@@ -22,8 +22,15 @@ section{
   margin-left: 10%;
   box-shadow: 1px 1px 80px 5px black;
   margin-bottom: 100px;
+  background-size: cover;
+  color: white; text-align: center;
 }
 
+ul {
+    list-style-type: " - "; /* Mantém as bolinhas padrão */
+    list-style-position: inside; /* Mantém as bolinhas alinhadas */
+    text-align: center;
+}
 .branco{ 
   color: white;
 }
@@ -112,3 +119,6 @@ section{
     margin-bottom: 20px;
     box-shadow: 1px 1px 80px 5px black;
 }
+/*h1{
+  text-align: justify;
+}*/
