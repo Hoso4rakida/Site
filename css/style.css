@@ -29,7 +29,7 @@ section{
 ul {
     list-style-type: " - "; /* Mantém as bolinhas padrão */
     list-style-position: inside; /* Mantém as bolinhas alinhadas */
-    text-align: center;
+    text-align: left;
 }
 .branco{ 
   color: white;
