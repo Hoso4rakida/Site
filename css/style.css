@@ -27,7 +27,7 @@ section{
 }
 
 ul {
-    list-style-type: " - "; /* Mantém as bolinhas padrão */
+    list-style-type: none; /* Mantém as bolinhas padrão */
     list-style-position: inside; /* Mantém as bolinhas alinhadas */
     text-align: center;
 }
