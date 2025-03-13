@@ -9,96 +9,147 @@
         body, html {
             height: 100%;
             margin: 0;
-            overflow: hidden;
             background-color: #171d3e;
-        }
-        .map-container {
-            width: 300vw;
-            height: 300vh;
-            background: url('img/Mapa.png') no-repeat center center;
-            background-size: contain; /* Ajusta a imagem proporcionalmente */
-            cursor: grab;
-            position: absolute;
+            overflow: hidden;
         }
 
         .map-wrapper {
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            position: absolute;
-            pointer-events: none; /* Desativa os eventos de interação do contêiner */
+            position: relative;
         }
         
-        #map {
-            pointer-events: all; /* Ativa eventos de interação apenas para o mapa */
+        .map-container {
+            width: 300vw;
+            height: 300vh;
+            background: url('img/Mapa.png') no-repeat center center;
+            background-size: contain;
+            cursor: grab;
+            position: absolute;
+            transform-origin: center;
         }
 
+        /* Animação apenas no zoom */
+        .zoom-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Botão de Voltar */
         #backButton {
             position: fixed;
             top: 10px;
             left: 10px;
             z-index: 1000;
+            background-color: #6A7FDB;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #backButton:hover {
+            background-color: #5564b8;
+        }
+
+        /* Botões de Zoom */
+        .zoom-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .zoom-controls button {
+            background-color: #8B9EFF;
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .zoom-controls button:hover {
+            background-color: #6A7FDB;
         }
     </style>
 </head>
 <body>
-    <div class="map-wrapper">
-        <div class="map-container" id="map">
-            <button id="backButton" class="btn btn-danger" style="background-color: #8B9EFF; border-color: #8B9EFF;">Voltar</button>
-        </div>
+    <button id="backButton">Voltar</button>
+
+    <div class="map-wrapper" id="mapWrapper">
+        <div class="map-container" id="map"></div>
+    </div>
+
+    <!-- Botões de Zoom -->
+    <div class="zoom-controls">
+        <button id="zoomIn">+</button>
+        <button id="zoomOut">-</button>
     </div>
 
     <script>
         const map = document.getElementById("map");
-        const mapWrapper = map.parentElement;
+        const mapWrapper = document.getElementById("mapWrapper");
         let isDragging = false;
-        let startX, startY, scrollLeft, scrollTop;
+        let startX, startY, lastX = 0, lastY = 0;
+        let scale = 1;
 
+        // Função para ajustar o zoom no centro da tela
+        function adjustZoom(zoomFactor) {
+            const prevScale = scale;
+            scale = Math.max(0.5, Math.min(scale + zoomFactor, 3)); // Limita o zoom entre 0.5x e 3x
+
+            // Pegamos a posição do centro da tela
+            const centerX = mapWrapper.clientWidth / 2;
+            const centerY = mapWrapper.clientHeight / 2;
+
+            // Ajustamos a posição para que o zoom foque no centro
+            lastX = (lastX - centerX) * (scale / prevScale) + centerX;
+            lastY = (lastY - centerY) * (scale / prevScale) + centerY;
+
+            // Adiciona a classe de transição apenas para o zoom
+            map.classList.add("zoom-transition");
+            map.style.transform = `translate(${lastX}px, ${lastY}px) scale(${scale})`;
+
+            // Remove a transição após o zoom para que o movimento fique fluido
+            setTimeout(() => {
+                map.classList.remove("zoom-transition");
+            }, 300);
+        }
+
+        document.getElementById("zoomIn").addEventListener("click", () => adjustZoom(0.2));
+        document.getElementById("zoomOut").addEventListener("click", () => adjustZoom(-0.2));
+
+        // Movimento do Mapa (Drag)
         map.addEventListener("mousedown", (e) => {
             isDragging = true;
-            startX = e.pageX - map.offsetLeft;
-            startY = e.pageY - map.offsetTop;
-            scrollLeft = mapWrapper.scrollLeft;
-            scrollTop = mapWrapper.scrollTop;
+            startX = e.clientX - lastX;
+            startY = e.clientY - lastY;
             map.style.cursor = "grabbing";
         });
 
-        map.addEventListener("mouseleave", () => {
-            if (isDragging) {
-                isDragging = false;
-                map.style.cursor = "grab";
-            }
+        window.addEventListener("mouseup", () => {
+            isDragging = false;
+            map.style.cursor = "grab";
         });
 
-        map.addEventListener("mouseup", () => {
-            if (isDragging) {
-                isDragging = false;
-                map.style.cursor = "grab";
-            }
-        });
-
-        map.addEventListener("mousemove", (e) => {
+        window.addEventListener("mousemove", (e) => {
             if (!isDragging) return;
-            e.preventDefault();
-            
-            const x = e.pageX - map.offsetLeft;
-            const y = e.pageY - map.offsetTop;
-            const walkX = (x - startX) * 1.5;
-            const walkY = (y - startY) * 1.5;
-
-            // Calculando os limites de rolagem para garantir que não ultrapasse a imagem
-            const maxScrollX = map.scrollWidth - mapWrapper.offsetWidth;
-            const maxScrollY = map.scrollHeight - mapWrapper.offsetHeight;
-
-            // Atualizando a rolagem
-            mapWrapper.scrollLeft = Math.max(0, Math.min(scrollLeft - walkX, maxScrollX));
-            mapWrapper.scrollTop = Math.max(0, Math.min(scrollTop - walkY, maxScrollY));
+            lastX = e.clientX - startX;
+            lastY = e.clientY - startY;
+            map.style.transform = `translate(${lastX}px, ${lastY}px) scale(${scale})`;
         });
 
+        // Botão de voltar
         document.getElementById("backButton").addEventListener("click", () => {
             window.location.href = "index.html";
         });
-
     </script>
 </body>
 </html>
