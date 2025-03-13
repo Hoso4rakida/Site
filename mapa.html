@@ -3,152 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa RPG</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mapa RPG Interativo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-color: #171d3e;
+        body {
             overflow: hidden;
-        }
-
-        .map-wrapper {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
+            background-color: #2c3e50;
+            color: #ecf0f1;
         }
         
         .map-container {
-            width: 300vw;
-            height: 300vh;
-            background: url('img/Mapa.png') no-repeat center center;
-            background-size: contain;
-            cursor: grab;
+            position: relative;
+            width: 100%;
+            height: 93vh;
+            overflow: hidden;
+            background-color: #3A4163;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .map {
             position: absolute;
-            transform-origin: center;
+            cursor: grab;
+            transform-origin: 0 0;
+            transition: transform 0.1s ease-out;
         }
-
-        /* Animação apenas no zoom */
-        .zoom-transition {
-            transition: transform 0.3s ease-in-out;
+        
+        .map:active {
+            cursor: grabbing;
         }
-
-        /* Botão de Voltar */
-        #backButton {
-            position: fixed;
+        
+        .controls {
+            background-color: rgba(44, 62, 80, 0.8);
+            border-radius: 8px;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        
+        .zoom-button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            margin: 5px;
+        }
+        
+        .legend {
+            background-color: rgba(44, 62, 80, 0.8);
+            border-radius: 8px;
+            padding: 10px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .legend-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        .title-container {
+            background-color: rgba(44, 62, 80, 0.8);
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+        }
+        
+        .back-button {
+            border-radius: 8px;
+            padding: 10px;
+            position: absolute;
             top: 10px;
             left: 10px;
             z-index: 1000;
-            background-color: #6A7FDB;
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
-
-        #backButton:hover {
-            background-color: #5564b8;
-        }
-
-        /* Botões de Zoom */
-        .zoom-controls {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+        
+        .back-button a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000;
+            align-items: center;
+            transition: color 0.3s ease;
         }
-
-        .zoom-controls button {
-            background-color: #8B9EFF;
-            border: none;
-            color: white;
-            padding: 10px;
+        
+        .back-button a:hover {
+            color: #3498db;
+        }
+        
+        .back-button a:before {
+            content: "←";
+            margin-right: 8px;
             font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .zoom-controls button:hover {
-            background-color: #6A7FDB;
         }
     </style>
 </head>
 <body>
-    <button id="backButton">Voltar</button>
-
-    <div class="map-wrapper" id="mapWrapper">
-        <div class="map-container" id="map"></div>
+    <div class="container-fluid py-4">
+        <div class="map-container" id="map-container">
+            <div class="map" id="map">
+                <!-- Aqui vai o mapa. Usando uma imagem placeholder para demonstração -->
+                <img src="img/Mapa.png" alt="Mapa RPG" id="map-image">
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-dark zoom-button" id="zoom-in">+</button>
+                <button class="btn btn-dark zoom-button" id="zoom-out">-</button>
+                <button class="btn btn-dark zoom-button" id="reset">⟲</button>
+            </div>
+            
+            <div class="back-button">
+                <a href="index.html" class="btn btn-dark">Voltar</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Botões de Zoom -->
-    <div class="zoom-controls">
-        <button id="zoomIn">+</button>
-        <button id="zoomOut">-</button>
-    </div>
-
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
     <script>
-        const map = document.getElementById("map");
-        const mapWrapper = document.getElementById("mapWrapper");
-        let isDragging = false;
-        let startX, startY, lastX = 0, lastY = 0;
-        let scale = 1;
-
-        // Função para ajustar o zoom no centro da tela
-        function adjustZoom(zoomFactor) {
-            const prevScale = scale;
-            scale = Math.max(0.5, Math.min(scale + zoomFactor, 3)); // Limita o zoom entre 0.5x e 3x
-
-            // Pegamos a posição do centro da tela
-            const centerX = mapWrapper.clientWidth / 2;
-            const centerY = mapWrapper.clientHeight / 2;
-
-            // Ajustamos a posição para que o zoom foque no centro
-            lastX = (lastX - centerX) * (scale / prevScale) + centerX;
-            lastY = (lastY - centerY) * (scale / prevScale) + centerY;
-
-            // Adiciona a classe de transição apenas para o zoom
-            map.classList.add("zoom-transition");
-            map.style.transform = `translate(${lastX}px, ${lastY}px) scale(${scale})`;
-
-            // Remove a transição após o zoom para que o movimento fique fluido
-            setTimeout(() => {
-                map.classList.remove("zoom-transition");
-            }, 300);
-        }
-
-        document.getElementById("zoomIn").addEventListener("click", () => adjustZoom(0.2));
-        document.getElementById("zoomOut").addEventListener("click", () => adjustZoom(-0.2));
-
-        // Movimento do Mapa (Drag)
-        map.addEventListener("mousedown", (e) => {
-            isDragging = true;
-            startX = e.clientX - lastX;
-            startY = e.clientY - lastY;
-            map.style.cursor = "grabbing";
-        });
-
-        window.addEventListener("mouseup", () => {
-            isDragging = false;
-            map.style.cursor = "grab";
-        });
-
-        window.addEventListener("mousemove", (e) => {
-            if (!isDragging) return;
-            lastX = e.clientX - startX;
-            lastY = e.clientY - startY;
-            map.style.transform = `translate(${lastX}px, ${lastY}px) scale(${scale})`;
-        });
-
-        // Botão de voltar
-        document.getElementById("backButton").addEventListener("click", () => {
-            window.location.href = "index.html";
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = document.getElementById('map');
+            const mapContainer = document.getElementById('map-container');
+            const zoomInBtn = document.getElementById('zoom-in');
+            const zoomOutBtn = document.getElementById('zoom-out');
+            const resetBtn = document.getElementById('reset');
+            
+            let scale = 1;
+            let panning = false;
+            let pointX = 0;
+            let pointY = 0;
+            let startX = 0;
+            let startY = 0;
+            
+            // Configuração inicial do tamanho do mapa
+            setMapPosition();
+            
+            // Função para atualizar a posição do mapa
+            function setMapPosition() {
+                map.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+            }
+            
+            // Função para zoom com a roda do mouse
+            function zoom(event) {
+                event.preventDefault();
+                
+                // Obtém as coordenadas do mouse em relação ao contêiner do mapa
+                const containerRect = mapContainer.getBoundingClientRect();
+                const mouseX = event.clientX - containerRect.left;
+                const mouseY = event.clientY - containerRect.top;
+                
+                // Converte as coordenadas do mouse para coordenadas relativas ao mapa transformado
+                const mouseXMap = (mouseX - pointX) / scale;
+                const mouseYMap = (mouseY - pointY) / scale;
+                
+                // Determina a direção do zoom
+                const delta = event.deltaY < 0 ? 1.2 : 0.8;
+                
+                // Limita o zoom
+                if (scale * delta > 0.5 && scale * delta < 6) {
+                    // Aplica o zoom
+                    const oldScale = scale;
+                    scale *= delta;
+                    
+                    // Ajusta a posição para centralizar no ponto do mouse
+                    pointX = mouseX - mouseXMap * scale;
+                    pointY = mouseY - mouseYMap * scale;
+                    
+                    setMapPosition();
+                }
+            }
+            
+            // Função para iniciar o arrasto
+            function startDrag(event) {
+                panning = true;
+                startX = event.clientX - pointX;
+                startY = event.clientY - pointY;
+                map.style.cursor = 'grabbing';
+            }
+            
+            // Função para mover durante o arrasto
+            function drag(event) {
+                if (!panning) return;
+                
+                pointX = event.clientX - startX;
+                pointY = event.clientY - startY;
+                setMapPosition();
+            }
+            
+            // Função para finalizar o arrasto
+            function endDrag() {
+                panning = false;
+                map.style.cursor = 'grab';
+            }
+            
+            // Realiza zoom centralizado na posição específica
+            function zoomAtPoint(x, y, factor) {
+                // Converte as coordenadas para coordenadas relativas ao mapa transformado
+                const mouseXMap = (x - pointX) / scale;
+                const mouseYMap = (y - pointY) / scale;
+                
+                // Verifica os limites do zoom
+                if (scale * factor > 0.5 && scale * factor < 6) {
+                    // Aplica o zoom
+                    scale *= factor;
+                    
+                    // Ajusta a posição para centralizar no ponto especificado
+                    pointX = x - mouseXMap * scale;
+                    pointY = y - mouseYMap * scale;
+                    
+                    setMapPosition();
+                }
+            }
+            
+            // Botões de controle de zoom
+            zoomInBtn.addEventListener('click', function() {
+                // Zoom centralizado no meio do contêiner
+                const rect = mapContainer.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                zoomAtPoint(centerX, centerY, 1.2);
+            });
+            
+            zoomOutBtn.addEventListener('click', function() {
+                // Zoom centralizado no meio do contêiner
+                const rect = mapContainer.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                zoomAtPoint(centerX, centerY, 0.8);
+            });
+            
+            resetBtn.addEventListener('click', function() {
+                scale = 1;
+                pointX = 0;
+                pointY = 0;
+                setMapPosition();
+            });
+            
+            // Eventos do mouse para zoom e arrasto
+            mapContainer.addEventListener('wheel', zoom);
+            map.addEventListener('mousedown', startDrag);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('mouseleave', endDrag);
+            
+            // Desativar comportamento padrão de arrasto da imagem
+            document.getElementById('map-image').addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
         });
     </script>
 </body>
