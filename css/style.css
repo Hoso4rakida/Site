@@ -9,7 +9,10 @@ body {
   min-height: 100%;
   height: 100%;
 }
-
+a
+{
+    color: #8B9EFF;
+}
 /* Section styling */
 section {
   margin: 15px 10% 100px;
