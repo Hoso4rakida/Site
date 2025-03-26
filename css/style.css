@@ -13,24 +13,7 @@ a
 {
     color: #8B9EFF;
 }
-.volta{
-  width: 50px;
-  height: 50px;
 
-  /*centraliza o botão no meio do canto esquerdo*/
-  position: fixed; /* Mantém o elemento fixo na tela */
-  left: 0; /* Alinha à esquerda */
-  top: 30%; /* Move o elemento para o meio verticalmente */
-  transform: translateY(-50%); /* Centraliza perfeitamente no eixo Y */
-  background-color: red; /* Apenas para visualização */
-  padding: 10px;
-  color: white;
-  background-color: #8B9EFF;
-
-  /*personaliza o botão*/
-  border: none;
-  border-radius: 0 10% 10% 0;
-}
 /* Section styling */
 section {
   margin: 15px 10% 100px;
@@ -148,4 +131,14 @@ ul {
   .custom-margin {
     margin: 0;
   }
+}
+
+.voltar{
+  /*centraliza o botão no meio do canto esquerdo*/
+  position: fixed; /* Mantém o elemento fixo na tela */
+  left: 0 !important; /* Alinha à esquerda */
+  top: 30% !important; /* Move o elemento para o meio verticalmente */
+  transform: translateY(-50%) !important; /* Centraliza perfeitamente no eixo Y */
+  border-radius: 0 0 10% 10% !important; 
+  background-color: #8B9EFF !important;
 }

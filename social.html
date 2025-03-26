@@ -8,6 +8,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style>
+        .back-button {
+            border-radius: 8px;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+        
+        .back-button a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            color: #3498db;
+        }
+        
+        .back-button a:before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+    </style>
 </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -36,18 +65,12 @@
   </nav>
   </div>
     <section class="bg-dark custom-margin p-3" style= "text-align: justify;">
-        <button onclick="window.history.back()" class="volta">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-                <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
-              </svg>
-        </button>
-        
+
         <h1 style="text-align: center;">Página em Manutenção</h1>
         <br>
-        <a href="/index.html" class="btn btn-primary" style="background-color: #8B9EFF; display: block; text-align: center; color: white; text-decoration: none;">
-            Voltar
-        </a>
-        
+        <div class="back-button">
+            <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
+        </div> 
     </section>
 
     <!--Roda Pé-->
