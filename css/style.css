@@ -139,6 +139,6 @@ ul {
   left: 0 !important; /* Alinha à esquerda */
   top: 30% !important; /* Move o elemento para o meio verticalmente */
   transform: translateY(-50%) !important; /* Centraliza perfeitamente no eixo Y */
-  border-radius: 0 0 10% 10% !important; 
+  border-radius: 0 8px 8px 0 !important; 
   background-color: #8B9EFF !important;
 }
