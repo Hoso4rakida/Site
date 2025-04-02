@@ -1,0 +1,164 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novastris - RPG</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+<!-- Adicione este estilo ao seu bloco <style> no cabeçalho ou modifique o estilo existente do botão -->
+    <style>
+        /* Mantenha seus estilos existentes de botão */
+        button {
+            background-color: #8B9EFF;
+            color: white;
+            padding: 5px 5px !important;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #8B9EFF;
+        }
+        
+        #botaoMostrar {
+            display: block;
+            margin: 20px auto;
+            width: 9rem !important;
+            height: 2rem !important;
+        }
+        
+        .texto-oculto {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #0b0b0d;
+            display: none;
+        }
+        .toggle-button {
+            display: block;
+            margin: 20px auto;
+            width: 9rem !important;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  </div>
+    <div class="back-button">
+        <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
+    </div> 
+    <section class="bg-dark custom-margin p-3" style= "text-align: justify;">
+
+        <h1 style="text-align: center;">Para Mestres</h1>
+
+        <p>Nessa página falaremos sobre algumas regras para vocês mestres, funcionamento de algumas coisas no servidor e outras coisas que podem sanar suas dúvidas. Pedimos que tenham conhecimento de como é o cenário do mundo, as principais cidades, os reinos, os deuses no geral, NPCs importantes e etc.</p>
+
+        <button id="botao1" class="toggle-button" data-target="caixaTexto1">Como ser Mestre</button>
+        <div id="caixaTexto1" class="texto-oculto">
+            <p>Para iniciarmos sua estadia como mestre no servidor Novastris é necessário ter um personagem no <strong>Rank Prata</strong>, ter lido os livros <a href="https://www.amazon.com.br/Dungeons-Dragons-Dungeon-Masters-Portugu%C3%AAs/dp/8568059325/ref=asc_df_8568059325/?tag=googleshopp00-20&amplinkCode=df0&amphvadid=393609811349&amphvpos=&amphvnetw=g&amphvrand=15388572948000612860&amphvpone=&amphvptwo=&amphvqmt=&amphvdev=c&amphvdvcmdl=&amphvlocint=&amphvlocphy=1001773&amphvtargid=pla-937544905623&amppsc=1">Dungeon Master's Guide - Livro do Mestre</a> e o <a href="https://www.amazon.com.br/Dungeons-Dragons-Players-Handbook-Portugu%C3%AAs/dp/B085S6W8PZ/ref=asc_df_B085S6W8PZ/?tag=googleshopp00-20&amplinkCode=df0&amphvadid=393609811349&amphvpos=&amphvnetw=g&amphvrand=2604624886301263573&amphvpone=&amphvptwo=&amphvqmt=&amphvdev=c&amphvdvcmdl=&amphvlocint=&amphvlocphy=1001773&amphvtargid=pla-1085670654912&amppsc=1">Player's Handbook - Livro Do Jogador</a> e que converse com o <strong>ADM e Mestre Veigar</strong> abrindo um Ticket no canal <strong>Quero ser Mestre</strong> no servidor Discord.</p>
+        </div>
+        <br>
+        <p>Após isso um <strong>LoreMaster</strong> ou um <strong>Moderador</strong> acompanhará você em todo o processo. Você deverá narrar uma quantidade de mesas entre <strong>3 a 5</strong> dependendo de seu feedback. Cada missão deverá acontecer no período de 10 a 15 dias dependendo da disponibilidade de seu LoreMaster ou Moderador e da sua. Ao final de todas as missões, você receberá a avaliação se foi aprovado ou não.</p>
+        <p>Se aprovado receberá o cargo de <strong>Mestre</strong> e poderá realizar missões dentro das regras detalhadas logo mais.</p>
+
+        <button id="botao2" class="toggle-button" data-target="caixaTexto2">Ranks de Mestres</button>
+        <div id="caixaTexto2" class="texto-oculto">
+            <ul>
+                <li><P><strong>Mestre Aprendiz:</strong> É aquele mestre em processo de aprendizagem no servidor. Esse mestre primeiro aprenderá como tudo funcionará, quais são as regras impostas pelo servidor antes de se tornar um mestre oficialmente. Após narrar as mesas de avaliações e ser aprovado por um <strong>LoreMaster</strong> ou <strong>Moderador</strong> você ganhará o cargo de <strong>Mestre</strong>.</P></li>
+                <li><p><strong>Mestre:</strong> Após adquirir esse cargo você irá adquirir alguns benefícios e poderá narrar missões de itens, iniciativas, lores para outros players, utilizar o canal Jornal para postagens de noticias recorrentes no mundo <strong>(que deverá haver uma verificar do LoreMaster ou da Administração)</strong>. Para se tornar um <strong>Mestre Ancião</strong> é necessário ter narrado 20 missões e montar o que chamamos de sagas. Para qualquer dúvida acerca das sagas converse com um membro da Staff.</p></li>
+                <li><p><strong>Mestre Ancião: </strong>O Mestre Ancião é aquele que pode realizar auxiliar em eventos, narrar missões de Sagas e criar NPCs para nosso mundo <strong>(Para se criar um NPC oficial da Guilda deve ser aberto um ticket com a aprovação da Staff)</strong>. Para se tornar um <strong>Grão Mestre Ancião</strong> é necessário concluir uma Saga e auxiliar em um evento.</p></li>
+                <li><p><strong>Grão Mestre Ancião: </strong>O cargo de Grão Mestre Ancião é fornecido para aqueles mestres em que mais confiamos. Este mestre poderá criar cidades, destrui-las, adicionar deuses no mundo e remove-los de seu posto, entre muitas outras coisas (Com permissão da Staff) e narrar missões de Ascensões.</p></li>
+            </ul>
+        </div>
+        <br>
+        <p> </p>
+        <a href="/index.html" class="btn btn-primary" style="background-color: #8B9EFF; display: block; text-align: center; color: white; text-decoration: none;">
+            Voltar
+        </a>
+    </section>
+    <div class="branco rodape">
+        <div>
+            <div class="icon">
+                <a href="./historia.html" style="text-decoration: none; color: white;">
+                    <img src="../img/Historia.webp" alt="História">
+                    <h2>História</h2>
+                </a>
+                <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
+            </div>
+            
+            <div class="icon">
+                <a href="../mapa.html" style="text-decoration: none; color: white;">
+                    <img src="../img/Geografia.webp" alt="Geografia">
+                    <h2>Mapa do Mundo</h2>
+                </a>
+                <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
+            </div>
+            
+            <div class="icon">
+                <a href="../social.html" style="text-decoration: none; color: white;">
+                    <img src="../img/Redes_Sociais.webp" alt="Redes Sociais">
+                    <h2>Redes Sociais</h2>
+                </a>
+                <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!</p>
+            </div>
+        </div>
+    </div>
+<br>
+</div> 
+  <footer class="bg-dark text-center py-3 branco">
+    <p>&copy; 2025 Novastris. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+// Update your existing script to handle multiple buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all buttons with class "toggle-button"
+    const buttons = document.querySelectorAll('.toggle-button');
+    
+    // Add click event to each button
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the target text box using the data attribute
+            const targetId = this.getAttribute('data-target');
+            const targetBox = document.getElementById(targetId);
+            
+            // Toggle visibility
+            if (targetBox.style.display === 'block') {
+                targetBox.style.display = 'none';
+            } else {
+                targetBox.style.display = 'block';
+            }
+        });
+    });
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
