@@ -13,6 +13,7 @@
             margin: auto;
             margin-left: 2em;
             margin-right: 2em;
+            color: white;
         }
         td{
             padding: 16px;
@@ -36,6 +37,43 @@
         a{
             color: #8B9EFF;
         }
+        .ar
+        {
+            color: #FFE38C;
+        }
+        .spoiler-content > h4{
+            color: #FFE38C
+        }
+        /* Estilo geral para o botão */
+        button {
+            background-color: #8B9EFF; /* Cor de fundo verde */
+            color: white;              /* Cor do texto branco */
+            padding: 10px 20px;        /* Espaciamento interno */
+            font-size: 16px;           /* Tamanho da fonte */
+            border: none;              /* Remove a borda */
+            border-radius: 8px;        /* Bordas arredondadas */
+            cursor: pointer;          /* Indica que é clicável */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+        }
+
+        /* Efeito de hover (passar o mouse sobre o botão) */
+        button:hover {
+            background-color: #606485; /* Cor de fundo um pouco mais escura */
+            transform: scale(1.05);     /* Aumenta ligeiramente o tamanho */
+        }
+
+        /* Efeito de foco (quando o botão é clicado ou selecionado) */
+        button:focus {
+            outline: none;             /* Remove o contorno padrão do foco */
+            box-shadow: 0 0 10px rgba(72, 159, 72, 0.8); /* Sombras suaves ao redor do botão */
+        }
+
+        /* Efeito de clique (pressionar o botão) */
+        button:active {
+            background-color: #606480; /* Cor de fundo ainda mais escura */
+            transform: scale(0.98);     /* Botão fica levemente menor ao ser pressionado */
+        }
+
     </style>
 </head>
   <body>
@@ -201,6 +239,7 @@
             </tbody>
         </table>
  <div class="container">
+    <br>
         <h2 id="RegraOpicional">Nível 1: Regra opcional: Proficiência em arma de fogo</h2>
         <hr>
         <div class="caracteristica">
@@ -344,6 +383,309 @@
             <p class="subtitulo">
                 (Nenhuma subclasse selecionada. Selecione uma subclasse para ver suas características aqui.)
             </p>
+            <div class="spoiler-container">
+                <button class="toggle-btn">Alquimista</button>
+                <div class="spoiler-content" style="display: none;">
+                    <hr style="color: #FFE38C;">
+                    <p>
+                        Um Alquimista é um especialista em combinar reagentes para produzir efeitos místicos. Os Alquimistas usam suas criações para dar vida e sugá-la. A Alquimia é a mais antiga das tradições dos artífices, e sua versatilidade tem sido valorizada há muito tempo em tempos de guerra e paz.
+                    </p>
+                    <h4>Nível 3: Proficiência em ferramentas</h4>
+                    <p>
+                        Ao adotar esta especialização no 3º nível, você ganha proficiência com suprimentos de alquimia. Se você já possui esta proficiência, ganha proficiência com outro tipo de ferramenta de artesão à sua escolha.
+                    </p>
+                    <h4>Nível 3: Feitiços de Alquimista</h4>
+                    <p>
+                        A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Alquimista. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
+                    </p>
+                    <table style="color: white;">
+                        <thead>
+                            <tr class="trh">
+                                <td><strong>Nível de Artífice</strong></td>
+                                <td><strong>Feitiço</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3º</td>
+                                <td><a>palavra de cura</a>, <a>raio de doença</a></td>
+                            </tr>
+                            <tr>
+                                <td>5º</td>
+                                <td><a>esfera flamejante</a>, <a>flecha ácida de Melf</a></td>
+                            </tr>
+                            <tr>
+                                <td>9º</td>
+                                <td><a>forma gasosa</a>, <a>palavra de cura em massa</a></td>
+                            </tr>
+                                <td>13º</td>
+                                <td><a>praga</a>, <a>proteção contra a morte</a></td>
+                            </tr>
+                            <tr>
+                                <td>17º</td>
+                                <td><a>nuvem mata</a>, <a>ressuscita os mortos</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h4>Nível 3: Elixir Experimental</h4>
+                    <p>
+                        A partir do 3º nível, sempre que terminar um descanso longo, você pode magicamente produzir um elixir experimental em um frasco vazio que tocar. Role na tabela de Elixir Experimental para ver o efeito do elixir, que é ativado quando alguém bebe o elixir. Com uma ação, uma criatura pode beber o elixir ou administrá-lo a uma criatura incapacitada.
+                    </p>
+                    <p>
+                        Criar um elixir experimental exige que você tenha suprimentos de alquimia consigo, e qualquer elixir que você criar com esse recurso dura até ser bebido ou até o final do seu próximo descanso longo.
+                    </p>
+                    <p>
+                        Ao atingir certos níveis nesta classe, você pode criar mais elixires ao final de um descanso longo: dois no 6º nível e três no 15º nível. Role para o efeito de cada elixir separadamente. Cada elixir requer seu próprio frasco.
+                    </p>
+                    <p>
+                        Você pode criar elixires experimentais adicionais gastando um espaço de magia de 1º nível ou superior para cada um. Ao fazer isso, você usa sua ação para criar o elixir em um frasco vazio que você tocar e escolhe o efeito do elixir na tabela de Elixires Experimentais.
+                    </p>
+                    <table style="color:white;">
+                        <thead>
+                            <tr class="trh">
+                                <td><strong>d6</strong></td><td><strong>Efeito</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td><strong>Cura.</strong> O bebedor recupera uma quantidade de pontos de vida igual a 2d4 + seu modificador de Inteligência.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td><td><strong>Rapidez.</strong> A velocidade de caminhada do bebedor aumenta em 3 metros por 1 hora.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td><td><strong>Resiliência.</strong> O bebedor ganha +1 de bônus na CA por 10 minutos.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td><td><strong>Ousadia.</strong> O bebedor pode rolar um d4 e somar o valor obtido a cada jogada de ataque e teste de resistência que fizer no minuto seguinte.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td><td><strong>Voo.</strong> O bebedor ganha uma velocidade de voo de 3 metros por 10 minutos.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td><td><strong>Transformação.</strong> O corpo do bebedor é transformado como se fosse pelo feitiço de alteração de si mesmo. O bebedor determina a transformação causada pelo feitiço, cujos efeitos duram 10 minutos.</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <button class="toggle-btn">Armeiro</button>
+                <div class="spoiler-content" style="display: none;">
+                    <p>
+                        Um artífice especializado em Armeiro modifica a armadura para que funcione quase como uma segunda pele. A armadura é aprimorada para aprimorar a magia do artífice, liberar ataques potentes e gerar uma defesa formidável. O artífice se conecta a essa armadura, tornando-se um com ela mesmo enquanto a experimenta e refina suas capacidades mágicas.
+                    </p>
+                    <h4>Nível 3: Ferramentas do Ofício</h4>
+                    <i>Característica de Armeiro de 3º nível</i>
+                    <br>
+                    <p>
+                        Você ganha proficiência com armaduras pesadas. Você também ganha proficiência com ferramentas de ferreiro. Se você já possui essa proficiência em ferramentas, você ganha proficiência com um outro tipo de ferramenta de artesão à sua escolha.
+                    </p>
+
+                    <h4>Nível 3: Magias de Armeiro</h4>
+                    <i>Característica de Armeiro de 3º nível</i>
+                    <p>
+                        Você sempre tem certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Armeiro. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
+                    </p>
+                    <table style="color: white;">
+                        <thead>
+                            <tr class="trh">
+                                <td><strong>Nível de Artífice</strong></td>
+                                <td><strong>Feitiço</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3º</td>
+                                <td><a>míssil mágico</a>, <a>onda de trovão</a></td>
+                            </tr>
+                            <tr>
+                                <td>5º</td>
+                                <td><a>imagem espelhada</a>, <a>estilhaçar</a></td>
+                            </tr>
+                            <tr>
+                                <td>9º</td>
+                                <td><a>padrão hipnótico</a>, <a>relâmpago</a></td>
+                            </tr>
+                                <td>13º</td>
+                                <td><a>escudo de fogo</a>, <a>maior invisibilidade</a></td>
+                            </tr>
+                            <tr>
+                                <td>17º</td>
+                                <td><a>parede de passagem</a>, <a>parede de força</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <h4>Nível 3: Armadura Arcana</h4>
+                        <i>Característica de Armeiro de 3º nível</i>
+                        <p>
+                            Suas atividades metalúrgicas o levaram a fazer da armadura um canal para sua magia. Com uma ação, você pode transformar uma armadura que esteja usando em uma Armadura Arcana, desde que tenha ferramentas de ferreiro em mãos.
+                        </p>
+                        <p>Você ganha os seguintes benefícios ao usar esta armadura:</p>
+                        <ul style="text-align:left; list-style: ' - ';">
+                            <li>Se a armadura normalmente tem um requisito de Força, a armadura arcana não tem esse requisito para você.</li>
+                            <li>Você pode usar a armadura arcana como foco de conjuração para suas magias de artífice.</li>
+                            <li>A armadura se fixa a você e não pode ser removida contra sua vontade. Ela também se expande para cobrir todo o seu corpo, embora você possa retrair ou abrir o capacete como uma ação bônus. A armadura substitui quaisquer membros ausentes, funcionando de forma idêntica a um membro que ela substitui.</li>
+                            <li>Você pode tirar ou vestir a armadura com uma ação. A armadura continua sendo uma Armadura Arcana até que você vista outra armadura ou morra.</li>
+                        </ul>
+                        <h4>Nível 3: Modelo de Armadura</h4>
+                        <i>Característica de Armeiro de 3º nível</i>
+                        <p>
+                            Você pode personalizar sua Armadura Arcana. Ao fazer isso, escolha um dos seguintes modelos de armadura: Guardião ou Infiltrador. O modelo escolhido lhe concede benefícios especiais enquanto você o veste.
+                        </p>
+                        <p>
+                            Cada modelo inclui uma arma especial. Ao atacar com essa arma, você pode adicionar seu modificador de Inteligência, em vez de Força ou Destreza, às jogadas de ataque e dano.
+                        </p>
+                        <p>
+                            Você pode mudar o modelo da armadura sempre que terminar um descanso curto ou longo, desde que tenha ferramentas de ferreiro em mãos.
+                        </p>
+                        <p>
+                            Guardião. Você projeta sua armadura para estar na linha de frente do conflito. Ela possui as seguintes características:
+                        </p>
+                        <div style="padding-left: 1em;">
+                            <p><strong>Manoplas do Trovão.</strong> Cada uma das manoplas da armadura conta como uma arma corpo a corpo simples enquanto você não estiver segurando nada nela, e causa 1d8 de dano trovejante ao acertar. Uma criatura atingida pela manopla tem desvantagem em jogadas de ataque contra alvos que não sejam você até o início do seu próximo turno, pois a armadura emite magicamente um pulso distrativo quando a criatura ataca outra pessoa.</p>
+                            <p><strong>Campo Defensivo.</strong> Como uma ação bônus, você pode ganhar pontos de vida temporários iguais ao seu nível nesta classe, substituindo quaisquer pontos de vida temporários que você já tenha. Você perde esses pontos de vida temporários se tirar a armadura. Você pode usar esta ação bônus um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p>
+                            <p><strong>Infiltrador.</strong> Você personaliza sua armadura para tarefas sutis. Ela possui as seguintes características:</p>
+                            <p><strong>Lançador de Relâmpagos.</strong> Um nódulo semelhante a uma gema aparece em um de seus punhos blindados ou no peito (à sua escolha). Conta como uma arma de longo alcance simples, com um alcance normal de 27 metros e um alcance longo de 90 metros, e causa 1d6 de dano elétrico ao acertar. Uma vez em cada um dos seus turnos, ao atingir uma criatura com ela, você pode causar 1d6 de dano elétrico extra a esse alvo.</p>
+                            <p><strong>Passos Potentes.</strong> Sua velocidade de caminhada aumenta em 1,5 metro.</p>
+                            <p><strong>Campo de Amortecimento.</strong> Você tem vantagem em testes de Destreza (Furtividade). Se a armadura normalmente impõe desvantagem em tais testes, a vantagem e a desvantagem se cancelam, como de costume.</p>
+                        </div>
+                </div>
+
+                <button class="toggle-btn">Artilheiro</button>
+                <div class="spoiler-content" style="display:none;">
+                    <p>
+                        Um Artilheiro se especializa em usar magia para lançar energia, projéteis e explosões no campo de batalha. Esse poder destrutivo era valorizado por todos os exércitos da Última Guerra. Agora que a guerra acabou, alguns membros dessa especialização buscam construir um mundo mais pacífico usando seus poderes para combater o ressurgimento da guerra em Khorvaire.
+                    </p>
+                    <p>
+                      O artífice gnomo Vi, um membro improvável, porém fundamental, do projeto de forjados bélicos da Casa Cannith, tem se mostrado especialmente fervoroso em consertar as coisas: "Já era hora de consertarmos as coisas em vez de mandar tudo para o inferno."  
+                    </p>
+                    <h4>Nível 3: Proficiência em Ferramentas</h4>
+                    <p>
+                        Ao adotar esta especialização no 3º nível, você ganha proficiência com ferramentas de entalhador. Se você já possui essa proficiência, ganha proficiência com outro tipo de ferramenta de artesão à sua escolha.
+                    </p>
+                    <h4>Nível 3: Magias de Artilheiro</h4>
+                    <p>
+                        A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Artilheiro. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
+                    </p>
+                    <table style="color: white;">
+                        <tbody>
+                            <tr>
+                                <td>3º</td>
+                                <td><a>escudo</a>, <a>onda de trovão</a></td>
+                            </tr>
+                            <tr>
+                                <td>5º</td>
+                                <td><a>raio escaldante</a>, <a>estilhaçar</a></td>
+                            </tr>
+                            <tr>
+                                <td>9º</td>
+                                <td><a>bola de fogo</a>, <a>parede de vento</a></td>
+                            </tr>
+                                <td>13º</td>
+                                <td><a>tempestade de gelo</a>, <a>parede de fogo</a></td>
+                            </tr>
+                            <tr>
+                                <td>17º</td>
+                                <td><a>cone de frio</a>, <a>parede de força</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Nível 3: Canhão Sobrenatural</h4>
+                    <p>
+                        No 3º nível, você aprende a criar um canhão mágico. Usando ferramentas de entalhador ou ferreiro, você pode realizar uma ação para criar magicamente um canhão sobrenatural Pequeno ou Minúsculo em um espaço desocupado em uma superfície horizontal a até 1,5 metro de você. Um canhão sobrenatural Pequeno ocupa seu espaço, e um Minúsculo pode ser segurado com uma mão.
+                    </p>
+                    <p>
+                       Depois de criar um canhão, você não pode fazê-lo novamente até terminar um descanso longo ou até gastar um espaço de magia de 1º nível ou superior. Você só pode ter um canhão por vez e não pode criar um enquanto o seu canhão estiver presente. 
+                    </p>
+                    <p>
+                      O canhão é um objeto mágico. Independentemente do tamanho, o canhão tem uma CA de 18 e um número de pontos de vida igual a cinco vezes o seu nível de artífice. Ele é imune a dano de veneno e dano psíquico, e a todas as condições. Se for forçado a fazer um teste de habilidade ou uma salvaguarda, considere todos os seus valores de habilidade como 10 (+0). Se a magia de reparação for conjurada, ele recupera 2d6 pontos de vida. Ele desaparece se for reduzido a 0 pontos de vida ou após 1 hora. Você pode dispensá-lo antecipadamente como uma ação.  
+                    </p>
+                    <p>
+                        Ao criar o canhão, você determina sua aparência e se ele possui pernas. Você também decide qual tipo ele é, escolhendo entre as opções na tabela Canhões Sobrenaturais. Em cada um dos seus turnos, você pode realizar uma ação bônus para ativar o canhão se estiver a até 18 metros dele. Como parte da mesma ação bônus, você pode direcionar o canhão para andar ou subir até 4,5 metros até um espaço desocupado, desde que tenha pernas.
+                    </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Lança-chamas:</td>
+                                <td>O canhão exala fogo em um cone adjacente de 4,5 metros designado por você. Cada criatura naquela área deve realizar um teste de resistência de Destreza contra sua CD de magia, sofrendo 2d8 de dano de fogo em uma falha ou metade desse dano em um sucesso. O fogo incendeia quaisquer objetos inflamáveis na área que não estejam sendo usados ou carregados.</td>
+                            </tr>
+                            <tr>
+                                <td>Balista de Força:</td>
+                                <td>Faça um ataque mágico à distância, originado do canhão, contra uma criatura ou objeto a até 36 metros dele. Ao acertar, o alvo sofre 2d8 de dano de força e, se o alvo for uma criatura, ele é empurrado para até 1,5 metro de distância do canhão.</td>
+                            </tr>
+                            <tr>
+                                <td>Protetor:</td>
+                                <td>O canhão emite uma explosão de energia positiva que concede a si mesmo e a cada criatura à sua escolha a até 3 metros dele um número de pontos de vida temporários igual a 1d8 + seu modificador de Inteligência (mínimo de +1).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button class="toggle-btn">Ferreiro de Batalha</button>
+                <div class="spoiler-content" style="display:none;">
+                    <p>
+                        Exércitos precisam de proteção, e alguém precisa reconstruir tudo se as defesas falharem. Uma combinação de protetor e médico, um Ferreiro de Batalha é especialista em defender os outros e reparar materiais e pessoal. Para auxiliar em seu trabalho, os Ferreiros de Batalha geralmente são acompanhados por um defensor de aço, um companheiro protetor criado por eles. Muitos soldados contam histórias de quase morrerem antes de serem salvos por um Ferreiro de Batalha e um defensor de aço.
+                    </p>
+                    <p>
+                        Os Ferreiros de Batalha desempenharam um papel fundamental no trabalho da Casa Cannith com construtos de batalha e os forjados bélicos originais e, após a Última Guerra, esses artífices lideraram esforços para ajudar aqueles que foram feridos nas terríveis batalhas da guerra.
+                    </p>
+                    <h4>Nível 3: Proficiência em ferramentas</h4>
+                    <p>
+                        Ao adotar esta especialização no 3º nível, você ganha proficiência com ferramentas de ferreiro. Se você já possui esta proficiência, ganha proficiência com outro tipo de ferramenta de artesão à sua escolha.
+                    </p>
+                    <h4>Nível 3: Feitiços de Ferreiro de Batalha</h4>
+                    <p>
+                        A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Ferreiro de Batalha. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
+                    </p>
+                    <table style="color: white;">
+                        <tbody>
+                            <tr>
+                                <td>3º</td>
+                                <td><a>heroísmo</a>, <a>escudo</a></td>
+                            </tr>
+                            <tr>
+                                <td>5º</td>
+                                <td><a>golpe de marca</a>, <a>vínculo de proteção</a></td>
+                            </tr>
+                            <tr>
+                                <td>9º</td>
+                                <td><a>aura de vitalidade</a>, <a>conjurar barragem</a></td>
+                            </tr>
+                                <td>13º</td>
+                                <td><a>aura de pureza</a>, <a>escudo de fogo</a></td>
+                            </tr>
+                            <tr>
+                                <td>17º</td>
+                                <td><a>banimento de ferimento</a>, <a>banimento de ferimento, cura em massa de ferimentos</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Nível 3: Pronto para a Batalha</h4>
+                    <p>
+                        Quando você atinge o 3º nível, seu treinamento de combate e seus experimentos com magia terão valido a pena de duas maneiras:
+                    </p>
+                    <ul>
+                        <li>Você ganha proficiência com armas marciais.</li>
+                        <li>Ao atacar com uma arma mágica, você pode usar seu modificador de Inteligência, em vez do modificador de Força ou Destreza, para as jogadas de ataque e dano.</li>
+                    </ul>
+                    <p>Nível 3: Defensor de Aço</p>
+                    <p>
+                        No 3º nível, sua habilidade com o jogo lhe rendeu um fiel companheiro, um defensor de aço. Ele é amigável com você e seus companheiros e obedece aos seus comandos. Veja as estatísticas de jogo desta criatura no bloco de estatísticas do defensor de aço, que usa seu bônus de proficiência (PB) em vários pontos. Você determina a aparência da criatura e se ela tem duas ou quatro pernas; sua escolha não afeta suas estatísticas de jogo.
+                    </p>
+                    <p>
+                        Em combate, o defensor compartilha sua contagem de iniciativa, mas ele joga seu turno imediatamente após o seu. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza em seu turno é a ação de Esquiva, a menos que você faça uma ação bônus em seu turno para comandá-lo a realizar outra ação. Essa ação pode estar em seu bloco de estatísticas ou em alguma outra ação. Se você estiver incapacitado, o defensor pode realizar qualquer ação de sua escolha, não apenas Esquiva.
+                    </p>
+                    <p>
+                        Se a magia de reparação for conjurada sobre ele, ele recupera 2d6 pontos de vida. Se ele morreu na última hora, você pode usar suas ferramentas de ferreiro como uma ação para reanimá-lo, desde que esteja a até 1,5 metro dele e gaste um espaço de magia de 1º nível ou superior. O defensor de aço retorna à vida após 1 minuto com todos os seus pontos de vida restaurados.
+                    </p>
+                    <p>
+                        Ao final de um descanso longo, você pode criar um novo defensor de aço se tiver suas ferramentas de ferreiro. Se você já tiver um defensor de aço desta habilidade, o primeiro perece imediatamente. O defensor também perece se você morrer.
+                    </p>
+                    </p>
+                </div>
+            </div>
+            
         </div>
 
         <h2 id="FerramentaCerta">Nível 3: A ferramenta certa para o trabalho</h2>
@@ -372,9 +714,41 @@
             <p>
                 Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
             </p>
-            <p class="subtitulo">
-                (Nenhuma subclasse selecionada. Selecione uma subclasse para ver suas características aqui.)
-            </p>
+
+                <button class="toggle-btn">Alquimista</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 5: Alquímico Sábio</h4>
+                    <p>
+                        No 5º nível, você desenvolve um domínio magistral de substâncias químicas mágicas, aprimorando a cura e o dano que você cria através delas. Sempre que conjurar uma magia usando os suprimentos do seu alquimista como foco de conjuração, você ganha um bônus em uma jogada da magia. Essa jogada deve restaurar pontos de vida ou ser uma jogada de dano que cause dano ácido, ígneo, necrótico ou venenoso, e o bônus é igual ao seu modificador de Inteligência (mínimo de +1).
+                    </p>
+                </div>
+
+                <button class="toggle-btn">Armeiro</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 5: Ataque Extra</h4>
+                    <p>
+                        A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
+                    </p>
+                </div>
+
+                <button class="toggle-btn">Artillerist</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 5: Arma de fogo arcana</h4>
+                    <p>
+                        No 5º nível, você sabe como transformar uma varinha, cajado ou bastão em uma arma de fogo arcana, um canal para suas magias destrutivas. Ao terminar um descanso longo, você pode usar ferramentas de entalhador para esculpir sigilos especiais em uma varinha, cajado ou bastão e, assim, transformá-los em sua arma de fogo arcana. Os sigilos desaparecem do objeto se você os esculpir posteriormente em um item diferente. Caso contrário, os sigilos duram indefinidamente.
+                    </p>
+                    <p>
+                        Você pode usar sua arma de fogo arcana como foco de conjuração para suas magias de artífice. Ao conjurar uma magia de artífice através da arma de fogo, role um d8 e você ganha um bônus em uma das jogadas de dano da magia igual ao número rolado.
+                    </p>
+                </div>
+
+                <button class="toggle-btn">Ferreiro de Batalha</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 5: Ataque Extra</h4>
+                    <p>
+                        A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
+                    </p>
+                </div>
         </div>
 
         <h2 id="ExperienciaFerramentas">Nível 6: Conhecimento em ferramentas</h2>
@@ -412,15 +786,67 @@
 
         <h2 id="RecursoArtifice">Nível 9: Característica de Especialista em Artífice</h2>
         <hr>
-        <div class="caracteristica">
             <p><i>Característica de artífice de 9º nível</i></p>
-            <p>
-                Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
-            </p>
-            <p class="subtitulo">
-                (Nenhuma subclasse selecionada. Selecione uma subclasse para ver suas características aqui.)
-            </p>
-        </div>
+                <p>
+                    Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
+                </p>
+                    <button class="toggle-btn">Alquimista</button>
+                    <div class="spoiler-content" style="display:none;">
+                        <h4>Nível 9: Reagentes Restauradores</h4>
+                        <i>Característica de Alquimista de 9º nível</i>
+                        <p>
+                            A partir do 9º nível, você pode incorporar reagentes restauradores em alguns de seus trabalhos:
+                        </p>
+                        <p>
+                            <ul>
+                                <li>Sempre que uma criatura bebe um elixir experimental que você criou, a criatura ganha pontos de vida temporários iguais a 2d6 + seu modificador de Inteligência (mínimo de 1 ponto de vida temporário).</li>
+                                <li>You can cast lesser restoration without expending a spell slot and without preparing the spell, provided you use alchemist's supplies as the spellcasting focus. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest.</li>
+                            </ul>
+                        </p>
+
+                    </div>
+
+                    <button class="toggle-btn">Armeiro</button>
+                    <div class="spoiler-content" style="display:none;">
+                        <h4>Nível 9: Modificações de armadura</h4>
+                        <i>Característica de Armeiro de 9º nível</i>
+                        <p>
+                            Você aprende a usar suas infusões de artífice para modificar sua Armadura Arcana de forma especial. Essa armadura agora conta como itens separados para os propósitos do seu recurso "Infundir Itens": armadura (a peça peitoral), botas, capacete e a arma especial da armadura. Cada um desses itens pode conter uma de suas infusões, e as infusões são transferidas se você alterar o modelo da sua armadura com o recurso "Modelo de Armadura". Além disso, o número máximo de itens que você pode infundir simultaneamente aumenta em 2, mas esses itens extras devem fazer parte da sua Armadura Arcana.
+                        </p>
+                    </div>
+
+                <button class="toggle-btn">Artillerist</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 9: Canhão Explosivo</h4>
+                    <p>
+                        A partir do 9º nível, cada canhão sobrenatural que você criar será mais destrutivo:
+                    </p>
+                    <ul>
+                        <li>Todos os testes de dano do canhão aumentam em 1d8.</li>
+                        <li>Com uma ação, você pode comandar a detonação do canhão se estiver a até 18 metros dele. Isso destrói o canhão e força cada criatura a até 6 metros dele a realizar um teste de resistência de Destreza contra sua CD de magia, sofrendo 3d8 de dano de força em uma falha ou metade desse dano em um sucesso.</li>
+                    </ul>
+
+                </div>
+
+                <button class="toggle-btn">Ferreiro de Batalha</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 9: Choque Arcano</h4>
+                    <p>
+                        No 9º nível, você aprende novas maneiras de canalizar energia arcana para ferir ou curar. Quando você atinge um alvo com um ataque de arma mágica ou seu defensor de aço atinge um alvo, você pode canalizar energia mágica através do golpe para criar um dos seguintes efeitos:
+                    </p>
+                    <p>
+                        <ul>
+                            <li>O alvo sofre 2d6 de dano de força adicional.</li>
+                            <li>Escolha uma criatura ou objeto que você possa ver a até 9 metros do alvo. Energia de cura flui para o recipiente escolhido, restaurando 2d6 pontos de vida.</li>
+                        </ul>
+                        <p>
+                            Você pode usar esta energia um número de vezes igual ao seu modificador de Inteligência (mínimo de uma vez), mas não pode fazer isso mais de uma vez por turno. Você recupera todos os usos gastos ao terminar um descanso longo.
+                        </p>
+                    </p>
+
+                    </p>
+                </div>
+        
 
         <h2 id="AdeptoItem">Nível 10: Adepto de Itens Mágicos</h2>
         <hr>
@@ -479,9 +905,47 @@
             <p>
                 Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
             </p>
-            <p class="subtitulo">
-                (Nenhuma subclasse selecionada. Selecione uma subclasse para ver suas características aqui.)
-            </p>
+                <button class="toggle-btn">Alquimista</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 15: Maestria Química</h4>
+                    <p>No 15º nível, você foi exposto a tantos produtos químicos que eles representam pouco risco para você, e você pode usá-los para acabar rapidamente com certas doenças:</p>
+                    <ul>
+                        <li>Você ganha resistência a dano de ácido e dano de veneno, e fica imune à condição de envenenamento.</li>
+                        <li>Você pode conjurar restauração e cura maiores sem gastar um espaço de magia, sem preparar a magia e sem componentes materiais, desde que use suprimentos de alquimista como foco de conjuração. Depois de conjurar qualquer uma das magias com esta característica, você não poderá conjurá-la novamente até terminar um descanso longo.</li>
+                    </ul>
+                </div>
+
+                <button class="toggle-btn">Armeiro</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Level 15: Improved Defender</h4>
+                    <p>No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:</p>
+                    <ul>
+                        <li>O dano extra e a cura do seu Ataque Arcano aumentam para 4d6.</li>
+                        <li>Seu defensor de aço ganha um bônus de +2 na Classe de Armadura.</li>
+                        <li>Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a 1d4 + seu modificador de Inteligência.</li>
+                    </ul>
+                </div>
+
+                <button class="toggle-btn">Artilheiro</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Nível 15: Posição Fortificada</h4>
+                    <p>A partir do 15º nível, você se torna um mestre na formação de posições bem defendidas usando Canhão Eldritch:</p>
+                    <ul>
+                        <li>Você e seus aliados têm meia cobertura enquanto estiverem a 3 metros de um canhão que você criar com o Canhão Sobrenatural, como resultado de um campo brilhante de proteção mágica que o canhão emite.</li>
+                        <li>Agora você pode ter dois canhões ao mesmo tempo. Você pode criar dois com a mesma ação (mas não com o mesmo espaço de magia) e pode ativar ambos com a mesma ação bônus. Você determina se os canhões são idênticos ou diferentes. Você não pode criar um terceiro canhão enquanto tiver dois.</li>
+                    </ul>
+                </div>
+
+                <button class="toggle-btn">Ferreiro de Batalha</button>
+                <div class="spoiler-content" style="display:none;">
+                    <h4>Level 15: Improved Defender</h4>
+                    <p>No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:</p>
+                    <ul>
+                        <li>O dano extra e a cura do seu Ataque Arcano aumentam para 4d6.</li>
+                        <li>Seu defensor de aço ganha um bônus de +2 na Classe de Armadura.</li>
+                        <li>Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a 1d4 + seu modificador de Inteligência.</li>
+                    </ul>
+                </div>
         </div>
 
         <h2 id="MelhoriaPontuacao3">Nível 16: Melhoria na pontuação de habilidade</h2>
@@ -563,5 +1027,23 @@
     <p>&copy; 2025 Novastris. Todos os direitos reservados.</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+    const botoes = document.querySelectorAll(".toggle-btn");
+    const conteudos = document.querySelectorAll(".spoiler-content");
+
+    botoes.forEach((botao, index) => {
+        botao.addEventListener("click", () => {
+            const conteudoAtual = conteudos[index];
+
+            // Alternar a visibilidade
+            if (conteudoAtual.style.display === "none" || conteudoAtual.style.display === "") {
+                conteudoAtual.style.display = "block"; // Mostrar o conteúdo
+            } else {
+                conteudoAtual.style.display = "none"; // Esconder o conteúdo
+            }
+        });
+    });
+    </script>
+
   </body>
 </html>
