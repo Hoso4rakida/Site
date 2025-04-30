@@ -111,29 +111,29 @@
 
         <img src="../../img/Classes/Artificer.webp" alt="Clerigo"  style="width: 100%; height: auto; padding-bottom: 16px;"> 
 
-        <h1 style="text-align: center;">Artifice</h1>
+        <h1 style="text-align: center;">Barbaro</h1>
 
         <table style="color: white;">
             <tbody>
                 <tr class="trh">
-                    <td>Nível</td><td>Bônus de Proficiencia</td><td>Características</td><td>Infusões Conhecidas</td><td>Itens Infusionados</td><td style="padding-right: 16px;">Truques</td><td>1°</td><td>2°</td><td>3°</td><td>4°</td><td>5°</td>
+                    <td>Nível</td><td>Bônus de Proficiencia</td><td>Características</td><td>Furia</td><td>Dano de Furia</td><td style="padding-right: 16px;">Maestria em armas</td>
                 </tr>
                 <tr>
                     <td>1º</td><td>+2</td>
-                    <td><a href="#RegraOpicional">Regra opcional: proficiência em armas de fogo</a>, <a href="#ConsertoMagico">Conserto mágico</a>, <a href="#Conjuracao">Conjuração de feitiços</a></td>
-                    <td> - </td><td> - </td><td>2</td><td>2</td><td> - </td><td> - </td><td> - </td><td> - </td>
+                    <td><a href="#Raiva">Furia</a>, <a href="#DefesaSemArmadura">Defesa sem armadura</a>, <a href="#MaestriaEmArmas">Maestria em armas</a></td>
+                    <td> 2 </td><td> +2 </td><td>2</td>
                 </tr>
                 <tr>
                     <td>2º</td>
                     <td>+2</td>
-                    <td><a href="#Infundir">Infundir Item</a></td>
-                    <td>4</td><td>2</td><td>2</td><td>2</td><td> - </td><td> - </td><td> - </td><td> - </td>
+                    <td><a href="#SentidoDePerigo">Sentido de Perigo</a><a href="AtaqueImprudente">Ataque Imprudente</a></td>
+                    <td> 2 </td><td> +2 </td><td>2</td>
                 </tr>
                 <tr>
                     <td>3º</td>
                     <td>+2</td>
-                    <td><a href="#EspecialistaArtificer">Especialista em Artificer</a>, <a href="#FerramentaCerta">A ferramenta certa para o trabalho</a></td>
-                    <td>4</td><td>2</td><td>2</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td>
+                    <td><a href="#SubclasseDeBarbaro">Subclasse de Bárbaro</a>, <a href="#ConhecimentoPrimordial">Conhecimento Primordial</a></td>
+                    <td> 3 </td><td> +2 </td><td> 2 </td>
                 </tr>
                 <tr>
                     <td>4º</td><td>+2</td>
@@ -995,12 +995,10 @@
             </ul>
         </div>
     </div>
-            
         <br>
         <a href="../../index.html" class="btn btn-primary" style="background-color: #8B9EFF; display: block; text-align: center; color: white; text-decoration: none;">
             Voltar
         </a>
-        
     </section>
   <div class="branco rodape">
     <div>
@@ -1031,7 +1029,6 @@
         <script>
     const botoes = document.querySelectorAll(".toggle-btn");
     const conteudos = document.querySelectorAll(".spoiler-content");
-
     botoes.forEach((botao, index) => {
         botao.addEventListener("click", () => {
             const conteudoAtual = conteudos[index];
@@ -1045,6 +1042,5 @@
         });
     });
     </script>
-
   </body>
 </html>
