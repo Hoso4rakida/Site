@@ -1,6 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <title>Menu Flutuante com Seções</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Botão flutuante */
+    .floating-menu-button {
+      position: absolute;
+      top: 32%;
+      left: 2%;
+      transform: translateY(-50%);
+      background-color: #616C9C; /* Azul escuro */
+      color: white;
+      padding: 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    /* Menu lateral posicionado ao lado do botão */
+    .side-menu {
+      position: absolute;
+      top: 10%;
+      left: 6%;
+      width: 250px;
+      max-height: 80%;
+      background-color: #2c2c2c;
+      padding-top: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .side-menu.open {
+      transform: scaleX(1);
+    }
+
+    .side-menu a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #A0A9D4;
+;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .side-menu a:hover {
+      background-color: #3a3a3a;
+    }
+
+    .side-menu i {
+      margin-right: 10px;
+    }
+
+    /* Título da seção */
+    .section-title {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 20px 5px;
+      text-transform: uppercase;
+      font-family: 'Georgia', serif;
+      border-top: 2px solid #aaa;
+      margin-top: 10px;
+    }
+
+    /* Scroll customizado (opcional) */
+    .side-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .side-menu::-webkit-scrollbar-thumb {
+      background-color: #616C9C;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão flutuante -->
+  <div class="floating-menu-button" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="side-menu" id="sideMenu">
+    <a href="/html/regras.html"><i class="fas fa-feather"></i> Regras</a>
+    <a href="/html/personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
+    <a href="/html/para mestre.html"><i class="fas fa-feather"></i> Para Mestres</a>
+    <a href="/html/sistema.html"><i class="fas fa-feather"></i> Sistema</a>
+    <a href="/html/mercado.html"><i class="fas fa-feather"></i> Mercado</a>
+    <a href="/html/eventos.html"><i class="fas fa-feather"></i> Eventos</a>
+    <a href="/html/colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
+    <a href="/html/ask.html"><i class="fas fa-feather"></i> Dúvidas e Respostas</a>
+    <hr>
+    <a href="/html/historia.html"><i class="fas fa-feather"></i> História</a>
+    <a href="social.html"><i class="fas fa-feather"></i> Redes Sociais</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa RPG Interativo</title>
@@ -38,7 +153,7 @@
             background-color: rgba(44, 62, 80, 0.8);
             border-radius: 8px;
             padding: 10px;
-            position: absolute;
+            position: fixed;
             top: 10px;
             right: 10px;
             z-index: 1000;
@@ -82,10 +197,10 @@
         
         .back-button {
             border-radius: 8px;
-            padding: 10px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            padding: 15px;
+            position: fixed;
+            top: 3%;
+            left: 0%;
             z-index: 1000;
         }
         
@@ -107,8 +222,12 @@
             margin-right: 8px;
             font-size: 18px;
         }
+        .controls>button{
+            background-color: #8B9EFF;
+        }
     </style>
 </head>
+
 <body>
     <div class="container-fluid py-4">
         <div class="map-container" id="map-container">
@@ -118,13 +237,13 @@
             </div>
             
             <div class="controls">
-                <button class="btn btn-dark zoom-button" id="zoom-in">+</button>
-                <button class="btn btn-dark zoom-button" id="zoom-out">-</button>
-                <button class="btn btn-dark zoom-button" id="reset">⟲</button>
+                <button class="btn zoom-button" id="zoom-in">+</button>
+                <button class="btn zoom-button" id="zoom-out">-</button>
+                <button class="btn zoom-button" id="reset">⟲</button>
             </div>
             
             <div class="back-button">
-                <button onclick="window.history.back()" class="btn btn-dark"> <- Voltar</button>
+                <button onclick="window.history.back()" class="btn" style="background-color: #8B9EFF;"> <- Voltar</button>
             </div>
         </div>
     </div>
