@@ -15,8 +15,13 @@
             margin-right: 2em;
             color: white;
         }
+        .tabela-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+}
         td{
-            padding: 8px;
+            padding: 6px;
         }
         .trh{
             background-color: #606480 !important;
@@ -77,6 +82,119 @@
 
     </style>
 </head>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Flutuante com Seções</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Botão flutuante */
+    .floating-menu-button {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #616C9C; /* Azul escuro */
+      color: white;
+      padding: 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    /* Menu lateral posicionado ao lado do botão */
+    .side-menu {
+      position: fixed;
+      top: 10%;
+      left: 60px;
+      width: 250px;
+      max-height: 80%;
+      background-color: #2c2c2c;
+      padding-top: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .side-menu.open {
+      transform: scaleX(1);
+    }
+
+    .side-menu a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #A0A9D4
+;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .side-menu a:hover {
+      background-color: #3a3a3a;
+    }
+
+    .side-menu i {
+      margin-right: 10px;
+    }
+
+    /* Título da seção */
+    .section-title {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 20px 5px;
+      text-transform: uppercase;
+      font-family: 'Georgia', serif;
+      border-top: 2px solid #aaa;
+      margin-top: 10px;
+    }
+
+    /* Scroll customizado (opcional) */
+    .side-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .side-menu::-webkit-scrollbar-thumb {
+      background-color: #616C9C;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão flutuante -->
+  <div class="floating-menu-button" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="side-menu" id="sideMenu">
+    <a href="/html/regras.html"><i class="fas fa-feather"></i> Regras</a>
+    <a href="/html/personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
+    <a href="/html/para mestre.html"><i class="fas fa-feather"></i> Para Mestres</a>
+    <a href="/html/sistema.html"><i class="fas fa-feather"></i> Sistema</a>
+    <a href="/html/mercado.html"><i class="fas fa-feather"></i> Mercado</a>
+    <a href="/html/eventos.html"><i class="fas fa-feather"></i> Eventos</a>
+    <a href="/html/colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
+    <a href="/html/ask.html"><i class="fas fa-feather"></i> Dúvidas e Respostas</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
+
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -86,19 +204,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
-            </ul>
+                    <li class="nav-item"><a class="nav-link" href="/html/historia.html"><i class="fas fa-book"></i> História </a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/mapa.html"><i class="fas fa-map"></i> Mapa do Mundo </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/social.html"><i class="fas fa-earth-americas"></i> Redes Sociais </a></li>
+                </ul>
         </div>
     </div>
   </nav>
@@ -111,16 +220,16 @@
 
         <img src="../../img/Classes/Artificer.webp" alt="Clerigo"  style="width: 100%; height: auto; padding-bottom: 16px;"> 
 
-        <h1 style="text-align: center;">Artifice</h1>
+        <h1 style="text-align: center;">Artíficer</h1>
 
         <table style="color: white;">
             <tbody>
                 <tr class="trh">
-                    <td>Nível</td><td>Bônus de Proficiencia</td><td>Características</td><td>Infusões Conhecidas</td><td>Itens Infusionados</td><td style="padding-right: 16px;">Truques</td><td>1°</td><td>2°</td><td>3°</td><td>4°</td><td>5°</td>
+                    <td>Nível</td><td>Bônus de Proficiencia</td><td >Características</td><td>Infusões Conhecidas</td><td>Itens Infusionados</td><td style="padding-right: 16px;">Truques</td><td>1°</td><td>2°</td><td>3°</td><td>4°</td><td>5°</td>
                 </tr>
                 <tr>
                     <td>1º</td><td>+2</td>
-                    <td><a href="#RegraOpicional">Regra opcional: proficiência em armas de fogo</a>, <a href="#ConsertoMagico">Conserto mágico</a>, <a href="#Conjuracao">Conjuração de feitiços</a></td>
+                    <td><a href="#ConsertoMagico">Conserto mágico</a>, <a href="#Conjuracao">Conjuração de feitiços</a></td>
                     <td> - </td><td> - </td><td>2</td><td>2</td><td> - </td><td> - </td><td> - </td><td> - </td>
                 </tr>
                 <tr>
@@ -132,18 +241,18 @@
                 <tr>
                     <td>3º</td>
                     <td>+2</td>
-                    <td><a href="#EspecialistaArtificer">Especialista em Artificer</a>, <a href="#FerramentaCerta">A ferramenta certa para o trabalho</a></td>
+                    <td><a href="#EspecialistaArtificer">Especialista Artíficer</a>, <a href="#FerramentaCerta">A ferramenta certa para o trabalho</a></td>
                     <td>4</td><td>2</td><td>2</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>4º</td><td>+2</td>
-                    <td><a href="#MelhoriaPontuacao">Melhoria na pontuação de habilidade</a></td>
+                    <td><a href="#MelhoriaPontuacao">Melhoria na pontuação de habilidade (ASIs)</a></td>
                     <td>4</td><td>2</td><td>2</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>5º</td>
                     <td>+3</td>
-                    <td><a href="#RecursoEspecialista">Recurso de especialista em artífice</a></td>
+                    <td><a href="#RecursoEspecialista">Característica de especialista em Artíficer</a></td>
                     <td>4</td><td>2</td><td>2</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td>
 
                 </tr>
@@ -162,37 +271,37 @@
                 <tr>
                     <td>8º</td>
                     <td>+3</td>
-                    <td><a href="#MelhoriaPontuacao1">Melhoria na pontuação de habilidade</a></td>
+                    <td><a href="#MelhoriaPontuacao1">Melhoria na pontuação de habilidade (ASIs)</a></td>
                     <td>6</td><td>3</td><td>2</td><td>4</td><td>3</td><td>-</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>9º</td>
                     <td>+4</td>
-                    <td><a href="#RecursoArtifice">Recurso de especialista em artífice</a></td>
+                    <td><a href="#RecursoArtifice">Característica de especialista em Artíficer</a></td>
                     <td>6</td><td>3</td><td>2</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>10º</td>
                     <td>+4</td>
-                    <td><a href="#AdeptoItem">Adepto de Item Mágico</a></td>
+                    <td><a href="#AdeptoItem">Adepto de Itens Mágicos</a></td>
                     <td>8</td><td>4</td><td>3</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>11º</td>
                     <td>+4</td>
-                    <td><a href="#ItemArmazena">Item que armazena magia</a></td>
+                    <td><a href="#ItemArmazena">Item Armazenador de Magias</a></td>
                     <td>8</td><td>4</td><td>3</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>12º</td>
                     <td>+4</td>
-                    <td><a href="#MelhoriaPontuacao2">Melhoria na pontuação de habilidade</a></th>
+                    <td><a href="#MelhoriaPontuacao2">Melhoria na pontuação de habilidade (ASIs)</a></th>
                     <td>8</td><td>4</td><td>3</td><td>4</td><td>3</td><td>3</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
                     <td>13º</td>
                     <td>+4</td>
-                    <td> - </td>
+                    <td> ---- </td>
                     <td>8</td><td>4</td><td>3</td><td>4</td><td>3</td><td>3</td><td>-</td><td>-</td>
                 </tr>
                 <tr>
@@ -204,19 +313,19 @@
                 <tr>
                     <td>15º</td>
                     <td>+5</td>
-                    <td><a href="#RecursoEspecialistaArtifice">Recurso de especialista em artífice</a></td>
+                    <td><a href="#RecursoEspecialistaArtifice">Característica de especialista em Artíficer</a></td>
                     <td>10</td><td>5</td><td>4</td><td>4</td><td>3</td><td>3</td><td>2</td><td>-</td>
                 </tr>
                 <tr>
                     <td>16º</td>
                     <td>+5</td>
-                    <td><a href="#MelhoriaPontuacao3">Melhoria na pontuação de habilidade</a></td>
+                    <td><a href="#MelhoriaPontuacao3">Melhoria na pontuação de habilidade (ASIs)</a></td>
                     <td>10</td><td>5</td><td>4</td><td>4</td><td>3</td><td>3</td><td>2</td><td>-</td>
                 </tr>
                 <tr>
                     <td>17º</td>
                     <td>+6</td>
-                    <td> - </td>
+                    <td> ---- </td>
                     <td>10</td><td>5</td><td>4</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td>
                 </tr>
                 <tr>
@@ -228,7 +337,7 @@
                 <tr>
                     <td>19º</td>
                     <td>+6</td>
-                    <td><a href="#MelhoriaPontuacao4">Melhoria na pontuação de habilidade</a></td>
+                    <td><a href="#MelhoriaPontuacao4">Melhoria na pontuação de habilidade (ASIs)</a></td>
                     <td>12</td><td>6</td><td>4</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td>
                 </tr>
                 <tr>
@@ -239,16 +348,40 @@
                 </tr>
             </tbody>
         </table>
+        <br>
+
  <div class="container">
     <br>
-        <h2 id="RegraOpicional">Nível 1: Regra opcional: Proficiência em arma de fogo</h2>
+        <h2><p> Características de Classe</p></h2>
         <hr>
-        <div class="caracteristica">
-            <p>
-                Os segredos da criação e operação de armas de pólvora foram descobertos em vários cantos do multiverso de D&D. Se o seu Mestre de Jogo usar as regras sobre armas de fogo do capítulo 9 do Guia do Mestre e seu artífice tiver sido exposto à operação dessas armas, ele é proficiente nelas.
-            </p>
-        </div>
+        <p>Como um Artíficer, você ganha as seguintes características de classe:</p>
+        <h4><p style="color: #8B9EFF;">Traços Essenciais</p></h4>
+        <p><strong> - Dados de Vida:</strong> 1d8 por Nível de Artífice<br>
+        <strong> - Dados de Vida no Nível 1:</strong> 8 + Modificador de Constituição<br>
+        <strong> - Pontos de Vida em Níveis Superiores:</strong> 5 + Modificador de Constituição por nível de Artífice após o 1º;</p>
 
+        <h4><p style="color: #8B9EFF;">Proficiências</p></h4>
+        <strong>- Armaduras:</strong> Armaduras Leves, Armaduras Médias, Escudos<br>
+        <strong>- Armas:</strong> Armas Simples e Armas de Fogo<br>
+        <strong>- Ferramentas:</strong> Ferramentas de Funileiro, Ferramentas de Ladrão e uma Ferramenta de Artesão a sua escolha.<br>
+        <strong>- Testes de Resistência:</strong> Constituição e Inteligência.<br>
+        <strong>- Perícias:</strong> Duas perícias a sua escolha<br><br>
+
+        <h4><p style="color: #8B9EFF;">Equipamentos</p></h4>   
+        <p>Você começa com os seguintes equipamentos, em adição aos recebidos por seu antecedente:</p>
+        - Duas armas simples;<br>
+        - Uma besta leve e 20 setas;<br>
+        - (a) Armadura de Couro Batido ou (b) Brunea;<br>
+        - Pacote de Aventureiro e Ferramentas de Ladrão.<br><br>
+
+        <h4><p style="color: #8B9EFF;">Multiclasse</p></h4>
+        <p>Para fazer Multiclasse como Artíficer, você deve ter um mínimo de valor no atributo de Intelecto de 1.</p>
+
+        <h4><p style="color: #8B9EFF;">Proficiências de Multiclasse</p></h4>
+        <p><strong> - Armaduras:</strong> Armaduras Leves, Armaduras Médias, Escudos <br>
+            <strong> - Armas:</strong> Armas de Fogo <br>
+            <strong> - Ferramentas:</strong> Ferramentas de Ladrão, Ferramentas de Funileiro.</p>
+        <hr>
         <h2 id="ConsertoMagico">Nível 1: Conserto Mágico</h2>
         <hr>
         <div class="caracteristica">
@@ -258,15 +391,14 @@
             <p>
                 Você aprendeu a investir uma centelha de magia em objetos mundanos. Para usar esta habilidade, você precisa ter ferramentas de ladrão ou ferramentas de artesão em mãos. Em seguida, toque em um objeto não mágico minúsculo como uma ação e conceda a ele uma das seguintes propriedades mágicas à sua escolha:
             </p>
-            <ul>
-                <li>O objeto emite luz brilhante em um raio de 1,5 m e luz fraca por mais 1,5 m.</li>
-                <li>Ao ser tocado por uma criatura, o objeto emite uma mensagem gravada que pode ser ouvida a até 3 metros de distância. Você emite a mensagem ao conceder esta propriedade ao objeto, e a gravação não pode durar mais de 6 segundos.</li>
-                <li>O objeto emite continuamente um odor ou um som não verbal de sua escolha (vento, ondas, chilreio ou algo parecido). O fenômeno escolhido é perceptível a até 3 metros de distância.</li>
-                <li>Um efeito visual estático aparece em uma das superfícies do objeto. Esse efeito pode ser uma imagem, até 25 palavras de texto, linhas e formas, ou uma mistura desses elementos, como você preferir.</li>
-            </ul>
+                <p><li> O objeto emite luz brilhante em um raio de 1,5 m e luz fraca por mais 1,5 m.</li></p>
+                <p><li> Ao ser tocado por uma criatura, o objeto emite uma mensagem gravada que pode ser ouvida a até 3 metros de distância. Você emite a mensagem ao conceder esta propriedade ao objeto, e a gravação não pode durar mais de 6 segundos.</li></p>
+                <p><li> O objeto emite continuamente um odor ou um som não verbal de sua escolha (vento, ondas, chilreio ou algo parecido). O fenômeno escolhido é perceptível a até 3 metros de distância.</li></p>
+                <p><li> Um efeito visual estático aparece em uma das superfícies do objeto. Esse efeito pode ser uma imagem, até 25 palavras de texto, linhas e formas, ou uma mistura desses elementos, como você preferir.</li></p>
+            
             <p>A propriedade escolhida dura indefinidamente. Como ação, você pode tocar no objeto e encerrar a propriedade antecipadamente.</p>
             <p>Você pode conceder magia a vários objetos, tocando um objeto a cada vez que usar esta habilidade, embora um único objeto possa ter apenas uma propriedade por vez. O número máximo de objetos que você pode afetar com esta habilidade simultaneamente é igual ao seu modificador de Inteligência (mínimo de um objeto). Se você tentar exceder o seu máximo, a propriedade mais antiga termina imediatamente e então a nova propriedade é aplicada.</p>
-        </div>
+        </div><br>
 
         <h2 id="Conjuracao">Nível 1: Conjuração de feitiços</h2>
         <hr>
@@ -275,44 +407,44 @@
             <p>
                 Você estudou o funcionamento da magia e como conjurar feitiços, canalizando a magia através de objetos. Para os observadores, você não parece conjurar feitiços de forma convencional; você parece produzir maravilhas a partir de itens comuns e invenções bizarras.
             </p>
-            <h5><strong>Ferramentas necessárias</strong></h5>
-            <p>Você produz os efeitos mágicos do seu artífice por meio de suas ferramentas. Você deve ter foco em conjuração de magias — especificamente <a href="#">ferramentas de ladrão</a> ou algum tipo de <a href="#">ferramenta do artesão</a> — na mão quando você conjura qualquer magia com esta habilidade de Conjuração (ou seja, a magia possui um componente 'M' quando você o conjura). Você precisa ser proficiente com a ferramenta para usá-la dessa forma. Consulte o <a href="#">capítulo 5</a>, "Equipamento", no <a href="#">Livro do Jogador</a> para obter descrições dessas ferramentas.
+            <h5 style="color: #8B9EFF;"><strong>Ferramentas necessárias</strong></h5>
+            <p>Você produz os efeitos mágicos do seu artífice por meio de suas ferramentas. Você deve ter foco em conjuração de magias — especificamente ferramentas de ladrão ou algum tipo de ferramenta do artesão — na mão quando você conjura qualquer magia com esta habilidade de Conjuração (ou seja, a magia possui um componente 'M' quando você o conjura). Você precisa ser proficiente com a ferramenta para usá-la dessa forma. Consulte o capítulo 5, "Equipamento", no Livro do Jogador para obter descrições dessas ferramentas.
             </p>
             <p>Após ganhar a habilidade Infundir Item no 2º nível, você também pode usar qualquer item que contenha uma de suas infusões como foco de conjuração.
             </p>
             <div class="caixas">
-                <strong>A Magia do Artifício</strong>
+                <strong>A Magia do Artíficio</strong>
                 <p>
-                    Como artífice, você usa ferramentas ao conjurar suas magias. Ao descrever sua conjuração, pense em como você está usando uma ferramenta para executar o efeito da magia. Se você conjurar <a href="#">curar ferimentos</a> usando <a href="#">suprimentos do alquimista</a>, você pode estar produzindo uma pomada rapidamente. Se você conjurar usando <a href="#">ferramentas de tinker</a>, você pode ter uma aranha mecânica em miniatura que cura feridas. Ao conjurar <a href="#">spray de veneno</a>, você pode lançar produtos químicos nocivos ou usar uma varinha que cospe veneno. O efeito da magia é o mesmo de um conjurador de qualquer outra classe, mas seu método de conjuração é especial.
+                    Como Artíficer, você usa ferramentas ao conjurar suas magias. Ao descrever sua conjuração, pense em como você está usando uma ferramenta para executar o efeito da magia. Se você conjurar Curar Ferimentos usando Suprimentos de Alquimista, você pode estar produzindo uma pomada rapidamente. Se você conjurar usando Ferramentas de Tinker, você pode ter uma aranha mecânica em miniatura que cura feridas. Ao conjurar Spray de Veneno, você pode lançar produtos químicos nocivos ou usar uma varinha que cospe veneno. O efeito da magia é o mesmo de um conjurador de qualquer outra classe, mas seu método de conjuração é especial.
                 </p>
                 <p>
-                    O mesmo princípio se aplica ao preparar suas magias. Como artífice, você não estuda um grimório nem reza para preparar suas magias. Em vez disso, você trabalha com suas ferramentas e cria os itens especializados que usará para produzir seus efeitos. Se você substituir <a href="#">curar feridas</a> por <a href="#">aquecer metal</a>, você pode estar alterando o dispositivo que usa para curar — talvez modificando uma ferramenta para que canalize calor em vez de energia de cura.
+                    O mesmo princípio se aplica ao preparar suas magias. Como Artíficer, você não estuda um grimório nem reza para preparar suas magias. Em vez disso, você trabalha com suas ferramentas e cria os itens especializados que usará para produzir seus efeitos. Se você substituir Curar Ferimentos por Aquecer Metal, você pode estar alterando o dispositivo que usa para curar — talvez modificando uma ferramenta para que canalize calor em vez de energia de cura.
                 </p>
                 <p>
                     Tais detalhes não o limitam de forma alguma nem lhe proporcionam qualquer benefício além dos efeitos da magia. Você não precisa justificar como está usando ferramentas para conjurar uma magia. Mas descrever sua conjuração de forma criativa é uma maneira divertida de se diferenciar de outros conjuradores.
                 </p>
             </div>
             
-            <h5>Truques (Magias de Nível 0)</h5>
+            <h5 style="color: #8B9EFF;">Truques (Magias de Nível 0)</h5>
             <p>
-                No 1º nível, você conhece dois truques de artesão à sua escolha da lista de magias de artífice. Em níveis mais altos, você aprende truques de artesão adicionais à sua escolha, conforme mostrado na coluna Truques Conhecidos da tabela de Artífice.
+                No 1º nível, você conhece dois truques de artesão à sua escolha da <a href="#">lista de magias de artífice.</a> Em níveis mais altos, você aprende truques de artesão adicionais à sua escolha, conforme mostrado na coluna Truques Conhecidos da tabela de Artífice.
             </p>
             <p>
                 Ao subir de nível nesta classe, você pode substituir um dos truques de artesão que conhece por outro da lista de magias de artífice.
             </p>
             
-            <h5>Preparando e lançando feitiços</h5>
+            <h5 style="color: #8B9EFF;">Preparando e lançando feitiços</h5>
             <p>
                 A tabela de Artífices mostra quantos espaços de magia você tem para conjurar suas magias de artífice. Para conjurar uma de suas magias de artífice de 1º nível ou superior, você precisa gastar um espaço do nível da magia ou superior. Você recupera todos os espaços de magia gastos ao terminar um descanso longo.
             </p>
             <p>
-                Você prepara a lista de magias de artífice disponíveis para você conjurar, escolhendo-as da lista. Ao fazer isso, escolha um número de magias de artífice igual ao seu modificador de Inteligência + metade do seu nível de artífice, arredondado para baixo (mínimo de uma magia). As magias devem ser de um nível para o qual você tenha espaços de magia.
+                Você prepara a <a href="#">lista de magias de artífice</a> disponíveis para você conjurar, escolhendo-as da lista. Ao fazer isso, escolha um número de magias de artífice igual ao seu <strong>modificador de Inteligência + metade do seu nível de artífice</strong>, arredondado para baixo (mínimo de uma magia). As magias devem ser de um nível para o qual você tenha espaços de magia.
             </p>
             <p>
                 Você pode alterar sua lista de magias preparadas ao terminar um descanso longo. Preparar uma nova lista de magias de artífice exige tempo para aprimorar seus focos de conjuração: pelo menos 1 minuto por nível de magia para cada magia da sua lista.
             </p>
             
-            <h5>Habilidade de conjuração</h5>
+            <h5 style="color: #8B9EFF;">Habilidade de conjuração</h5>
             <p>
                 Inteligência é a sua habilidade de conjuração para suas magias de artífice; sua compreensão da teoria por trás da magia permite que você as utilize com habilidade superior. Você usa sua Inteligência sempre que uma magia de artífice se referir à sua habilidade de conjuração. Além disso, você usa seu modificador de Inteligência ao definir a CD do teste de resistência para uma magia de artífice que você conjura e ao fazer uma jogada de ataque com uma.
             </p>
@@ -321,7 +453,7 @@
                 <li><strong>Modificador de ataque a magia</strong> = modificador de Inteligência + bônus de proficiência</li>
             </ul>
             
-            <h5>Fundição Ritual</h5>
+            <h5 style="color: #8B9EFF;">Fundição Ritual</h5>
             <p>
                 Você pode conjurar uma magia de artífice como um ritual se essa magia tiver a etiqueta de ritual e você tiver a magia preparada.
             </p>
@@ -335,56 +467,53 @@
                 Você ganhou a habilidade de imbuir itens mundanos com certas infusões mágicas, transformando esses objetos em itens mágicos.
             </p>
             
-            <h5>Infusões Conhecidas</h5>
+            <h5 style="color: #8B9EFF;">Infusões Conhecidas</h5>
             <p>
-                Ao adquirir esta habilidade, escolha quatro infusões de artífice para aprender, escolhendo na seção "Infusões de Artífice" no final da descrição da classe. Você aprende infusões adicionais à sua escolha ao atingir certos níveis nesta classe, conforme mostrado na coluna Infusões Conhecidas da tabela de Artífice.
+                Ao adquirir esta habilidade, escolha quatro infusões de artífice para aprender, escolhendo na seção <a href="#">Infusões de Artíficer</a> no final da descrição da classe. Você aprende infusões adicionais à sua escolha ao atingir certos níveis nesta classe, conforme mostrado na coluna Infusões Conhecidas da tabela de Artífice.
             </p>
             <p>
                 Sempre que você subir de nível nesta classe, você pode substituir uma das infusões de artífice que aprendeu por uma nova.
             </p>
             
             <div class="caixas">
-                <strong>Infusões Artificer</strong>
+                <strong>Infusões de Artíficer</strong>
                 <p>
                     Artífices inventaram inúmeras infusões mágicas, processos extraordinários que criam itens mágicos rapidamente. Para muitos, os artífices parecem milagreiros, realizando em horas o que outros levam semanas para concluir.
                 </p>
                 <p>
-                    A descrição de cada uma das infusões a seguir detalha o tipo de item que pode recebê-la, juntamente com a necessidade de sintonização do item mágico resultante.
+                    - A descrição de cada uma das infusões a seguir detalha o tipo de item que pode recebê-la, juntamente com a necessidade de sintonização do item mágico resultante.
                 </p>
                 <p>
-                    Algumas infusões especificam um nível mínimo de artífice. Você não pode aprender uma infusão dessas até atingir pelo menos esse nível.
+                    - Algumas infusões especificam um nível mínimo de artífice. Você não pode aprender uma infusão dessas até atingir pelo menos esse nível.
                 </p>
                 <p>
-                    A menos que a descrição de uma infusão diga o contrário, você não pode aprender uma infusão mais de uma vez.
+                    - A menos que a descrição de uma infusão diga o contrário, você não pode aprender uma infusão mais de uma vez.
                 </p>
             </div>
             
-            <h5>Infundindo um item</h5>
+            <h5 style="color: #8B9EFF;">Infundindo um item</h5>
             <p>
-                Ao terminar um descanso longo, você pode tocar um objeto não mágico e imbuí-lo com uma de suas infusões de artífice, transformando-o em um item mágico. Uma infusão funciona apenas em certos tipos de objetos, conforme especificado na descrição da infusão. Se o item exigir harmonização, você pode se harmonizar com ele no instante em que o infundir. Se decidir se harmonizar com o item posteriormente, deverá fazê-lo usando o processo normal de harmonização (consulte "Sintonização" no capítulo 7 do Guia do Mestre).
+                Ao terminar um descanso longo, você pode tocar um objeto não mágico e imbuí-lo com uma de suas infusões de artífice, transformando-o em um item mágico. Uma infusão funciona apenas em certos tipos de objetos, conforme especificado na descrição da infusão. Se o item exigir sintonização, você pode se sintonizar com ele no instante em que o infundir. Se decidir se sintonizar com o item posteriormente, deverá fazê-lo usando o processo normal de sintonização (consulte <a href="#">Sintonização</a> no capítulo 7 do Guia do Mestre).
             </p>
             <p>
-                Sua infusão permanece em um item indefinidamente, mas quando você morre, ela desaparece após um número de dias igual ao seu modificador de Inteligência (mínimo de 1 dia). A infusão também desaparece se você abrir mão do seu conhecimento sobre ela para obter outra.
+                Sua infusão permanece em um item indefinidamente, mas quando você morre, ela desaparece após um número de dias igual ao seu <strong>modificador de Inteligência (mínimo de 1 dia)</strong>. A infusão também desaparece se você abrir mão do seu conhecimento sobre ela para obter outra.
             </p>
             <p>
                 Você pode infundir mais de um objeto não mágico ao final de um descanso longo; o número máximo de objetos aparece na coluna Itens Infundidos da tabela do Artífice. Você deve tocar em cada um dos objetos, e cada uma das suas infusões pode estar em apenas um objeto por vez. Além disso, nenhum objeto pode suportar mais de uma das suas infusões por vez. Se você tentar exceder o número máximo de infusões, a infusão mais antiga termina imediatamente e, em seguida, a nova infusão é aplicada.
             </p>
             <p>
-                Se uma infusão termina em um item que contém outras coisas, como uma bolsa de contenção, seu conteúdo aparece inofensivamente dentro e ao redor de seu espaço.
+                Se uma infusão termina em um item que contém outras coisas, como uma <strong>Bag of Holding</strong>, seu conteúdo aparece inofensivamente fora e ao redor de seu espaço.
             </p>
         </div>
 
-        <h2 id="EspecialistaArtificer">Nível 3: Especialista Artífice</h2>
+        <h2 id="EspecialistaArtificer">Nível 3: Especialista Artíficer</h2>
         <hr>
-        <div class="caracteristica">
+        <div class="características">
             <p><i>Característica de artífice de 3º nível</i></p>
             <p>
                 Escolha o tipo de especialista que você é, cada um detalhado no final da descrição da classe. Sua escolha concede a você habilidades de 5º nível e novamente de 9º e 15º níveis.
             </p>
-            <p class="subtitulo">
-                (Nenhuma subclasse selecionada. Selecione uma subclasse para ver suas características aqui.)
-            </p>
-            <div class="spoiler-container">
+            <div class="caixas">
                 <button class="toggle-btn">Alquimista</button>
                 <div class="spoiler-content" style="display: none;">
                     <hr style="color: #FFE38C;">
@@ -399,14 +528,10 @@
                     <p>
                         A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Alquimista. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
                     </p>
-                    <table style="color: white;">
-                        <thead>
-                            <tr class="trh">
-                                <td><strong>Nível de Artífice</strong></td>
-                                <td><strong>Feitiço</strong></td>
-                            </tr>
-                        </thead>
+                    <table style="color: white;" class="tabela-container">
                         <tbody>
+                            <td><strong>Nível de Artíficer</strong></td>
+                                <td><strong>Feitiço</strong></td>
                             <tr>
                                 <td>3º</td>
                                 <td><a>palavra de cura</a>, <a>raio de doença</a></td>
@@ -467,12 +592,15 @@
                             </tr>
                         </thead>
                     </table>
+                     <br>
                 </div>
+               
 
                 <button class="toggle-btn">Armeiro</button>
                 <div class="spoiler-content" style="display: none;">
+                    <hr style="color: #FFE38C;">
                     <p>
-                        Um artífice especializado em Armeiro modifica a armadura para que funcione quase como uma segunda pele. A armadura é aprimorada para aprimorar a magia do artífice, liberar ataques potentes e gerar uma defesa formidável. O artífice se conecta a essa armadura, tornando-se um com ela mesmo enquanto a experimenta e refina suas capacidades mágicas.
+                        Um Artíficer especializado em Armeiro modifica a armadura para que funcione quase como uma segunda pele. A armadura é aprimorada para aprimorar a magia do artíficer, liberar ataques potentes e gerar uma defesa formidável. O artíficer se conecta a essa armadura, tornando-se um com ela mesmo enquanto a experimenta e refina suas capacidades mágicas.
                     </p>
                     <h4>Nível 3: Ferramentas do Ofício</h4>
                     <i>Característica de Armeiro de 3º nível</i>
@@ -482,18 +610,16 @@
                     </p>
 
                     <h4>Nível 3: Magias de Armeiro</h4>
-                    <i>Característica de Armeiro de 3º nível</i>
+                    <i>Característica de Armeiro de 3º nível</i><br>
                     <p>
                         Você sempre tem certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Armeiro. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
                     </p>
-                    <table style="color: white;">
-                        <thead>
+                    <table style="color: white;" class="tabela-container">
+                        <tbody>
                             <tr class="trh">
-                                <td><strong>Nível de Artífice</strong></td>
+                                <td><strong>Nível de Artíficer</strong></td>
                                 <td><strong>Feitiço</strong></td>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
                                 <td>3º</td>
                                 <td><a>míssil mágico</a>, <a>onda de trovão</a></td>
@@ -531,7 +657,7 @@
                         <h4>Nível 3: Modelo de Armadura</h4>
                         <i>Característica de Armeiro de 3º nível</i>
                         <p>
-                            Você pode personalizar sua Armadura Arcana. Ao fazer isso, escolha um dos seguintes modelos de armadura: Guardião ou Infiltrador. O modelo escolhido lhe concede benefícios especiais enquanto você o veste.
+                            Você pode personalizar sua Armadura Arcana. Ao fazer isso, escolha um dos seguintes modelos de armadura: <strong>Guardião ou Infiltrador.</strong> O modelo escolhido lhe concede benefícios especiais enquanto você o veste.
                         </p>
                         <p>
                             Cada modelo inclui uma arma especial. Ao atacar com essa arma, você pode adicionar seu modificador de Inteligência, em vez de Força ou Destreza, às jogadas de ataque e dano.
@@ -539,21 +665,22 @@
                         <p>
                             Você pode mudar o modelo da armadura sempre que terminar um descanso curto ou longo, desde que tenha ferramentas de ferreiro em mãos.
                         </p>
-                        <p>
-                            Guardião. Você projeta sua armadura para estar na linha de frente do conflito. Ela possui as seguintes características:
-                        </p>
                         <div style="padding-left: 1em;">
-                            <p><strong>Manoplas do Trovão.</strong> Cada uma das manoplas da armadura conta como uma arma corpo a corpo simples enquanto você não estiver segurando nada nela, e causa 1d8 de dano trovejante ao acertar. Uma criatura atingida pela manopla tem desvantagem em jogadas de ataque contra alvos que não sejam você até o início do seu próximo turno, pois a armadura emite magicamente um pulso distrativo quando a criatura ataca outra pessoa.</p>
-                            <p><strong>Campo Defensivo.</strong> Como uma ação bônus, você pode ganhar pontos de vida temporários iguais ao seu nível nesta classe, substituindo quaisquer pontos de vida temporários que você já tenha. Você perde esses pontos de vida temporários se tirar a armadura. Você pode usar esta ação bônus um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p>
-                            <p><strong>Infiltrador.</strong> Você personaliza sua armadura para tarefas sutis. Ela possui as seguintes características:</p>
-                            <p><strong>Lançador de Relâmpagos.</strong> Um nódulo semelhante a uma gema aparece em um de seus punhos blindados ou no peito (à sua escolha). Conta como uma arma de longo alcance simples, com um alcance normal de 27 metros e um alcance longo de 90 metros, e causa 1d6 de dano elétrico ao acertar. Uma vez em cada um dos seus turnos, ao atingir uma criatura com ela, você pode causar 1d6 de dano elétrico extra a esse alvo.</p>
-                            <p><strong>Passos Potentes.</strong> Sua velocidade de caminhada aumenta em 1,5 metro.</p>
-                            <p><strong>Campo de Amortecimento.</strong> Você tem vantagem em testes de Destreza (Furtividade). Se a armadura normalmente impõe desvantagem em tais testes, a vantagem e a desvantagem se cancelam, como de costume.</p>
+                            <hr>
+                            <h5><strong>Guardião:</strong></h5> <p>Você projeta sua armadura para estar na linha de frente do conflito. Ela possui as seguintes características:</p>
+                            <p><li><strong>Manoplas do Trovão.</strong> Cada uma das manoplas da armadura conta como uma arma corpo a corpo simples enquanto você não estiver segurando nada nela, e causa 1d8 de dano trovejante ao acertar. Uma criatura atingida pela manopla tem desvantagem em jogadas de ataque contra alvos que não sejam você até o início do seu próximo turno, pois a armadura emite magicamente um pulso distrativo quando a criatura ataca outra pessoa.</p></li>
+                            <p><li><strong>Campo Defensivo.</strong> Como uma ação bônus, você pode ganhar pontos de vida temporários iguais ao seu nível nesta classe, substituindo quaisquer pontos de vida temporários que você já tenha. Você perde esses pontos de vida temporários se tirar a armadura. Você pode usar esta ação bônus um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p></li>
+                            <hr>
+                            <h5><strong>Infiltrador:</strong></h5> <p>Você personaliza sua armadura para tarefas sutis. Ela possui as seguintes características:</p>
+                            <p><li><strong>Lançador de Relâmpagos.</strong> Um nódulo semelhante a uma gema aparece em um de seus punhos blindados ou no peito (à sua escolha). Conta como uma arma de longo alcance simples, com um alcance normal de 27 metros e um alcance longo de 90 metros, e causa 1d6 de dano elétrico ao acertar. Uma vez em cada um dos seus turnos, ao atingir uma criatura com ela, você pode causar 1d6 de dano elétrico extra a esse alvo.</p></li>
+                            <p><li><strong>Passos Potentes.</strong> Sua velocidade de caminhada aumenta em 1,5 metro.</p></li>
+                            <p><li><strong>Campo de Amortecimento.</strong> Você tem vantagem em testes de Destreza (Furtividade). Se a armadura normalmente impõe desvantagem em tais testes, a vantagem e a desvantagem se cancelam, como de costume.</p></li>
                         </div>
                 </div>
 
                 <button class="toggle-btn">Artilheiro</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <p>
                         Um Artilheiro se especializa em usar magia para lançar energia, projéteis e explosões no campo de batalha. Esse poder destrutivo era valorizado por todos os exércitos da Última Guerra. Agora que a guerra acabou, alguns membros dessa especialização buscam construir um mundo mais pacífico usando seus poderes para combater o ressurgimento da guerra em Khorvaire.
                     </p>
@@ -568,8 +695,12 @@
                     <p>
                         A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Artilheiro. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
                     </p>
-                    <table style="color: white;">
+                    <table style="color: white;" class="tabela-container">
                         <tbody>
+                            <tr class="trh">
+                                <td><strong>Nível de Artíficer</strong></td>
+                                <td><strong>Feitiço</strong></td>
+                            </tr>
                             <tr>
                                 <td>3º</td>
                                 <td><a>escudo</a>, <a>onda de trovão</a></td>
@@ -620,11 +751,12 @@
                             </tr>
                         </tbody>
                     </table>
-
+<br>
                 </div>
 
                 <button class="toggle-btn">Ferreiro de Batalha</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <p>
                         Exércitos precisam de proteção, e alguém precisa reconstruir tudo se as defesas falharem. Uma combinação de protetor e médico, um Ferreiro de Batalha é especialista em defender os outros e reparar materiais e pessoal. Para auxiliar em seu trabalho, os Ferreiros de Batalha geralmente são acompanhados por um defensor de aço, um companheiro protetor criado por eles. Muitos soldados contam histórias de quase morrerem antes de serem salvos por um Ferreiro de Batalha e um defensor de aço.
                     </p>
@@ -639,8 +771,12 @@
                     <p>
                         A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, conforme mostrado na tabela de Magias de Ferreiro de Batalha. Essas magias contam como magias de artífice para você, mas não contam para o número de magias de artífice que você prepara.
                     </p>
-                    <table style="color: white;">
+                    <table style="color: white;" class="tabela-container">
                         <tbody>
+                            <tr class="trh">
+                                <td><strong>Nível de Artíficer</strong></td>
+                                <td><strong>Feitiço</strong></td>
+                            </tr>
                             <tr>
                                 <td>3º</td>
                                 <td><a>heroísmo</a>, <a>escudo</a></td>
@@ -662,23 +798,24 @@
                             </tr>
                         </tbody>
                     </table>
+                    <br>
                     <h4>Nível 3: Pronto para a Batalha</h4>
                     <p>
                         Quando você atinge o 3º nível, seu treinamento de combate e seus experimentos com magia terão valido a pena de duas maneiras:
                     </p>
-                    <ul>
+
                         <li>Você ganha proficiência com armas marciais.</li>
                         <li>Ao atacar com uma arma mágica, você pode usar seu modificador de Inteligência, em vez do modificador de Força ou Destreza, para as jogadas de ataque e dano.</li>
-                    </ul>
-                    <p>Nível 3: Defensor de Aço</p>
+                    <br>
+                    <h4>Nível 3: Defensor de Aço</h4>
                     <p>
-                        No 3º nível, sua habilidade com o jogo lhe rendeu um fiel companheiro, um defensor de aço. Ele é amigável com você e seus companheiros e obedece aos seus comandos. Veja as estatísticas de jogo desta criatura no bloco de estatísticas do defensor de aço, que usa seu bônus de proficiência (PB) em vários pontos. Você determina a aparência da criatura e se ela tem duas ou quatro pernas; sua escolha não afeta suas estatísticas de jogo.
+                        No 3º nível, sua habilidade com o jogo lhe rendeu um fiel companheiro, um <a href="#">defensor de aço<a>. Ele é amigável com você e seus companheiros e obedece aos seus comandos. Veja as estatísticas de jogo desta criatura no bloco de estatísticas do defensor de aço, que usa seu bônus de proficiência (PB) em vários pontos. Você determina a aparência da criatura e se ela tem duas ou quatro pernas; sua escolha não afeta suas estatísticas de jogo.
                     </p>
                     <p>
-                        Em combate, o defensor compartilha sua contagem de iniciativa, mas ele joga seu turno imediatamente após o seu. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza em seu turno é a ação de Esquiva, a menos que você faça uma ação bônus em seu turno para comandá-lo a realizar outra ação. Essa ação pode estar em seu bloco de estatísticas ou em alguma outra ação. Se você estiver incapacitado, o defensor pode realizar qualquer ação de sua escolha, não apenas Esquiva.
+                        Em combate, o defensor compartilha sua contagem de iniciativa, mas ele joga seu turno imediatamente após o seu. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza em seu turno é a ação de <a href="#">Esquiva</a>, a menos que você faça uma ação bônus em seu turno para comandá-lo a realizar outra ação. Essa ação pode estar em seu bloco de estatísticas ou em alguma outra ação. Se você estiver incapacitado, o defensor pode realizar qualquer ação de sua escolha, não apenas Esquiva.
                     </p>
                     <p>
-                        Se a magia de reparação for conjurada sobre ele, ele recupera 2d6 pontos de vida. Se ele morreu na última hora, você pode usar suas ferramentas de ferreiro como uma ação para reanimá-lo, desde que esteja a até 1,5 metro dele e gaste um espaço de magia de 1º nível ou superior. O defensor de aço retorna à vida após 1 minuto com todos os seus pontos de vida restaurados.
+                        Se a magia de <a href="#">Mending</a> for conjurada sobre ele, ele recupera 2d6 pontos de vida. Se ele morreu na última hora, você pode usar suas ferramentas de ferreiro como uma ação para reanimá-lo, desde que esteja a até 5fts dele e gaste um espaço de magia de 1º nível ou superior. O defensor de aço retorna à vida após 1 minuto com todos os seus pontos de vida restaurados.
                     </p>
                     <p>
                         Ao final de um descanso longo, você pode criar um novo defensor de aço se tiver suas ferramentas de ferreiro. Se você já tiver um defensor de aço desta habilidade, o primeiro perece imediatamente. O defensor também perece se você morrer.
@@ -686,54 +823,57 @@
                     </p>
                 </div>
             </div>
-            
         </div>
+        <br>
 
         <h2 id="FerramentaCerta">Nível 3: A ferramenta certa para o trabalho</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 3º nível</i></p>
             <p>
-                Você aprendeu a produzir exatamente a ferramenta que precisa: com ferramentas de ladrão ou de artesão em mãos, você pode criar magicamente um conjunto de ferramentas de artesão em um espaço desocupado a até 1,5 metro de você. Essa criação requer 1 hora de trabalho ininterrupto, que pode coincidir com um descanso curto ou longo. Embora sejam produto de magia, as ferramentas não são mágicas e desaparecem quando você usa esse recurso novamente.
+                Você aprendeu a produzir exatamente a ferramenta que precisa: com ferramentas de ladrão ou de artesão em mãos, você pode criar magicamente um conjunto de ferramentas de artesão em um espaço desocupado a até 5fts de você. Essa criação requer 1 hora de trabalho ininterrupto, que pode coincidir com um descanso curto ou longo. Embora sejam produto de magia, as ferramentas não são mágicas e desaparecem quando você usa esse recurso novamente.
             </p>
         </div>
 
-        <h2 id="MelhoriaPontuacao">Nível 4: Melhoria na pontuação de habilidade</h2>
+        <h2 id="MelhoriaPontuacao">Nível 4: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 4º nível</i></p>
             <p>
                 Ao atingir o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>Se o seu Mestre permitir o uso de talentos, você poderá escolher um talento.</p>
+            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
         </div>
 
-        <h2 id="RecursoEspecialista">Nível 5: Característica de Especialista em Artífice</h2>
+        <h2 id="RecursoEspecialista">Nível 5: Característica de Especialista em Artíficer</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 5º nível</i></p>
             <p>
                 Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
             </p>
-
+                <div class="caixas">
                 <button class="toggle-btn">Alquimista</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 5: Alquímico Sábio</h4>
                     <p>
-                        No 5º nível, você desenvolve um domínio magistral de substâncias químicas mágicas, aprimorando a cura e o dano que você cria através delas. Sempre que conjurar uma magia usando os suprimentos do seu alquimista como foco de conjuração, você ganha um bônus em uma jogada da magia. Essa jogada deve restaurar pontos de vida ou ser uma jogada de dano que cause dano ácido, ígneo, necrótico ou venenoso, e o bônus é igual ao seu modificador de Inteligência (mínimo de +1).
+                        No 5º nível, você desenvolve um domínio magistral de substâncias químicas mágicas, aprimorando a cura e o dano que você cria através delas. Sempre que conjurar uma magia usando os suprimentos do seu alquimista como foco de conjuração, você ganha um bônus em uma jogada da magia. Essa jogada deve restaurar pontos de vida ou ser uma jogada de dano que cause dano ácido, ígneo, necrótico ou venenoso, e o bônus é igual ao seu <strong>modificador de Inteligência (mínimo de +1)</strong>.
                     </p>
                 </div>
 
                 <button class="toggle-btn">Armeiro</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 5: Ataque Extra</h4>
                     <p>
                         A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
                     </p>
                 </div>
 
-                <button class="toggle-btn">Artillerist</button>
+                <button class="toggle-btn">Artilheiro</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 5: Arma de fogo arcana</h4>
                     <p>
                         No 5º nível, você sabe como transformar uma varinha, cajado ou bastão em uma arma de fogo arcana, um canal para suas magias destrutivas. Ao terminar um descanso longo, você pode usar ferramentas de entalhador para esculpir sigilos especiais em uma varinha, cajado ou bastão e, assim, transformá-los em sua arma de fogo arcana. Os sigilos desaparecem do objeto se você os esculpir posteriormente em um item diferente. Caso contrário, os sigilos duram indefinidamente.
@@ -745,13 +885,14 @@
 
                 <button class="toggle-btn">Ferreiro de Batalha</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 5: Ataque Extra</h4>
                     <p>
                         A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
                     </p>
                 </div>
         </div>
-
+</div>
         <h2 id="ExperienciaFerramentas">Nível 6: Conhecimento em ferramentas</h2>
         <hr>
         <div class="caracteristica">
@@ -766,88 +907,86 @@
         <div class="caracteristica">
             <p><i>Característica de artífice de 7º nível</i></p>
             <p>
-                Você adquiriu a habilidade de encontrar soluções sob pressão. Quando você ou outra criatura que você possa ver a até 9 metros de distância fizer um teste de habilidade ou uma salvaguarda, você pode usar sua reação para adicionar seu modificador de Inteligência à jogada.
+                Você adquiriu a habilidade de encontrar soluções sob pressão. Quando você ou outra criatura que você possa ver a até 30fts de distância fizer um teste de habilidade ou uma salvaguarda, você pode usar sua reação para adicionar seu modificador de Inteligência à jogada.
             </p>
             <p>
                 Você pode usar esta habilidade um número de vezes igual ao seu modificador de Inteligência (mínimo de uma vez). Você recupera todos os usos gastos ao terminar um descanso longo.
             </p>
         </div>
 
-        <h2 id="MelhoriaPontuacao1">Nível 8: Melhoria na pontuação de habilidade</h2>
+        <h2 id="MelhoriaPontuacao1">Nível 8: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 8º nível</i></p>
             <p>
                 Ao atingir o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>
-                Se o seu Mestre permitir o uso de talentos, você poderá escolher um talento.
-            </p>
+            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
         </div>
 
-        <h2 id="RecursoArtifice">Nível 9: Característica de Especialista em Artífice</h2>
+        <h2 id="RecursoArtifice">Nível 9: Característica de Especialista em Artíficer</h2>
         <hr>
             <p><i>Característica de artífice de 9º nível</i></p>
                 <p>
                     Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
                 </p>
+                <div class="caixas">
                     <button class="toggle-btn">Alquimista</button>
                     <div class="spoiler-content" style="display:none;">
+                        <hr style="color: #FFE38C;">
                         <h4>Nível 9: Reagentes Restauradores</h4>
                         <i>Característica de Alquimista de 9º nível</i>
                         <p>
                             A partir do 9º nível, você pode incorporar reagentes restauradores em alguns de seus trabalhos:
                         </p>
                         <p>
-                            <ul>
                                 <li>Sempre que uma criatura bebe um elixir experimental que você criou, a criatura ganha pontos de vida temporários iguais a 2d6 + seu modificador de Inteligência (mínimo de 1 ponto de vida temporário).</li>
-                                <li>You can cast lesser restoration without expending a spell slot and without preparing the spell, provided you use alchemist's supplies as the spellcasting focus. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest.</li>
-                            </ul>
+                                <li>Você pode conjurar a magia Lesser Restoration sem gastar um espaço de magia e sem preparar a magia, desde que use suprimentos de alquimista como foco de conjuração. Você pode fazer isso um número de vezes igual ao seu <strong>modificador de Inteligência (mínimo de uma vez)</strong>, e recupera todos os usos gastos ao terminar um descanso longo.</li>
                         </p>
 
                     </div>
 
                     <button class="toggle-btn">Armeiro</button>
                     <div class="spoiler-content" style="display:none;">
-                        <h4>Nível 9: Modificações de armadura</h4>
+                        <hr style="color: #FFE38C;">
+                        <h4>Nível 9: Modificações de Armadura</h4>
                         <i>Característica de Armeiro de 9º nível</i>
                         <p>
                             Você aprende a usar suas infusões de artífice para modificar sua Armadura Arcana de forma especial. Essa armadura agora conta como itens separados para os propósitos do seu recurso "Infundir Itens": armadura (a peça peitoral), botas, capacete e a arma especial da armadura. Cada um desses itens pode conter uma de suas infusões, e as infusões são transferidas se você alterar o modelo da sua armadura com o recurso "Modelo de Armadura". Além disso, o número máximo de itens que você pode infundir simultaneamente aumenta em 2, mas esses itens extras devem fazer parte da sua Armadura Arcana.
                         </p>
                     </div>
 
-                <button class="toggle-btn">Artillerist</button>
+                <button class="toggle-btn">Artilheiro</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 9: Canhão Explosivo</h4>
                     <p>
                         A partir do 9º nível, cada canhão sobrenatural que você criar será mais destrutivo:
                     </p>
-                    <ul>
                         <li>Todos os testes de dano do canhão aumentam em 1d8.</li>
-                        <li>Com uma ação, você pode comandar a detonação do canhão se estiver a até 18 metros dele. Isso destrói o canhão e força cada criatura a até 6 metros dele a realizar um teste de resistência de Destreza contra sua CD de magia, sofrendo 3d8 de dano de força em uma falha ou metade desse dano em um sucesso.</li>
-                    </ul>
-
-                </div>
+                        <li>Com uma ação, você pode comandar a detonação do canhão se estiver a até 60fts dele. Isso destrói o canhão e força cada criatura a até 20fts dele a realizar um teste de resistência de Destreza contra sua CD de magia, sofrendo 3d8 de dano de força em uma falha ou metade desse dano em um sucesso.</li>
+                    <br>
+                    </div>
+                
 
                 <button class="toggle-btn">Ferreiro de Batalha</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 9: Choque Arcano</h4>
                     <p>
                         No 9º nível, você aprende novas maneiras de canalizar energia arcana para ferir ou curar. Quando você atinge um alvo com um ataque de arma mágica ou seu defensor de aço atinge um alvo, você pode canalizar energia mágica através do golpe para criar um dos seguintes efeitos:
                     </p>
                     <p>
-                        <ul>
                             <li>O alvo sofre 2d6 de dano de força adicional.</li>
-                            <li>Escolha uma criatura ou objeto que você possa ver a até 9 metros do alvo. Energia de cura flui para o recipiente escolhido, restaurando 2d6 pontos de vida.</li>
-                        </ul>
+                            <li>Escolha uma criatura ou objeto que você possa ver a até 30fts do alvo. Energia de cura flui para o recipiente escolhido, restaurando 2d6 pontos de vida.</li>
                         <p>
-                            Você pode usar esta energia um número de vezes igual ao seu modificador de Inteligência (mínimo de uma vez), mas não pode fazer isso mais de uma vez por turno. Você recupera todos os usos gastos ao terminar um descanso longo.
+                            Você pode usar esta energia um número de vezes igual ao seu <strong>modificador de Inteligência (mínimo de uma vez)</strong>, mas não pode fazer isso mais de uma vez por turno. Você recupera todos os usos gastos ao terminar um descanso longo.
                         </p>
                     </p>
 
                     </p>
                 </div>
-        
+        </div>
 
         <h2 id="AdeptoItem">Nível 10: Adepto de Itens Mágicos</h2>
         <hr>
@@ -856,33 +995,31 @@
             <p>
                 Você alcançou um profundo entendimento de como usar e fazer itens mágicos:
             </p>
-            <ul>
                 <li>Você pode sintonizar até quatro itens mágicos ao mesmo tempo.</li>
                 <li>Se você criar um item mágico com raridade comum ou incomum, levará um quarto do tempo normal e custará metade do ouro usual.</li>
-            </ul>
         </div>
+        <br>
 
-        <h2 id="ItemArmazena">Nível 11: Item que Armazena Magias</h2>
+        <h2 id="ItemArmazena">Nível 11: Item Armazenador de Magias</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 11º nível</i></p>
             <p>
-                Agora você pode armazenar uma magia em um objeto. Sempre que terminar um descanso longo, você pode tocar em uma arma simples ou marcial ou em um item que possa usar como foco de conjuração e armazenar uma magia nele, escolhendo uma magia de 1º ou 2º nível da lista de magias de artífice que exija 1 ação para ser conjurada (você não precisa tê-la preparada).
+                Agora você pode armazenar uma magia em um objeto. Sempre que terminar um descanso longo, você pode tocar em uma arma simples ou marcial ou em um item que possa usar como foco de conjuração e armazenar uma magia nele, escolhendo uma magia de 1º ou 2º nível da <a href="#">lista de magias de Artíficer</a> que exija 1 ação para ser conjurada (você não precisa tê-la preparada).
             </p>
             <p>
-                Enquanto segura o objeto, uma criatura pode realizar uma ação para produzir o efeito da magia a partir dele, usando seu modificador de habilidade de conjuração. Se a magia exigir concentração, a criatura deve se concentrar. A magia permanece no objeto até ser usada um número de vezes igual ao dobro do seu modificador de Inteligência (mínimo de duas vezes) ou até que você use esta habilidade novamente para armazenar uma magia em um objeto.
+                Enquanto segura o objeto, uma criatura pode realizar uma ação para produzir o efeito da magia a partir dele, usando seu modificador de habilidade de conjuração. Se a magia exigir <a href="#">concentração</a>, a criatura deve se concentrar. A magia permanece no objeto até ser usada um número de vezes igual ao dobro do seu modificador de Inteligência (mínimo de duas vezes) ou até que você use esta habilidade novamente para armazenar uma magia em um objeto.
             </p>
         </div>
 
-        <h2 id="MelhoriaPontuacao2">Nível 12: Melhoria na pontuação de habilidade</h2>
+        <h2 id="MelhoriaPontuacao2">Nível 12: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 12º nível</i></p>
             <p>
                 Ao atingir o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>
-                Se o seu Mestre permitir o uso de talentos, você poderá escolher um talento.
+            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
             </p>
         </div>
 
@@ -893,71 +1030,73 @@
             <p>
                 Sua habilidade com itens mágicos se aprofunda:
             </p>
-            <ul>
                 <li>Você pode sintonizar até cinco itens mágicos de uma vez.</li>
                 <li>Você ignora todos os requisitos de classe, raça, magia e nível para sintonizar ou usar um item mágico.</li>
-            </ul>
         </div>
 
-        <h2 id="RecursoEspecialistaArtifice">Nível 15: Característica de Especialista em Artífice</h2>
+        <h2 id="RecursoEspecialistaArtifice">Nível 15: Característica de Especialista em Artíficer</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 15º nível</i></p>
             <p>
                 Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
             </p>
+            <div class="caixas">
                 <button class="toggle-btn">Alquimista</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 15: Maestria Química</h4>
                     <p>No 15º nível, você foi exposto a tantos produtos químicos que eles representam pouco risco para você, e você pode usá-los para acabar rapidamente com certas doenças:</p>
-                    <ul>
+         
                         <li>Você ganha resistência a dano de ácido e dano de veneno, e fica imune à condição de envenenamento.</li>
                         <li>Você pode conjurar restauração e cura maiores sem gastar um espaço de magia, sem preparar a magia e sem componentes materiais, desde que use suprimentos de alquimista como foco de conjuração. Depois de conjurar qualquer uma das magias com esta característica, você não poderá conjurá-la novamente até terminar um descanso longo.</li>
-                    </ul>
+          <br>
                 </div>
 
                 <button class="toggle-btn">Armeiro</button>
                 <div class="spoiler-content" style="display:none;">
-                    <h4>Level 15: Improved Defender</h4>
+                    <hr style="color: #FFE38C;">
+                    <h4>Level 15: Armadura Aperfeiçoada</h4>
                     <p>No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:</p>
-                    <ul>
+     
                         <li>O dano extra e a cura do seu Ataque Arcano aumentam para 4d6.</li>
                         <li>Seu defensor de aço ganha um bônus de +2 na Classe de Armadura.</li>
                         <li>Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a 1d4 + seu modificador de Inteligência.</li>
-                    </ul>
+            <br>
                 </div>
 
                 <button class="toggle-btn">Artilheiro</button>
                 <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
                     <h4>Nível 15: Posição Fortificada</h4>
                     <p>A partir do 15º nível, você se torna um mestre na formação de posições bem defendidas usando Canhão Eldritch:</p>
-                    <ul>
+         
                         <li>Você e seus aliados têm meia cobertura enquanto estiverem a 3 metros de um canhão que você criar com o Canhão Sobrenatural, como resultado de um campo brilhante de proteção mágica que o canhão emite.</li>
                         <li>Agora você pode ter dois canhões ao mesmo tempo. Você pode criar dois com a mesma ação (mas não com o mesmo espaço de magia) e pode ativar ambos com a mesma ação bônus. Você determina se os canhões são idênticos ou diferentes. Você não pode criar um terceiro canhão enquanto tiver dois.</li>
-                    </ul>
+            <br>
                 </div>
 
                 <button class="toggle-btn">Ferreiro de Batalha</button>
                 <div class="spoiler-content" style="display:none;">
-                    <h4>Level 15: Improved Defender</h4>
+                    <hr style="color: #FFE38C;">
+                    <h4>Level 15: Defensor Aprimorado</h4>
                     <p>No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:</p>
-                    <ul>
+             
                         <li>O dano extra e a cura do seu Ataque Arcano aumentam para 4d6.</li>
                         <li>Seu defensor de aço ganha um bônus de +2 na Classe de Armadura.</li>
                         <li>Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a 1d4 + seu modificador de Inteligência.</li>
-                    </ul>
+          <br>
                 </div>
         </div>
-
-        <h2 id="MelhoriaPontuacao3">Nível 16: Melhoria na pontuação de habilidade</h2>
+</div>
+        <h2 id="MelhoriaPontuacao3">Nível 16: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 16º nível</i></p>
             <p>
                 Ao atingir o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>
-                Se o seu Mestre permitir o uso de talentos, você poderá escolher um talento.
+            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
             </p>
         </div>
 
@@ -970,15 +1109,15 @@
             </p>
         </div>
 
-        <h2 id="MelhoriaPontuacao4">Nível 19: Melhoria na pontuação de habilidade</h2>
+        <h2 id="MelhoriaPontuacao4">Nível 19: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
             <p><i>Característica de artífice de 19º nível</i></p>
             <p>
                 Ao atingir o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>
-                Se o seu Mestre permitir o uso de talentos, você poderá escolher um talento.
+            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
+            </p>
             </p>
         </div>
 
@@ -989,35 +1128,31 @@
             <p>
                 Você desenvolveu uma conexão mística com seus itens mágicos, dos quais você pode se valer para proteção:
             </p>
-            <ul>
                 <li>Você ganha um bônus de +1 em todos os testes de resistência por item mágico ao qual você está sintonizado no momento.</li>
                 <li>Se você for reduzido a 0 pontos de vida, mas não for morto imediatamente, você pode usar sua reação para encerrar uma de suas infusões de artífice, fazendo com que você caia para 1 ponto de vida em vez de 0.</li>
-            </ul>
+   
         </div>
     </div>
-            
         <br>
-        <a href="../../index.html" class="btn btn-primary" style="background-color: #8B9EFF; display: block; text-align: center; color: white; text-decoration: none;">
-            Voltar
-        </a>
-        
     </section>
   <div class="branco rodape">
     <div>
         <div class="icon">
-            <a href="#" style="text-decoration: none; color: white;">
+            <a href="/html/historia.html" style="text-decoration: none; color: white;">
             <img src="../../img/Historia.webp" alt="Historia">
             <h2>História</h2></a>
             <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história! Descubra a rica história que moldou este mundo incrível.</p>
         </div>
         <div class="icon">
-            <img src="../../img/Geografia.webp" alt="Geografia">
-            <h2>Mapa do Mundo</h2>
+            <a href="/mapa.html" style="text-decoration: none; color: white;">
+            <img src="../../img/Geografia.webp" alt="Mapa">
+            <h2>Mapa do Mundo</h2></a>
             <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você, visualizando nosso mapa do mundo e planejando sua próxima aventura... </p>
         </div>
         <div class="icon">
+            <a href="/social.html" style="text-decoration: none; color: white;">
             <img src="../../img/Redes_Sociais.webp" alt="Personagens">
-            <h2>Redes Sociais</h2>
+            <h2>Redes Sociais</h2></a>
             <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!.</p>
         </div>
     </div>
