@@ -14,7 +14,7 @@
         button {
             background-color: #8B9EFF;
             color: white;
-            padding: 5px 5px !important;
+            padding: 6px 12px !important;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -52,6 +52,118 @@
         }
     </style>
 </head>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Flutuante com Seções</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Botão flutuante */
+    .floating-menu-button {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #616C9C; /* Azul escuro */
+      color: white;
+      padding: 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    /* Menu lateral posicionado ao lado do botão */
+    .side-menu {
+      position: fixed;
+      top: 10%;
+      left: 60px;
+      width: 250px;
+      max-height: 80%;
+      background-color: #2c2c2c;
+      padding-top: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .side-menu.open {
+      transform: scaleX(1);
+    }
+
+    .side-menu a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #A0A9D4
+;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .side-menu a:hover {
+      background-color: #3a3a3a;
+    }
+
+    .side-menu i {
+      margin-right: 10px;
+    }
+
+    /* Título da seção */
+    .section-title {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 20px 5px;
+      text-transform: uppercase;
+      font-family: 'Georgia', serif;
+      border-top: 2px solid #aaa;
+      margin-top: 10px;
+    }
+
+    /* Scroll customizado (opcional) */
+    .side-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .side-menu::-webkit-scrollbar-thumb {
+      background-color: #616C9C;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão flutuante -->
+  <div class="floating-menu-button" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="side-menu" id="sideMenu">
+    <a href="regras.html"><i class="fas fa-feather"></i> Regras</a>
+    <a href="personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
+    <a href="sistema.html"><i class="fas fa-feather"></i> Sistema</a>
+    <a href="mercado.html"><i class="fas fa-feather"></i> Mercado</a>
+    <a href="eventos.html"><i class="fas fa-feather"></i> Eventos</a>
+    <a href="colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
+    <a href="ask.html"><i class="fas fa-feather"></i> Dúvidas e Respostas</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -61,19 +173,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
-            </ul>
+                    <li class="nav-item"><a class="nav-link" href="historia.html"><i class="fas fa-book"></i> História </a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="../mapa.html"><i class="fas fa-map"></i> Mapa do Mundo </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../social.html"><i class="fas fa-earth-americas"></i> Redes Sociais </a></li>
+                </ul>
         </div>
     </div>
   </nav>
@@ -85,13 +188,12 @@
 
         <h1 style="text-align: center;">Para Mestres</h1>
         <p>Nessa página falaremos sobre algumas regras para vocês mestres, funcionamento de algumas coisas no servidor e outras coisas que podem sanar suas dúvidas. Pedimos que tenham conhecimento de como é o cenário do mundo, as principais cidades, os reinos, os deuses no geral, NPCs importantes e etc.</p>
-        <br>
         <hr>
         <h1 style="color: #8B9EFF;">Como ser Mestre</h1>
         <hr style="color: #8B9EFF">
         <button id="botao1" class="toggle-button" data-target="caixaTexto1">Como ser Mestre</button>
         <div id="caixaTexto1" class="texto-oculto">
-            <p>Para iniciarmos sua estadia como mestre no servidor Novastris é necessário ter um personagem no <strong>Rank Prata</strong>, ter lido os livros <a href="https://www.amazon.com.br/Dungeons-Dragons-Dungeon-Masters-Portugu%C3%AAs/dp/8568059325/ref=asc_df_8568059325/?tag=googleshopp00-20&amplinkCode=df0&amphvadid=393609811349&amphvpos=&amphvnetw=g&amphvrand=15388572948000612860&amphvpone=&amphvptwo=&amphvqmt=&amphvdev=c&amphvdvcmdl=&amphvlocint=&amphvlocphy=1001773&amphvtargid=pla-937544905623&amppsc=1">Dungeon Master's Guide - Livro do Mestre</a> e o <a href="https://www.amazon.com.br/Dungeons-Dragons-Players-Handbook-Portugu%C3%AAs/dp/B085S6W8PZ/ref=asc_df_B085S6W8PZ/?tag=googleshopp00-20&amplinkCode=df0&amphvadid=393609811349&amphvpos=&amphvnetw=g&amphvrand=2604624886301263573&amphvpone=&amphvptwo=&amphvqmt=&amphvdev=c&amphvdvcmdl=&amphvlocint=&amphvlocphy=1001773&amphvtargid=pla-1085670654912&amppsc=1">Player's Handbook - Livro Do Jogador</a> e que converse com o <strong>ADM e Mestre Veigar</strong> abrindo um Ticket no canal <strong>Quero ser Mestre</strong> no servidor Discord.</p>
+            <p>Para iniciarmos sua estadia como mestre no servidor Novastris, é necessário ter um personagem no <strong>Rank Prata</strong>, ter lido os livros <a href="https://www.amazon.com.br/Dungeons-Dragons-Dungeon-Masters-Portugu%C3%AAs/dp/8568059325/ref=asc_df_8568059325/?tag=googleshopp00-20&amplinkCode=df0&amphvadid=393609811349&amphvpos=&amphvnetw=g&amphvrand=15388572948000612860&amphvpone=&amphvptwo=&amphvqmt=&amphvdev=c&amphvdvcmdl=&amphvlocint=&amphvlocphy=1001773&amphvtargid=pla-937544905623&amppsc=1">Dungeon Master's Guide - Livro do Mestre</a> e o <a href="https://www.amazon.com.br/Dungeons-Dragons-Players-Handbook-Portugu%C3%AAs/dp/B085S6W8PZ/ref=asc_df_B085S6W8PZ/?tag=googleshopp00-20&amplinkCode=df0&amphvadid=393609811349&amphvpos=&amphvnetw=g&amphvrand=2604624886301263573&amphvpone=&amphvptwo=&amphvqmt=&amphvdev=c&amphvdvcmdl=&amphvlocint=&amphvlocphy=1001773&amphvtargid=pla-1085670654912&amppsc=1">Player's Handbook - Livro Do Jogador</a> e que converse com o <strong>ADM e Mestre Veigar</strong> abrindo um Ticket no canal <strong>Quero ser Mestre</strong> no servidor Discord.</p>
             <p>Após isso um <strong>LoreMaster</strong> ou um <strong>Moderador</strong> acompanhará você em todo o processo. Você deverá narrar uma quantidade de mesas entre <strong>3 a 5</strong> dependendo de seu feedback. Cada missão deverá acontecer no período de 10 a 15 dias dependendo da disponibilidade de seu LoreMaster ou Moderador e da sua. Ao final de todas as missões, você receberá a avaliação se foi aprovado ou não.</p>
             <p>Se aprovado receberá o cargo de <strong>Mestre</strong> e poderá realizar missões dentro das regras detalhadas logo mais.</p>
         </div>
@@ -155,8 +257,7 @@
             <p>As regras a seguir deverão ser seguidas por todos os jogadores e mestres nas mesas aqui no servidor:</p>
             <ul>
                 <li><p> - Magias sempre traduzidas (Nome não é necessário)</p></li>
-                <li><p> - Flanco +2</p></li>
-                <li><p> - Regra de Cobertura - Aliados não fornecem cobertura.</p></li>
+                <li><p> - Flanco fornece Vantagem</p></li>
                 <li><p> - Beber uma poção ou fazer alguém beber é uma ação. A mesma regra inclui pergaminhos a menos que o item diga o contrário.</p></li>
                 <li><p> - Familiares, Simulacros e Invocações usam a iniciativa do PJ.</p></li>
                 <li><p> - Se um oponente não tem chances para acertos em sua CA, somente um crítico pode acertá-lo. O mesmo serve para testes de perícias e testes de resistências.</p></li>
@@ -229,17 +330,17 @@
         </div>
         <button id="botao16" class="toggle-button" data-target="caixaTexto16">Mini-campanhas</button>
         <div id="caixaTexto16" class="texto-oculto">
-            <p> Para saberem como funcionam as <strong>Missões de Ascensões</strong> e o funcionamento das Dádivas, clique no link a seguir:</p>
-
+            
             <p>No servidor Novastris é possível realizar missões com múltiplas sessões, conhecidas como Mini-campanhas. Quando a missão for postada nos canais de missões no Discord, basta indicar no nome da missão ou nas observações, que se trata de uma Mini-campanha.</p>
 
-            <p>Elas podem durar de **2 a 5 mesas,** com um espaço de até **10 dias** entre o início de uma das mesas e o início da seguinte. Caso isso não seja cumprido, a missão é dada como completa e os jogadores ganham a recompensa até o momento que jogaram. Elas seguem as seguintes regras:</p>
+            <p>Elas podem durar de <strong>2 a 5 mesas</strong>, com um espaço de até <strong>10 dias</strong> entre o início de uma das mesas e o início da seguinte. Caso isso não seja cumprido, a missão é dada como completa e os jogadores ganham a recompensa até o momento que jogaram. Elas seguem as seguintes regras:</p>
             
 
             <li> Os Jogadores podem ser alterados no meio da Mini-Campanha, caso algum saia no meio, ele só receberá o bônus pelas mesas que participou e não poderá reingressar na missão novamente.</li>
             <li> Caso o mestre não envie a missão para a sessão de último dia, ele poderá enviar a mesma para a próxima sessão.</li>
             <li> Como uma campanha, entre uma sessão e outra, não se recupera slots de feitiços, itens mágicos e nem Pontos de vidas (a não ser que aconteça um descanso curto, longo, que seja curado por algo na narrativa ou que o mestre indique) e vocês não upam seus personagens até o término da mini campanha.</li>
-            <li> Os jogadores que participarem de três ou mais sessões recebem a recompensa da Mini-Campanha baseado no número de mesas que jogo. Esses benefícios se somam ao valor que já será recebido do tempo da missão.</li>
+            <li> Os jogadores que participarem de três ou mais sessões recebem a recompensa da Mini-Campanha baseado no número de mesas que jogo.</li>
+            <br><p>Esses benefícios se somam ao valor que já será recebido do tempo da missão.</p><br>
     
 
             <p>Ao fazer esse tipo de missão, os jogadores e o mestre recebem uns benefícios dependendo de quantas mesas tenham sido realizadas, segundo a tabela abaixo:</p>
@@ -251,7 +352,7 @@
             
 
                 
-                <p><strong>Ex:</strong>Caso um mestre narre 3 mesas para o Rank Ouro, que totalizam 14 horas totais, o valor de recompensa será:</p>
+                <br><p><strong>Ex:</strong> Caso um mestre narre 3 mesas para o Rank Ouro, que totalizam 14 horas totais, o valor de recompensa será:</p>
                 
                 <li> 14 Horas -> 1400 + 100 + 200 = 1700EXPs</li>
                 
@@ -275,7 +376,7 @@
     <div class="branco rodape">
         <div>
             <div class="icon">
-                <a href="./historia.html" style="text-decoration: none; color: white;">
+                <a href="historia.html" style="text-decoration: none; color: white;">
                     <img src="../img/Historia.webp" alt="História">
                     <h2>História</h2>
                 </a>

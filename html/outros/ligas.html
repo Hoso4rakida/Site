@@ -32,7 +32,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
+            width: 300px;
             height: auto;
         }
         ul {
@@ -44,6 +44,119 @@
 
     </style>
 </head>
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Flutuante com Seções</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Botão flutuante */
+    .floating-menu-button {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #616C9C; /* Azul escuro */
+      color: white;
+      padding: 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    /* Menu lateral posicionado ao lado do botão */
+    .side-menu {
+      position: fixed;
+      top: 10%;
+      left: 60px;
+      width: 250px;
+      max-height: 80%;
+      background-color: #2c2c2c;
+      padding-top: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .side-menu.open {
+      transform: scaleX(1);
+    }
+
+    .side-menu a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #A0A9D4
+;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .side-menu a:hover {
+      background-color: #3a3a3a;
+    }
+
+    .side-menu i {
+      margin-right: 10px;
+    }
+
+    /* Título da seção */
+    .section-title {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 20px 5px;
+      text-transform: uppercase;
+      font-family: 'Georgia', serif;
+      border-top: 2px solid #aaa;
+      margin-top: 10px;
+    }
+
+    /* Scroll customizado (opcional) */
+    .side-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .side-menu::-webkit-scrollbar-thumb {
+      background-color: #616C9C;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão flutuante -->
+  <div class="floating-menu-button" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="side-menu" id="sideMenu">
+    <a href="/html/regras.html"><i class="fas fa-feather"></i> Regras</a>
+    <a href="/html/personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
+    <a href="/html/para mestre.html"><i class="fas fa-feather"></i> Para Mestres</a>
+    <a href="/html/sistema.html"><i class="fas fa-feather"></i> Sistema</a>
+    <a href="/html/mercado.html"><i class="fas fa-feather"></i> Mercado</a>
+    <a href="/html/eventos.html"><i class="fas fa-feather"></i> Eventos</a>
+    <a href="/html/colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
+    <a href="/html/ask.html"><i class="fas fa-feather"></i> Dúvidas e Respostas</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
+
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -53,19 +166,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
-            </ul>
+                    <li class="nav-item"><a class="nav-link" href="/html/historia.html"><i class="fas fa-book"></i> História </a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/mapa.html"><i class="fas fa-map"></i> Mapa do Mundo </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/social.html"><i class="fas fa-earth-americas"></i> Redes Sociais </a></li>
+                </ul>
         </div>
     </div>
   </nav>
@@ -79,87 +183,83 @@
     <!--texto que sera transcrito de mark down para html(apenas para referencia)-->
 
         <h1 style="text-align: center;">🎓<strong>Liga Noxelis</strong></h1>
-
+        
         <h3><strong>👋 Bem-vindo à Liga Noxelis!</strong></h3>
 
-        <p>📜<strong>O que fazemos:</strong>Somos especializados na criação de pergaminhos mágicos. Nossa missão é estudar e dominar as artes arcanas para produzir pergaminhos de alta qualidade que possam ser usados por todos os membros da nossa comunidade.</p>
-
-        <p><strong>🧙‍♂️ Benefícios de ser um membro:</strong></p>
-        <ul>
+        <p>📜<strong>O que fazemos:</strong> Somos especializados na criação de pergaminhos mágicos. Nossa missão é estudar e dominar as artes arcanas para produzir pergaminhos de alta qualidade que possam ser usados por todos os membros da nossa comunidade.</p>
+        <img src="../../img/Simbolo_da_Liga_Noxelis_2.png" alt="Liga Noxelis" width="300px" height="100px">
+        <h5><strong>🧙‍♂️ Benefícios de ser um membro:</strong></h5>
+        
             <li>Acesso a conhecimentos arcanos e criação de pergaminhos mágicos</li>
             <li>Opotunidade de colaborar com magos experientes</li>
             <li>suporte e orientação em suas pesquisas e criações.</li>
-        </ul>
-        <p><strong><a href="https://docs.google.com/document/d/1UeMELpJx5VkJ4RVqyylXkIqLncYC6948PT__ZF5rBFk/edit?usp=sharing">🔗 Junte-se a nós e expanda seus horizontes no mundo da magia!</a></strong></p>
-        <img src="../../img/ligas.png" alt="Liga Noxelis" width="500" height="300">
+       <br>
+        <p style="text-align: center;"><strong><a href="https://docs.google.com/document/d/1UeMELpJx5VkJ4RVqyylXkIqLncYC6948PT__ZF5rBFk/edit?usp=sharing">🔗 Junte-se a nós e expanda seus horizontes no mundo da magia!</a></strong></p>
+        
         <hr>
         <h1><strong>🧪 Liga Ludriel</strong></h1>
         <h3><strong>👋 Bem-vindo à Liga Ludriel!</strong></h3>
-
-        <p><strong>🧴 O que fazemos:</strong>Somos mestres na criação de poções, elixires e venenos. Nossa arte é combinar ingredientes raros e poderosos para criar misturas que podem curar, fortalecer ou envenenar.</p> 
-
-        <p><strong>🍃 Benefícios de ser um membro:</strong></p>
-        <ul>
+        <p><strong>🧴 O que fazemos:</strong> Somos mestres na criação de poções, elixires e venenos. Nossa arte é combinar ingredientes raros e poderosos para criar misturas que podem curar, fortalecer ou envenenar.</p> 
+        <img src="../../img/Simbolo_da_Liga_Ludriel_2.png" alt="Liga Noxelis" width="300px" height="100px">
+        
+        <h5><strong>🍃 Benefícios de ser um membro:</strong></h5>
+      
             <li>Acesso a uma vasta biblioteca de receitas e fórmulas, além de participar de nossas aulas práticas e teóricas.</li>
             <li>Orientação de mestres alquimistas experientes.</li>
             <li>Oportunidades de participar de expedições para coletar ingredientes raros.</li>
-        </ul>
-        <p><strong><a href="https://docs.google.com/document/d/1h0Xkx2CHsV_UQn059uHgoH8D6_efJdrqf5SFOmqpl68/edit?usp=sharing">🔗 Junte-se a nós e descubra os segredos da alquimia!</a></strong></p>
+      <br>
+        <p style="text-align: center;"><strong><a href="https://docs.google.com/document/d/1h0Xkx2CHsV_UQn059uHgoH8D6_efJdrqf5SFOmqpl68/edit?usp=sharing">🔗 Junte-se a nós e descubra os segredos da alquimia!</a></strong></p>
         <hr>
         <h1><strong>🔨 Liga IronForge</strong></h1>
 
         <h3><strong>👋 Bem-vindo à Liga IronForge!</strong></h3>
-
-        <p><strong>⚒️ O que fazemos:</strong>Somos ferreiros e encantadores mágicos. Nossa missão é forjar e encantar armas, armaduras e itens mágicos de alta qualidade.</p>
-
-        <p><strong>🔥 Benefícios de ser um membro:</strong></p>
-        <ul>
+        <p><strong>⚒️ O que fazemos:</strong> Somos ferreiros e encantadores mágicos. Nossa missão é forjar e encantar armas, armaduras e itens mágicos de alta qualidade.</p>
+        <img src="../../img/Simbolos_da_liga_Goldenforge.png" alt="Liga Noxelis" width="300px" height="100px">
+        <br>
+        <h5 ><strong>🔥 Benefícios de ser um membro:</strong></h5>
+        
             <li>Acesso a forjas equipadas com tecnologia de ponta.</li> 
             <li>Treinamento com mestres ferreiros e encantadores.</li>
             <li>Oportunidade de criar itens lendários e únicos.</li>
-        </ul>
-
-
-        <p><strong><a href="https://docs.google.com/document/d/1h3VTDShYJ2UYyz-fVVqB0bQbA43CC6BfVA_SJQZ5kI0/edit?usp=drive_link">🔗 Junte-se a nós e forje seu próprio destino!</a></strong></p>
+   <br>
+        <p style="text-align: center;"><strong><a href="https://docs.google.com/document/d/1h3VTDShYJ2UYyz-fVVqB0bQbA43CC6BfVA_SJQZ5kI0/edit?usp=drive_link">🔗 Junte-se a nós e forje seu próprio destino!</a></strong></p>
         <hr>
         <h1 style="text-align: center;">🏹<strong>Liga Claymore</strong></h1>
         <h3><strong>👋 Bem-vindo à Liga Claymore!</strong></h3>
-
         <p><strong>🌿 O que fazemos:</strong> Somos caçadores e coletores de ingredientes essenciais para as outras ligas. Nossa missão é explorar, encontrar e trazer de volta os materiais mais raros e valiosos.</p>
-
-        <p><strong>🦅 Benefícios de ser um membro:</strong></p>
-        <ul>
+        <img src="../../img/Simbolo_da_Liga_Claymore.png" alt="Liga Noxelis" width="300px" height="100px">
+        
+        <h5><strong>🦅 Benefícios de ser um membro:</strong></h5>
             <li>Acesso a equipamentos e ferramentas de última geração.</li>
             <li>Treinamento com caçadores veteranos.</li>
             <li>Oportunidades de coleta e troca de materiais.</li>
-        </ul>
-        <p><strong><a href="https://docs.google.com/document/d/19luAWHAfkyjGM-Ab9aXrpm3jBxYZmmBUL3GRwJbBtZU/edit?usp=sharing">🔗 Junte-se a nós e torne-se um mestre caçador e coletor!</a></strong></p>
+   <br>
+        <p style="text-align: center;"><strong><a href="https://docs.google.com/document/d/19luAWHAfkyjGM-Ab9aXrpm3jBxYZmmBUL3GRwJbBtZU/edit?usp=sharing">🔗 Junte-se a nós e torne-se um mestre caçador e coletor!</a></strong></p>
 
         <!--Apenas um botão para voltar a tela inicial-->
-        <a href="../../index.html" class="btn btn-primary" style="background-color: #8B9EFF; display: block; width: 200px; margin: 0 auto; text-align: center; color: white; text-decoration: none;">
-            Voltar
-        </a>
     </section>
   <div class="branco rodape">
     <div>
         <div class="icon">
-            <a href="#" style="text-decoration: none; color: white;">
-            <img src="../../img/Historia.webp" alt="Historia">
-            <h2>História</h2></a>
-            <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história! Descubra a rica história que moldou este mundo incrível.</p>
-        </div>
-        <div class="icon">
-            <img src="../../img/Geografia.webp" alt="Geografia">
-            <h2>Mapa do Mundo</h2>
-            <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você, visualizando nosso mapa do mundo e planejando sua próxima aventura... </p>
-        </div>
-        <div class="icon">
-            <img src="../../img/Redes_Sociais.webp" alt="Personagens">
-            <h2>Redes Sociais</h2>
-            <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!.</p>
+                <a href="/html/historia.html" style="text-decoration: none; color: white;">
+                <img src="../../img/Historia.webp" alt="Historia">
+                <h2>História</h2></a>
+                <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história! Descubra a rica história que moldou este mundo incrível.</p>
+            </div>
+            <div class="icon">
+                <a href="/mapa.html" style="text-decoration: none; color: white;">
+                <img src="../../img/Geografia.webp" alt="Geografia">
+                <h2>Mapa do Mundo</h2></a>
+                <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você, visualizando nosso mapa do mundo e planejando sua próxima aventura... </p>
+            </div>
+            <div class="icon">
+                <a href="/social.html" style="text-decoration: none; color: white;">
+                <img src="../../img/Redes_Sociais.webp" alt="Personagens">
+                <h2>Redes Sociais</h2></a>
+                <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!.</p>
+            </div>
         </div>
     </div>
-</div>
 <br>
 </div> 
   <footer class="bg-dark text-center py-3 branco">
