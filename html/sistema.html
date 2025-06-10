@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Novastris - RPG</title>
+    <title>Sistema - Novastris</title>
     <link href="../css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,10 +12,34 @@
         .regras-container{
             text-align: center;
         }
-        a
-        {
+        
+        a{
             color: #8B9EFF;
         }
+
+        .accordion {
+        cursor: pointer;
+        padding: 14px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 16px;
+        border: none;
+        background-color: #b0b9e6;
+        margin-bottom: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .accordion:hover {
+        background-color: #8B9EFF;
+      }
+      .panel {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #1E2125;
+        border-left: 2px solid #1E2125;
+      }
+
     </style>
     </head>
 
@@ -66,8 +90,7 @@
       align-items: center;
       padding: 12px 20px;
       text-decoration: none;
-      color: #A0A9D4
-;
+      color: #A0A9D4;
       font-weight: bold;
       font-size: 16px;
     }
@@ -114,7 +137,6 @@
   <div class="side-menu" id="sideMenu">
     <a href="personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
     <a href="para mestre.html"><i class="fas fa-feather"></i> Para Mestres</a>
-    <a href="https://http.cat/status/103"><i class="fas fa-feather"></i> Sistema</a>
     <a href="mercado.html"><i class="fas fa-feather"></i> Mercado</a>
     <a href="eventos.html"><i class="fas fa-feather"></i> Eventos</a>
     <a href="colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
@@ -154,9 +176,121 @@
     </button>
     
         <div class="regras-container">
-            <h1 id="regras">SISTEMA</h1>
-            
-    </section>
+            <h1 id="regras">Sistema</h1>
+            <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
+            <p style="color: #9b9898;">Algumas mecânicas foram adaptadas para melhor se encaixarem no estilo e na ambientação do mundo de Novastris. Além disso, elementos inéditos (como raças, habilidades, sistemas e recursos) foram incorporados para enriquecer a experiência dos jogadores.</p>
+ <br>
+          </div>
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Flanco</p></h5>   
+      <li>Em Novastris, utilizamos a regra opcional de flanqueamento descrita no Dungeon Master’s Guide, página 251. Quando dois aliados estão em lados opostos de um inimigo em combate corpo a corpo, ambos ganham vantagem em seus ataques corpo a corpo contra ele.</li>
+      <br>
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Divine Punch</p></h5>   
+      <li>O paladino pode utilizar a Destruição Divina (Divine Smite) ao empregar o Estilo de Luta: Luta Desarmada (Unarmed Fighting). Além disso, paladinos também têm a opção de escolher esse estilo de luta.</li>
+      <br>
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Estilo de Luta: Combate com Armas Grandes</p></h5> 
+      <li>Se você rolar 1 ou 2 no dado de dano da arma ao atacar com uma arma <strong>pesada</strong> usando <strong>duas mãos</strong>, pode rolar o dado novamente.
+          Você deve usar o novo resultado, mesmo que seja outro 1 ou 2.
+          Essa regra se aplica apenas ao dado de dano da arma, não a danos extras (como de itens mágicos, habilidades ou magias).</li>
+      <br> 
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Ação: Execução Precisa</p></h5>   
+      <li>A ação Execução Precisa, permite que assassinos eliminem alvos estrategicamente, escalando com seu nível e testando sua furtividade contra as defesas mais vigilantes. Use com sabedoria e domine as sombras. </li>
+      <br>  
+      <p>O Mestre determina quem pode ser alvo de Execução Precisa e compara os testes de <strong>Destreza (Furtividade)</strong> de qualquer um escondido com o valor <strong>passivo de Sabedoria (Percepção)</strong> de cada criatura do lado oposto (caso haja mais de um). Logo após isso, realize uma ação de ataque, caso o alvo não seja eliminado por Execução Precisa seguindo as regras impostas abaixo, ele apenas leva o dano total do ataque. A habilidade só pode eliminar instantaneamente criaturas cujos Pontos de Vida Máximos sejam inferiores a um limite baseado no nível do PJ, caso eles não possuam Resistências Lendárias e estejam surpresos. Você pode verificar o limite baseado no nível do PJ na tabela abaixo:</p>
+       
+      <div style="text-align: center;">
+      <img src="../img/execprecisa.png" style="text-align: center;" width="500px">
+      </div>  
+      <br>
+
+
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Regra de Reskin</p></h5> 
+     
+      Reskin é a prática de alterar a aparência visual de um item, personagem ou habilidade sem modificar suas funcionalidades, estatísticas ou mecânicas de jogo. Por isso, implementamos algumas regras gerais a serem seguidas:
+      <br><br>
+
+      <li><strong>Consistência Mecânica</strong>: A Reskin não pode alterar as estatísticas, habilidades ou efeitos mecânicos do item ou personagem. Apenas a aparência visual pode ser modificada. Por exemplo, uma espada reskinada para parecer uma lança ainda deve ser tratada como uma espada em termos de regras de jogo.</li>
+      <li><strong>Armas e Equipamentos</strong>: Reskins devem manter o mesmo tipo de arma ou equipamento. Por exemplo, uma espada longa pode ser reskinada para parecer uma katana, mas não pode ser reskinada para parecer um arco.</li>
+      <li><strong>Habilidades e Magias</strong>: Efeitos visuais das habilidades e magias podem ser alterados, mas o alcance, a área de efeito, o tipo de dano e outros aspectos mecânicos devem permanecer os mesmos.</li>
+      <li><strong>Personagens e Criaturas</strong>: Se sua raça não está liberada para ser jogada, não adianta fazer uma reskin de outra raça. E se seu familiar ou criatura invocada tiver asas, sua nova Reskin obviamente tem que ter asas.</li>
+      <br>          
+
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Regras de Montaria</p></h5> 
+      <p>Montaria em Combate é o uso de criaturas como meio de transporte durante encontros de combate. No entanto, para manter o equilíbrio e a coerência dentro do jogo, implementamos algumas regras gerais a serem seguidas:</p>
+
+      <button class="accordion">🛡 Participação de Montarias em Combate</button>
+      <div class="panel">
+        <br>
+        <li>Somente montarias especialmente treinadas para batalha são permitidas em combates. Essas montarias, como cavalos de guerra, grifos, dragões jovens, entre outros, são adestradas para suportar o caos da batalha e executar comandos táticos. Elas podem atacar inimigos, defender seus cavaleiros e realizar manobras estratégicas durante os encontros de combate.</li>
+        <br>
+      </div>
+
+      <button class="accordion">⚠ Perturbações à Montaria</button>
+      <div class="panel">
+     <br>
+        <p>Naturalmente, ser montado também traz algumas desvantagens:</p>   
+          <li>Se sua montaria for movida contra sua vontade, como por uma magia thorn whip enquanto você estiver sobre ela, você deve fazer um teste de resistência de Destreza CD 13 imediatamente. Em uma falha, você é jogado da montaria e cai em um espaço a menos de 5fts (1,5 metros) dela.</li>
+          <li>Se sua montaria for derrubada, você pode usar sua reação para desmontar imediatamente, “saltando” e caindo de pé a menos de 5fts (1,5 m) da montaria. Se você não pode usar sua reação para isso, em vez disso, você está propenso a menos de 5fts (1,5 m) de sua montaria.</li>
+          <li>Além disso, um Mestre pode pedir um teste de Força (Atletismo) para permanecer montado em resposta a interrupções repentinas. Claro, essas verificações serão muito mais fáceis com o equipamento adequado.</li>
+     <br>
+      </div>
+
+      <button class="accordion">🐾 Animais de Estimação</button>
+      <div class="panel">
+          <br>
+        <li>Animais comprados no mercado, como cães, gatos, ratos, cobras, aranhas e similares, são considerados animais de estimação ou domésticos. Estes animais podem ser adestrados para realizar tarefas simples, como buscar objetos, alertar sobre perigos próximos ou realizar truques. No entanto, eles não são treinados para o combate e, portanto, não participarão de confrontos contra criaturas ou inimigos.</li>
+            <br>
+      </div>
+
+      <button class="accordion">🐎 Montando uma Criatura</button>
+      <div class="panel">
+          <br>
+          <p>Para montar uma criatura:</p>
+        <li>Você deve estar a menos de 5fts (1,5 m) dela.</li>
+        <li>Ela deve estar disposta a suportá-lo como um cavaleiro.</li>
+        <li>Deve ser pelo menos um tamanho maior do que você e ter uma anatomia adequada (a critério do Mestre) Cavalo: sim, cubo gelatinoso: provavelmente não.</li>
+        <li>Você deve gastar uma quantidade de movimento igual à metade de sua velocidade (15fts se sua velocidade for 30fts, por exemplo). </li>
+        <li>Você não pode montar se não puder gastar esse movimento por qualquer motivo. </li>
+        <li>Desmontar é o mesmo processo, e você desmonta em um espaço a menos de 5fts de sua montaria.</li>
+            <br>
+      </div>
+
+      <button class="accordion">⚔ Quando Montado</button>
+      <div class="panel">
+          <br>
+          <p>Você só pode montar ou desmontar uma vez por turno e, depois de montado, as seguintes regras se aplicam:</p>
+        <li>Se sua montaria for treinada, como um cavalo ou uma mula, você escolhe controlá-la ou deixá-la permanecer independente.</li>
+        <li>Quando você monta uma criatura inteligente (12 de Int para cima), como um dragão, ela sempre mantém sua independência. Isso também se aplica a uma criatura não treinada.</li>
+        <li>Se você controlar uma montaria, sua Iniciativa muda para combinar com a sua, mas ele só pode escolher entre três ações: Dash, Disengage ou Dodge. Ele pode agir imediatamente no turno quando você montá-lo.</li>
+        <li>Uma montaria independente mantém seu lugar na ordem de Iniciativa (Agindo primeiro ou depois de você), mas pode realizar todas as suas ações normalmente.</li>
+            <br>
+        <p>Em todos os casos, se sua montaria provocar um ataque de oportunidade, o atacante pode escolher mirar em você ou na montaria, desde que ela possa alcançá-lo.</p>
+      
+      </div>
+<br><br>
+      
+        <h5><p style="color: #8B9EFF;" style="text-align: left;">Regras sobre Necromancia</p></h5> 
+      <p>No nosso servidor, a prática de necromancia é tratada de forma diferenciada. Embora a necromancia tradicionalmente seja considerada um ato maligno em muitas campanhas e sistemas, aqui a interpretação é ajustada para se adequar melhor às narrativas e estilos de jogo que desejamos explorar.</p>
+      <p>A utilização de magias como Animate Dead e similares permite ao conjurador reanimar corpos mortos para servir como servos ou soldados. No entanto, no contexto do nosso servidor, essa prática não influencia a alma ou a essência espiritual do indivíduo que foi animado. Em vez disso, trata-se apenas de manipular o corpo físico dos mortos. Embora animar mortos não seja considerado um ato maligno por si só, é uma prática controversa. A forma como o corpo é utilizado e as ações do necromante podem influenciar a percepção moral da comunidade e dos NPCs. O necromante pode enfrentar críticas e oposição com base no contexto e na forma como os corpos são utilizados. </p>
+      <p>Jogadores que escolhem a necromancia devem estar cientes da natureza controversa dessa prática e considerar como suas ações podem impactar a narrativa e a interação com outros personagens, além de, estar ciente das regras do servidor de PJs Malignos e de que não é em todo lugar no mundo de Cosmoria que ele é bem visto, assim como a própria Guilda e outros locais tem restrições sobre criaturas andando pela cidade. Corpos para utilização das magias, podem ser obtidos apenas através de missões, ou por rps 'oficializados' por mestres.</p>
+        
+      <h5><p style="color: #8B9EFF;" style="text-align: left;">Consumíveis em Mesa:</p></h5> 
+      <p>É possível levar uma variedade de consumíveis para suas aventuras. No entanto, atenção às regras:</p>
+      <li><strong>Efeitos de Poções:</strong> Cada personagem pode estar sob o efeito de até <strong>3 Poções ou Comidas Mágicas</strong> simultaneamente. Portanto, escolha sabiamente!</li>
+      <li><strong>Poções de Cura:</strong> Não há limite para o uso de Poções de Cura. Elas podem ser usadas à vontade para manter seu personagem saudável.</li>
+      <li><strong>Outros Itens Consumíveis:</strong> Seguem uma regra especial. Não é permitido utilizar mais de um do mesmo tipo no mesmo dia. Use com cautela e estratégia!</li>
+<script>
+          const acc = document.querySelectorAll(".accordion");
+          acc.forEach(btn => {
+            btn.addEventListener("click", function () {
+              this.classList.toggle("active");
+              let panel = this.nextElementSibling;
+              panel.style.display = (panel.style.display === "block") ? "none" : "block";
+            });
+          });
+        </script>
+
+
+ </section>
     <!--Roda pé-->
     <div class="branco rodape">
       <div>
