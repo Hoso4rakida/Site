@@ -54,12 +54,14 @@
         button {
             background-color: #8B9EFF; /* Cor de fundo verde */
             color: white;              /* Cor do texto branco */
-            padding: 10px 20px;        /* Espaciamento interno */
+            padding: 7px 14px;        /* Espacamento interno */
             font-size: 16px;           /* Tamanho da fonte */
             border: none;              /* Remove a borda */
             border-radius: 8px;        /* Bordas arredondadas */
             cursor: pointer;          /* Indica que é clicável */
             transition: all 0.3s ease; /* Transição suave para efeitos */
+            margin: 3px;
+            line-height: 1.2;
         }
 
         /* Efeito de hover (passar o mouse sobre o botão) */
@@ -260,7 +262,7 @@
                 <tr>
                     <td>6º</td>
                     <td>+3</td>
-                    <td><a href="#Característicadocaminho">Caractéristica do Caminho</a></td>
+                    <td><a href="#Característicadocaminho">Característica do Caminho</a></td>
                     <td>4</td><td>+2</td>
                 </tr>
                 <tr>
@@ -284,7 +286,7 @@
                 <tr>
                     <td>10º</td>
                     <td>+4</td>
-                    <td><a href="#Característicadocaminho1">Caractéristica do Caminho</a></td>
+                    <td><a href="#Característicadocaminho1">Característica do Caminho</a></td>
                     <td>4</td><td>+3</td>
                 </tr>
                 <tr>
@@ -308,7 +310,7 @@
                 <tr>
                     <td>14º</td>
                     <td>+5</td>
-                    <td><a href="#Característicadocaminho2">Caractéristica do Caminho</a></td>
+                    <td><a href="#Característicadocaminho2">Característica do Caminho</a></td>
                     <td>5</td><td>+3</td>
                 </tr>
                 <tr>
@@ -461,7 +463,7 @@ Além disso, quando você usa a ação Ataque para agarrar uma criatura, o alvo 
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>1d4</td>
+                                <td>d4</td>
                                 <td><a>Origem</a></td>
                             </tr>
                             <tr>
@@ -486,9 +488,9 @@ Além disso, quando você usa a ação Ataque para agarrar uma criatura, o alvo 
                     <p>Você escolhe a forma da arma cada vez que entra em fúria:</p>
 
 <li><strong>Mordida.</strong> Sua boca se transforma em um focinho bestial ou em grandes mandíbulas (à sua escolha). Causa 1d8 de dano perfurante ao acertar. Uma vez em cada um dos seus turnos, ao causar dano a uma criatura com esta mordida, você recupera uma quantidade de pontos de vida igual ao seu bônus de proficiência, desde que tenha menos da metade dos seus pontos de vida ao acertar.</li>
-<br>
+
 <li><strong>Garras.</strong> Cada uma das suas mãos se transforma em uma garra, que você pode usar como arma se estiver vazia. Ela causa 1d6 de dano cortante ao acertar. Uma vez em cada um dos seus turnos, ao atacar com uma garra usando a ação Atacar , você pode realizar um ataque de garra adicional como parte da mesma ação.</li>
-<br>
+
 <li><strong>Cauda.</strong> Você desenvolve uma cauda espinhosa e cortante, que causa 1d8 de dano perfurante ao acertar e tem a propriedade de alcance. Se uma criatura que você possa ver a até 3 metros de você o atingir com uma jogada de ataque, você pode usar sua reação para deslizar sua cauda e rolar um d8 , aplicando um bônus à sua CA igual ao número rolado, potencialmente fazendo com que o ataque erre você.</li>
 <br>                    
                 </div>
@@ -554,361 +556,672 @@ Além disso, quando você usa a ação Ataque para agarrar uma criatura, o alvo 
 
                     <h4>Nível 3: Fumaça Sombria</h4>
                     <p>A partir do 3º nível, você emana tentáculos de fumaça sombria enquanto se enfurece. A fumaça se estende por 10fts de você em todas as direções. Qualquer criatura (exceto você) que começar seu turno na fumaça terá desvantagem na próxima jogada de ataque.</p>
-                    
-            </div>
-<br><br>
-                    <button class="toggle-btn">Arauto da Tempestade</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <p>Energia sombria permeia o Reino das Sombras, corrompendo e corroendo tudo o que toca. Alguns bárbaros consomem intencionalmente essa sombra bruta, impregnando seus corpos com energia sombria para manifestar poderosas habilidades mágicas.</p>
-                    <p>Muitos dos bárbaros que trilham esse caminho o fazem para absorver magia sombria nociva, a fim de proteger os outros de sua influência. Um grupo menor consome a magia sombria simplesmente por não conseguir resistir à sua tentação constante.</p>
-
-                    <h4>Nível 3: Fumaça Sombria</h4>
-                    <p>A partir do 3º nível, você emana tentáculos de fumaça sombria enquanto se enfurece. A fumaça se estende por 10fts de você em todas as direções. Qualquer criatura (exceto você) que começar seu turno na fumaça terá desvantagem na próxima jogada de ataque.</p>
-                    
-            </div>
-
-                    <button class="toggle-btn">Guerreiro Totêmico</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <p>Energia sombria permeia o Reino das Sombras, corrompendo e corroendo tudo o que toca. Alguns bárbaros consomem intencionalmente essa sombra bruta, impregnando seus corpos com energia sombria para manifestar poderosas habilidades mágicas.</p>
-                    <p>Muitos dos bárbaros que trilham esse caminho o fazem para absorver magia sombria nociva, a fim de proteger os outros de sua influência. Um grupo menor consome a magia sombria simplesmente por não conseguir resistir à sua tentação constante.</p>
-
-                    <h4>Nível 3: Fumaça Sombria</h4>
-                    <p>A partir do 3º nível, você emana tentáculos de fumaça sombria enquanto se enfurece. A fumaça se estende por 10fts de você em todas as direções. Qualquer criatura (exceto você) que começar seu turno na fumaça terá desvantagem na próxima jogada de ataque.</p>
-                    
-            </div>
-
-                    <button class="toggle-btn">Magia Selvagem</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <p>Energia sombria permeia o Reino das Sombras, corrompendo e corroendo tudo o que toca. Alguns bárbaros consomem intencionalmente essa sombra bruta, impregnando seus corpos com energia sombria para manifestar poderosas habilidades mágicas.</p>
-                    <p>Muitos dos bárbaros que trilham esse caminho o fazem para absorver magia sombria nociva, a fim de proteger os outros de sua influência. Um grupo menor consome a magia sombria simplesmente por não conseguir resistir à sua tentação constante.</p>
-
-                    <h4>Nível 3: Fumaça Sombria</h4>
-                    <p>A partir do 3º nível, você emana tentáculos de fumaça sombria enquanto se enfurece. A fumaça se estende por 10fts de você em todas as direções. Qualquer criatura (exceto você) que começar seu turno na fumaça terá desvantagem na próxima jogada de ataque.</p>
-                    
             </div>
 
                     <button class="toggle-btn">Fanático</button>
                 <div class="spoiler-content" style="display:none;">
                     <hr style="color: #FFE38C;">
-                    <p>Energia sombria permeia o Reino das Sombras, corrompendo e corroendo tudo o que toca. Alguns bárbaros consomem intencionalmente essa sombra bruta, impregnando seus corpos com energia sombria para manifestar poderosas habilidades mágicas.</p>
-                    <p>Muitos dos bárbaros que trilham esse caminho o fazem para absorver magia sombria nociva, a fim de proteger os outros de sua influência. Um grupo menor consome a magia sombria simplesmente por não conseguir resistir à sua tentação constante.</p>
+                    <p>Algumas divindades inspiram seus seguidores a se lançarem em uma fúria feroz de batalha. Esses bárbaros são fanáticos — guerreiros que canalizam sua fúria em demonstrações poderosas de poder divino.</p>
+                    <p>Diversos deuses nos mundos de D&D inspiram seus seguidores a abraçar esse caminho. Tempus, Hextor e Erythnul, são exemplos primorosos. Em geral, os deuses que inspiram os fanáticos são divindades do combate, da destruição e da violência. Nem todos são maus, mas poucos são bons.</p>
 
-                    <h4>Nível 3: Fumaça Sombria</h4>
-                    <p>A partir do 3º nível, você emana tentáculos de fumaça sombria enquanto se enfurece. A fumaça se estende por 10fts de você em todas as direções. Qualquer criatura (exceto você) que começar seu turno na fumaça terá desvantagem na próxima jogada de ataque.</p>
-                    
+                    <h4>Nível 3: Fúria Divina</h4>
+                    <p>A partir do 3º nível, ao escolher este caminho, você pode canalizar fúria divina para seus golpes de arma. Enquanto estiver em fúria, a primeira criatura que você atingir em cada um dos seus turnos com um ataque de arma sofre dano adicional igual a 1d6 + metade do seu nível de bárbaro. O dano adicional é necrótico ou radiante; você escolhe o tipo de dano ao adquirir esta habilidade.</p>
+
+                    <h4>Nível 3: Guerreiro dos Deuses</h4>
+                    <p>No 3º nível, sua alma é marcada para uma batalha sem fim. Se uma magia, como ressuscitar os mortos , tiver o único efeito de restaurar sua vida (mas não a morte-viva), o conjurador não precisa de componentes materiais para conjurar a magia em você.</p>
+
             </div>
+
+                    <button class="toggle-btn">Arauto da Tempestade</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    <p>Todos os bárbaros abrigam uma fúria interior. Sua fúria lhes concede força, durabilidade e velocidade superiores. Bárbaros que seguem o Caminho do Arauto da Tempestade aprendem a transformar essa fúria em um manto de magia primordial, que os envolve. Em fúria, um bárbaro deste caminho recorre às forças da natureza para criar poderosos efeitos mágicos.</p>
+                    <p>Arautos da Tempestade são tipicamente campeões de elite que treinam ao lado de druidas, patrulheiros e outros que juraram proteger a natureza. Outros arautos da tempestade aprimoram sua arte em alojamentos em regiões devastadas por tempestades, nos confins congelados do fim do mundo ou nas profundezas dos desertos mais escaldantes.</p>
+                    
+                    <h4>Nível 3: Aura de Tempestade</h4>
+                    <p>A partir do 3º nível, você emana uma aura mágica e tempestuosa enquanto se enfurece. A aura se estende por 10fts de você em todas as direções, mas não por cobertura total. Sua aura tem um efeito que é ativado quando você entra em fúria, e você pode ativar o efeito novamente em cada um dos seus turnos como uma ação bônus. Escolha deserto, mar ou tundra. O efeito da sua aura depende do ambiente escolhido, conforme detalhado abaixo. Você pode mudar sua escolha de ambiente sempre que subir de nível nesta classe.</p>
+                    <p>Se os efeitos da sua aura exigirem um teste de resistência, a CD será igual a 8 + seu bônus de proficiência + seu modificador de Constituição.</p>
+
+                <li><strong>Deserto.</strong> Quando este efeito é ativado, todas as outras criaturas em sua aura sofrem 2 de dano de fogo cada. O dano aumenta conforme você atinge certos níveis nesta classe, aumentando para 3 no 5º nível, 4 no 10º nível, 5 no 15º nível e 6 no 20º nível.</li>
+                <li><strong>Mar.</strong> Quando este efeito é ativado, você pode escolher uma outra criatura que possa ver em sua aura. O alvo deve realizar um teste de resistência de Destreza. O alvo sofre 1d6 de dano elétrico em uma falha, ou metade desse dano em um sucesso. O dano aumenta quando você atinge certos níveis nesta classe, aumentando para 2d6 no 10º nível, 3d6 no 15º nível e 4d6 no 20º nível.</li>
+                <li><strong>Tundra.</strong> Quando este efeito é ativado, cada criatura à sua escolha em sua aura ganha 2 pontos de vida temporários, pois espíritos gélidos a acostumam ao sofrimento. Os pontos de vida temporários aumentam conforme você atinge certos níveis nesta classe, aumentando para 3 no 5º nível, 4 no 10º nível, 5 no 15º nível e 6 no 20º nível.</li>
+            <br>
+            </div>
+
+                    <button class="toggle-btn">Magia Selvagem</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    <p>Muitos lugares no multiverso abundam em beleza, emoção intensa e magia desenfreada; a Agrestia das Fadas, os Planos Superiores e outros reinos de poder sobrenatural irradiam tais forças e podem influenciar profundamente as pessoas. Como um povo de sentimentos profundos, os bárbaros são especialmente suscetíveis a essas influências selvagens, com alguns bárbaros sendo transformados pela magia. Esses bárbaros imbuídos de magia trilham a Trilha da Magia Selvagem. Bárbaros elfos, tieflings, aasimar e genasis frequentemente buscam esse caminho, ávidos por manifestar a magia sobrenatural de seus ancestrais.</p>
+                    
+                    <h4>Nível 3: Consciência Mágica</h4>
+                    <p>Com uma ação, você pode abrir sua consciência para a presença de magia concentrada. Até o final do seu próximo turno, você sabe a localização de qualquer magia ou item mágico a até 60fts de você que não esteja sob cobertura total. Ao sentir uma magia, você descobre a qual escola de magia ela pertence. Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p>
+                   
+                    <h4>Nível 3: Onda Selvagem</h4>
+                  <p>A energia mágica que fervilha dentro de você às vezes irrompe de você. Ao entrar em fúria, role na tabela de Magia Selvagem para determinar o efeito mágico produzido.</p>
+                  <p>Se o efeito exigir um teste de resistência, a CD será igual a 8 + seu bônus de proficiência + seu modificador de Constituição.</p>
+                    
+                    <table style="color: white;" class="tabela-container">
+                        <tbody>
+                            <tr class="trh">
+                                <td><strong>Magia Selvagem</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>d8</td>
+                                <td><a>Efeito Mágico</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a>Tentáculos sombrios chicoteiam ao seu redor. Cada criatura à sua escolha que você puder ver a até 30fts de distância deve ser bem-sucedida em um teste de resistência de Constituição ou sofrer 1d12 de dano necrótico. Você também ganha 1d12 pontos de vida temporários.</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a>Você se teletransporta até 30fts para um espaço desocupado visível. Até que sua fúria termine, você pode usar este efeito novamente em cada um dos seus turnos como uma ação bônus.</a></td>
+                            </tr>
+                                <td>3</td>
+                                <td><a>Um espírito intangível, que se parece com um flumph ou uma fada (à sua escolha), aparece a até 5fts de uma criatura à sua escolha que você possa ver a até 30fts de distância. No final do turno atual, o espírito explode, e cada criatura a até 5fts dele deve ser bem-sucedida em um teste de resistência de Destreza ou sofrer 1d6 de dano de força. Até que sua fúria termine, você pode usar este efeito novamente, invocando outro espírito, em cada um dos seus turnos como uma ação bônus.</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a>Magia infunde uma arma à sua escolha que você esteja segurando. Até que sua fúria termine, o tipo de dano da arma muda para força, e ela ganha as propriedades de luz e arremesso, com um alcance normal de 20fts e um alcance longo de 60fts. Se a arma sair da sua mão, ela reaparecerá na sua mão ao final do turno atual.</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a>Sempre que uma criatura lhe atingir com uma jogada de ataque antes que sua fúria termine, aquela criatura sofre 1d6 de dano de força, enquanto a magia é usada em retaliação.</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a>Até que sua fúria acabe, você estará cercado por luzes protetoras multicoloridas; você ganha um bônus de +1 na CA e, enquanto estiver a até 10fts de você, seus aliados ganham o mesmo bônus.</a></td>
+                            </tr>
+                                <td>7</td>
+                                <td><a>Flores e trepadeiras crescem temporariamente ao seu redor. Até que sua fúria acabe, o solo a até 15fts de você é terreno difícil para seus inimigos.</a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><a>Um raio de luz é disparado do seu peito. Outra criatura à sua escolha que você possa ver a até 30fts de você deve ser bem-sucedida em um teste de resistência de Constituição ou sofrer 1d6 de dano radiante e ficar cego até o início do seu próximo turno. Até que sua fúria termine, você pode usar este efeito novamente em cada um dos seus turnos como uma ação bônus.</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+
+                    <button class="toggle-btn">Guerreiro Totêmico</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    <p>O Caminho do Guerreiro Totêmico é uma jornada espiritual, pois o bárbaro aceita um animal espiritual como guia, protetor e inspiração. Em batalha, seu espírito totêmico o preenche com poder sobrenatural, adicionando combustível mágico à sua fúria bárbara.</p>
+                    <p>A maioria das tribos bárbaras considera um animal totêmico como parente de um clã específico. Nesses casos, é incomum que um indivíduo tenha mais de um espírito animal totêmico, embora existam exceções.</p>
+
+                    <h4>Nível 3: Buscador de Espíritos</h4>
+                    <p>A sua trilha busca a sintonia com o mundo natural, o que lhe confere um parentesco com as feras. No 3º nível, ao adotar essa trilha, você ganha a habilidade de conjurar as magias de sentido das feras e falar com animais , mas apenas como rituais, conforme descrito no capítulo 10 .</p>
+                    
+                    <h4>Nível 3: Espírito Totêmico</h4>
+                    <p>No 3º nível, ao adotar este caminho, você escolhe um espírito totêmico e ganha sua característica. Você deve criar ou adquirir um objeto totêmico físico — um amuleto ou adorno similar — que incorpore pelos ou penas, garras, dentes ou ossos do animal totêmico. À sua escolha, você também ganha atributos físicos menores que lembram o seu espírito totêmico. Por exemplo, se você tiver um espírito totêmico de urso, você pode ser anormalmente peludo e de pele grossa, ou se o seu totem for a águia, seus olhos se tornarão amarelos brilhantes.</p>
+                    <p>Seu animal totêmico pode ser um animal relacionado aos listados aqui, mas mais apropriado para sua terra natal. Por exemplo, você pode escolher um falcão ou abutre em vez de uma águia.</p>
+                   
+                    <li><strong>Urso.</strong> Enquanto estiver em fúria, você tem resistência a todos os tipos de dano, exceto dano psíquico. O espírito do urso o torna forte o suficiente para suportar qualquer punição.</li>
+                    <li><strong>Águia.</strong> Enquanto você estiver em fúria e sem armadura pesada, outras criaturas terão desvantagem em jogadas de ataque de oportunidade contra você, e você pode usar a ação de Disparar como uma ação bônus no seu turno. O espírito da águia transforma você em um predador que pode atravessar a briga com facilidade.</li>
+                    <li><strong>Alce.</strong> Enquanto você estiver em fúria e sem armadura pesada, sua velocidade de caminhada aumenta em 15fts. O espírito do alce o torna extraordinariamente rápido.</li>
+                    <li><strong>Tigre.</strong> Enquanto estiver em fúria, você pode adicionar 10fts à sua distância de salto em distância e 90 centímetros à sua distância de salto em altura. O espírito do tigre fortalece seus saltos.</li>
+                    <li><strong>Lobo.</strong> Enquanto você estiver em fúria, seus amigos têm vantagem em jogadas de ataque corpo a corpo contra qualquer criatura hostil a até 5fts de distância. O espírito do lobo faz de você um líder de caçadores.</li>
+                </div>
 
         </div>
         <br>
 
-        <h2 id="FerramentaCerta">Nível 3: A ferramenta certa para o trabalho</h2>
+        <h2 id="Conhecimentoprimordial">Nível 3: Conhecimento Primordial</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 3º nível</i></p>
+            <p><i>Característica de Bárbaro de 3º nível</i></p>
             <p>
-                Você aprendeu a produzir exatamente a ferramenta que precisa: com ferramentas de ladrão ou de artesão em mãos, você pode criar magicamente um conjunto de ferramentas de artesão em um espaço desocupado a até 5fts de você. Essa criação requer 1 hora de trabalho ininterrupto, que pode coincidir com um descanso curto ou longo. Embora sejam produto de magia, as ferramentas não são mágicas e desaparecem quando você usa esse recurso novamente.
+                Ao atingir o 3º nível e novamente no 10º nível, você ganha proficiência em uma perícia de sua escolha da lista de perícias disponíveis para bárbaros no 1º nível.
             </p>
         </div>
 
         <h2 id="MelhoriaPontuacao">Nível 4: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 4º nível</i></p>
+            <p><i>Característica de Bárbaro de 4º nível</i></p>
             <p>
                 Ao atingir o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
+            <p>Alternativamente, você poderá escolher um <a href="https://5e.tools/feats.html">talento</a>.</p>
         </div>
 
-        <h2 id="RecursoEspecialista">Nível 5: Característica de Especialista em Artíficer</h2>
+        <h2 id="Ataqueextra">Nível 5: Ataque Extra</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 5º nível</i></p>
+            <p><i>Característica de Bárbaro de 5º nível</i></p>
             <p>
-                Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
+                A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
             </p>
-                <div class="caixas">
-                <button class="toggle-btn">Alquimista</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Nível 5: Alquímico Sábio</h4>
-                    <p>
-                        No 5º nível, você desenvolve um domínio magistral de substâncias químicas mágicas, aprimorando a cura e o dano que você cria através delas. Sempre que conjurar uma magia usando os suprimentos do seu alquimista como foco de conjuração, você ganha um bônus em uma jogada da magia. Essa jogada deve restaurar pontos de vida ou ser uma jogada de dano que cause dano ácido, ígneo, necrótico ou venenoso, e o bônus é igual ao seu <strong>modificador de Inteligência (mínimo de +1)</strong>.
-                    </p>
-                </div>
+        
+        <h2 id="Movimentorapido">Nível 5: Movimento Rápido</h2>
+        <hr>
+        <div class="caracteristica">
+            <p><i>Característica de Bárbaro de 5º nível</i></p>
+            <p>
+                A partir do 5º nível, sua velocidade aumenta em 10fts enquanto você não estiver usando armadura pesada.
+            </p>
 
-                <button class="toggle-btn">Armeiro</button>
-                <div class="spoiler-content" style="display:none;">
+        <h2 id="Característicadocaminho">Nível 6: Caractéristica do Caminho</h2>
+        <hr>
+        <div class="caracteristica">
+            <p><i>Característica de Bárbaro de 6º nível</i></p>
+            
+            <div class="caixas">
+                <button class="toggle-btn">Guardião Ancestral</button>
+                <div class="spoiler-content" style="display: none;">
                     <hr style="color: #FFE38C;">
-                    <h4>Nível 5: Ataque Extra</h4>
-                    <p>
-                        A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
-                    </p>
-                </div>
+    
+                    <h4>Nível 6: Escudo Espiritual</h4>
+                    <p>A partir do 6º nível, os espíritos guardiões que o auxiliam podem fornecer proteção sobrenatural àqueles que você defende. Se você estiver em fúria e outra criatura que você possa ver a até 30fts de distância sofrer dano, você pode usar sua reação para reduzir esse dano em 2d6 .</p>
+                    <p>Ao atingir certos níveis nesta classe, você pode reduzir o dano em mais: em 3d6 no 10º nível e em 4d6 no 14º nível.</p> 
 
-                <button class="toggle-btn">Artilheiro</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Nível 5: Arma de fogo arcana</h4>
-                    <p>
-                        No 5º nível, você sabe como transformar uma varinha, cajado ou bastão em uma arma de fogo arcana, um canal para suas magias destrutivas. Ao terminar um descanso longo, você pode usar ferramentas de entalhador para esculpir sigilos especiais em uma varinha, cajado ou bastão e, assim, transformá-los em sua arma de fogo arcana. Os sigilos desaparecem do objeto se você os esculpir posteriormente em um item diferente. Caso contrário, os sigilos duram indefinidamente.
-                    </p>
-                    <p>
-                        Você pode usar sua arma de fogo arcana como foco de conjuração para suas magias de artífice. Ao conjurar uma magia de artífice através da arma de fogo, role um d8 e você ganha um bônus em uma das jogadas de dano da magia igual ao número rolado.
-                    </p>
                 </div>
+               
 
-                <button class="toggle-btn">Ferreiro de Batalha</button>
+                <button class="toggle-btn">Battlerager</button>
+                <div class="spoiler-content" style="display: none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 6: Abandono Imprudente</h4>
+                  
+                    <p>A partir do 6º nível, ao usar Ataque Imprudente enquanto estiver em fúria, você também ganha pontos de vida temporários iguais ao seu modificador de Constituição (mínimo de 1). Eles desaparecem se algum deles sobrar quando sua fúria acabar.</p>
+
+                    </div>
+
+                <button class="toggle-btn">Besta</button>
                 <div class="spoiler-content" style="display:none;">
                     <hr style="color: #FFE38C;">
-                    <h4>Nível 5: Ataque Extra</h4>
-                    <p>
-                        A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação de Ataque no seu turno.
-                    </p>
-                </div>
+                    
+                    <h4>Nível 6: Alma Bestial</h4>
+                    <p>O poder selvagem dentro de você aumenta, fazendo com que as armas naturais da sua Forma da Besta sejam consideradas mágicas para superar a resistência e a imunidade a ataques e danos não mágicos.</p>
+                    <p>Você também pode alterar sua forma para se adaptar ao ambiente. Ao terminar um descanso curto ou longo, escolha um dos seguintes benefícios, que dura até você terminar o próximo descanso curto ou longo:</p>
+
+            <li>Você ganha uma velocidade de natação igual à sua velocidade de caminhada e pode respirar debaixo d'água.</li>
+            <li>Você ganha uma velocidade de escalada igual à sua velocidade de caminhada e pode escalar superfícies difíceis, incluindo de cabeça para baixo no teto, sem precisar fazer um teste de habilidade.</li>
+            <li>Ao saltar, você pode fazer um teste de Força (Atletismo) e estender seu salto em um número de metros igual ao total do teste. Você pode fazer este teste especial apenas uma vez por turno.</li>
+<br>                 
+    </div>
+
+                <button class="toggle-btn">Berserker</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 6: Fúria Sem Mente</h4>
+                    <p>A partir do 6º nível, você não pode ser enfeitiçado ou amedrontado enquanto estiver em fúria. Se você for enfeitiçado ou amedrontado ao entrar em fúria, o efeito será suspenso enquanto durar a fúria.</p>
+                    
+            </div>
+
+                <button class="toggle-btn">Gigante</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+
+                    <h4>Nível 6: Cutelo Elemental</h4>
+                    <p>Seu vínculo com o poder elemental dos gigantes cresce, e você aprende a infundir armas com energia primordial.</p>
+                    <p>Ao entrar em fúria, você pode escolher uma arma que esteja segurando e infundi-la com um dos seguintes tipos de dano: ácido, frio, fogo, trovão ou relâmpago. Enquanto empunhar a arma infundida durante sua fúria, o tipo de dano da arma muda para o tipo escolhido, ela causa 1d6 de dano adicional do tipo escolhido ao atingir e ganha a propriedade de arremessar, com um alcance normal de 20fts e um alcance longo de 60fts. Se você arremessar a arma, ela reaparece em sua mão no instante em que atinge ou erra um alvo. Os benefícios da arma infundida são suprimidos enquanto uma criatura diferente de você a empunha.</p>
+                    <p>Enquanto estiver enfurecido e segurando a arma infundida, você pode usar uma ação bônus para mudar o tipo de dano atual da arma infundida para outro dentre as opções de tipo de dano acima.</p>                   
+
         </div>
-</div>
-        <h2 id="ExperienciaFerramentas">Nível 6: Conhecimento em ferramentas</h2>
-        <hr>
-        <div class="caracteristica">
-            <p><i>Característica de artífice de 6º nível</i></p>
-            <p>
-                Seu bônus de proficiência agora é dobrado para qualquer teste de habilidade que você fizer que use sua proficiência com uma ferramenta.
-            </p>
+
+                <button class="toggle-btn">Hercúleo</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 6: Atirador Poderoso</h4>
+                    <p>A partir do 6º nível, você utiliza sua imensa força ao usar armas de longo alcance. Você pode usar armas pesadas sem incorrer em desvantagem devido ao seu tamanho. Além disso, você pode optar por usar seu modificador de Força para jogadas de ataque e dano com arcos longos. Ao realizar ataques à distância com arcos longos ou armas de arremesso enquanto estiver em fúria, você pode adicionar seu bônus de dano de fúria às jogadas de dano.</p>
+
+                    <p><strong>Disparo Trovejante.</strong> Ao realizar um ataque à distância, você pode optar por adicionar o efeito de onda trovejante ao projétil, centralizado no local atingido. A CD para este efeito é 8 + seu bônus de proficiência + seu modificador de Força. Após usar esta habilidade, você não poderá usá-la novamente até completar um descanso curto ou longo.</p>
+                    
+            </div>
+
+                <button class="toggle-btn">Juggernaut</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                   
+                    <h4>Nível 6: Poder Demolidor</h4>
+                    <p>A partir do 6º nível, seus ataques de arma corpo a corpo causam 1d8 de dano extra a construções e o dobro de dano a objetos e estruturas.</p>
+                  
+                    <h4>Nível 6: Postura Resoluta</h4>
+                    <p>Também no 6º nível, você pode reorientar temporariamente sua habilidade de combate para se tornar um baluarte de defesa. No início do seu turno (nenhuma ação necessária), você pode assumir uma postura defensiva que dura até o início do seu próximo turno. Enquanto estiver nessa postura, você não pode ser agarrado, jogadas de ataque contra você têm desvantagem e seus ataques com armas são feitos com desvantagem.</p>
+            </div>
+
+                    <button class="toggle-btn">Fumaça Sombria</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 6: Névoa Rastejante</h4>
+                    <p>A partir do 6º nível, você pode irromper em uma névoa de sombra bruta e então se recompor em outro lugar. Com uma ação, você se teletransporta magicamente, junto com qualquer equipamento que esteja vestindo ou carregando, até 60fts para um espaço desocupado que você possa ver. Antes ou depois do teletransporte, você pode realizar um ataque corpo a corpo.</p>
+            </div>
+
+                    <button class="toggle-btn">Fanático</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    <h4>Nível 6: Foco Fanático</h4>
+                    <p>A partir do 6º nível, o poder divino que alimenta sua fúria pode protegê-lo. Se você falhar em um teste de resistência enquanto estiver em fúria, poderá repeti-lo e deverá usar a nova jogada. Você pode usar esta habilidade apenas uma vez por fúria.</p>
+
+            </div>
+
+                    <button class="toggle-btn">Arauto da Tempestade</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                   
+                    <h4>Nível 6: Alma da Tempestade</h4>
+                    <p>No 6º nível, a tempestade concede benefícios mesmo quando sua aura não está ativa. Os benefícios são baseados no ambiente que você escolheu para sua Aura de Tempestade.</p>
+                <li><strong>Deserto.</strong> Você ganha resistência a dano de fogo e não sofre os efeitos do calor extremo, conforme descrito no Guia do Mestre. Além disso, com uma ação, você pode tocar em um objeto inflamável que não esteja sendo usado ou carregado por ninguém e incendiá-lo.</li>
+                <li><strong>Mar.</strong>Você ganha resistência a danos elétricos e pode respirar debaixo d'água. Você também ganha uma velocidade de natação de 30fts.</li>
+                <li><strong>Tundra.</strong> Você ganha resistência a dano de frio e não sofre os efeitos do frio extremo. Além disso, com uma ação, você pode tocar água e transformar um cubo de 5fts em gelo, que derrete após 1 minuto. Esta ação falha se houver uma criatura no cubo.</li>
+            <br>
+            </div>
+
+                    <button class="toggle-btn">Magia Selvagem</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 6: Reforçando a Magia</h4>
+                    <p>Você pode usar sua magia selvagem para fortalecer a si mesmo ou a um companheiro. Com uma ação, você pode tocar uma criatura (que pode ser você mesmo) e conferir um dos seguintes benefícios à sua escolha a essa criatura:</p>
+                    <li>Por 10 minutos, a criatura pode rolar um d3 sempre que fizer uma jogada de ataque ou um teste de habilidade e adicionar o número rolado à jogada de d20.</li>
+                    <li>Role um d3. A criatura recupera um espaço de magia gasto, cujo nível é igual ou inferior ao número rolado (à escolha da criatura). Uma vez que a criatura recebe este benefício, ela não pode recebê-lo novamente até após um descanso longo.</li><br>
+                    <p>Você pode realizar esta ação um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p>
+                    
+            </div>
+
+                    <button class="toggle-btn">Guerreiro Totêmico</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 6: Aspecto da Besta</h4>
+                    <p>No 6º nível, você ganha um benefício mágico baseado no animal totêmico de sua escolha. Você pode escolher o mesmo animal que selecionou no 3º nível ou um diferente.</p>
+                   
+                    <li><strong>Urso.</strong> Você ganha a força de um urso. Sua capacidade de carga (incluindo carga máxima e elevação máxima) é dobrada, e você tem vantagem em testes de Força para empurrar, puxar, levantar ou quebrar objetos.</li>
+                    <li><strong>Águia.</strong> Você ganha a visão de uma águia. Você consegue enxergar até 1,6 km de distância sem dificuldade, sendo capaz de discernir até detalhes sutis como se estivesse olhando para algo a menos de 100fts de distância. Além disso, a penumbra não impõe desvantagem aos seus testes de Sabedoria (Percepção).</li>
+                    <li><strong>Alce.</strong> Seja montado ou a pé, seu ritmo de viagem é dobrado, assim como o de até dez companheiros enquanto estiverem a até 60fts de você e você não estiver incapacitado. O espírito do alce ajuda você a viajar longe e rápido.</li>
+                    <li><strong>Tigre.</strong> Você adquire proficiência em duas perícias da seguinte lista: Atletismo, Acrobacia, Furtividade e Sobrevivência. O espírito felino aprimora seus instintos de sobrevivência.</li>
+                    <li><strong>Lobo.</strong> Você adquire a sensibilidade de caça de um lobo. Você pode rastrear outras criaturas enquanto viaja em ritmo acelerado e pode se mover furtivamente enquanto viaja em ritmo normal.</li>
+                </div>
+
+        </div>
+        <br>
+
         </div>
 
-        <h2 id="FlahsGenio">Nível 7: Flash de Gênio</h2>
+        <h2 id="Instintoselvagem">Nível 7: Instinto Selvagem</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 7º nível</i></p>
-            <p>
-                Você adquiriu a habilidade de encontrar soluções sob pressão. Quando você ou outra criatura que você possa ver a até 30fts de distância fizer um teste de habilidade ou uma salvaguarda, você pode usar sua reação para adicionar seu modificador de Inteligência à jogada.
-            </p>
-            <p>
-                Você pode usar esta habilidade um número de vezes igual ao seu modificador de Inteligência (mínimo de uma vez). Você recupera todos os usos gastos ao terminar um descanso longo.
-            </p>
+            <p><i>Característica de Bárbaro de 7º nível</i></p>
+            <p> No 7º nível, seus instintos estão tão aguçados que você tem vantagem em testes de iniciativa. Além disso, se você for surpreendido no início do combate e não estiver incapacitado, você pode agir normalmente no seu primeiro turno, mas somente se entrar em fúria antes de fazer qualquer outra coisa naquele turno.</p>
+        </div>
+
+        <h2 id="Ataqueinstintivo">Nível 7: Ataque Instintivo</h2>
+        <hr>
+        <div class="caracteristica">
+            <p><i>Característica de Bárbaro de 7º nível</i></p>
+            <p> Como parte da ação bônus que você realiza para entrar em fúria, você pode se mover até metade de sua velocidade.</p>
         </div>
 
         <h2 id="MelhoriaPontuacao1">Nível 8: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 8º nível</i></p>
+            <p><i>Característica de Bárbaro de 8º nível</i></p>
             <p>
                 Ao atingir o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
+            <p>Alternativamente, você poderá escolher um <a href="https://5e.tools/feats.html">talento</a>.</p>
         </div>
 
-        <h2 id="RecursoArtifice">Nível 9: Característica de Especialista em Artíficer</h2>
+        <h2 id="Críticobrutal">Nível 9: Crítico Brutal (1 dado)</h2>
         <hr>
-            <p><i>Característica de artífice de 9º nível</i></p>
-                <p>
-                    Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
-                </p>
-                <div class="caixas">
-                    <button class="toggle-btn">Alquimista</button>
-                    <div class="spoiler-content" style="display:none;">
-                        <hr style="color: #FFE38C;">
-                        <h4>Nível 9: Reagentes Restauradores</h4>
-                        <i>Característica de Alquimista de 9º nível</i>
-                        <p>
-                            A partir do 9º nível, você pode incorporar reagentes restauradores em alguns de seus trabalhos:
-                        </p>
-                        <p>
-                                <li>Sempre que uma criatura bebe um elixir experimental que você criou, a criatura ganha pontos de vida temporários iguais a 2d6 + seu modificador de Inteligência (mínimo de 1 ponto de vida temporário).</li>
-                                <li>Você pode conjurar a magia Lesser Restoration sem gastar um espaço de magia e sem preparar a magia, desde que use suprimentos de alquimista como foco de conjuração. Você pode fazer isso um número de vezes igual ao seu <strong>modificador de Inteligência (mínimo de uma vez)</strong>, e recupera todos os usos gastos ao terminar um descanso longo.</li>
-                        </p>
-
-                    </div>
-
-                    <button class="toggle-btn">Armeiro</button>
-                    <div class="spoiler-content" style="display:none;">
-                        <hr style="color: #FFE38C;">
-                        <h4>Nível 9: Modificações de Armadura</h4>
-                        <i>Característica de Armeiro de 9º nível</i>
-                        <p>
-                            Você aprende a usar suas infusões de artífice para modificar sua Armadura Arcana de forma especial. Essa armadura agora conta como itens separados para os propósitos do seu recurso "Infundir Itens": armadura (a peça peitoral), botas, capacete e a arma especial da armadura. Cada um desses itens pode conter uma de suas infusões, e as infusões são transferidas se você alterar o modelo da sua armadura com o recurso "Modelo de Armadura". Além disso, o número máximo de itens que você pode infundir simultaneamente aumenta em 2, mas esses itens extras devem fazer parte da sua Armadura Arcana.
-                        </p>
-                    </div>
-
-                <button class="toggle-btn">Artilheiro</button>
-                <div class="spoiler-content" style="display:none;">
+            <p><i>Característica de Bárbaro de 9º nível</i></p>
+              
+            <p>A partir do 9º nível, você pode rolar um dado de dano de arma adicional para determinar o dano extra de um acerto crítico com um ataque corpo a corpo. Isso aumenta para dois dados adicionais no 13º nível e três dados adicionais no 17º nível.</p>
+        
+        <h2 id="Característicadocaminho1">Nível 10: Característica do Caminho</h2>
+        <hr>
+        <p><i>Característica de Bárbaro de 10º nível</i></p>
+        <div class="caixas">
+                <button class="toggle-btn">Guardião Ancestral</button>
+                <div class="spoiler-content" style="display: none;">
                     <hr style="color: #FFE38C;">
-                    <h4>Nível 9: Canhão Explosivo</h4>
-                    <p>
-                        A partir do 9º nível, cada canhão sobrenatural que você criar será mais destrutivo:
-                    </p>
-                        <li>Todos os testes de dano do canhão aumentam em 1d8.</li>
-                        <li>Com uma ação, você pode comandar a detonação do canhão se estiver a até 60fts dele. Isso destrói o canhão e força cada criatura a até 20fts dele a realizar um teste de resistência de Destreza contra sua CD de magia, sofrendo 3d8 de dano de força em uma falha ou metade desse dano em um sucesso.</li>
-                    <br>
-                    </div>
-                
+    
+                    <h4>Nível 10: Consultar os Espíritos</h4>
+                    <p>No 10º nível, você ganha a habilidade de consultar seus espíritos ancestrais. Ao fazer isso, você conjura a magia augúrio ou clarividência , sem usar um espaço de magia ou componentes materiais. Em vez de criar um sensor esférico, esse uso da clarividência invoca invisivelmente um de seus espíritos ancestrais para o local escolhido. Sabedoria é sua habilidade de conjuração para essas magias.</p>
+                    <p>Após conjurar qualquer uma das magias dessa forma, você não poderá usar esse recurso novamente até terminar um descanso curto ou longo.</p> 
 
-                <button class="toggle-btn">Ferreiro de Batalha</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Nível 9: Choque Arcano</h4>
-                    <p>
-                        No 9º nível, você aprende novas maneiras de canalizar energia arcana para ferir ou curar. Quando você atinge um alvo com um ataque de arma mágica ou seu defensor de aço atinge um alvo, você pode canalizar energia mágica através do golpe para criar um dos seguintes efeitos:
-                    </p>
-                    <p>
-                            <li>O alvo sofre 2d6 de dano de força adicional.</li>
-                            <li>Escolha uma criatura ou objeto que você possa ver a até 30fts do alvo. Energia de cura flui para o recipiente escolhido, restaurando 2d6 pontos de vida.</li>
-                        <p>
-                            Você pode usar esta energia um número de vezes igual ao seu <strong>modificador de Inteligência (mínimo de uma vez)</strong>, mas não pode fazer isso mais de uma vez por turno. Você recupera todos os usos gastos ao terminar um descanso longo.
-                        </p>
-                    </p>
-
-                    </p>
                 </div>
+               
+
+                <button class="toggle-btn">Battlerager</button>
+                <div class="spoiler-content" style="display: none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Investida do Battlerager</h4>
+                  
+                    <p>A partir do 10º nível, você pode realizar a ação de Disparar como uma ação bônus enquanto estiver em fúria.</p>
+
+                    </div>
+
+                <button class="toggle-btn">Besta</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Fúria Infecciosa</h4>
+                    <p>Ao atingir uma criatura com suas armas naturais enquanto estiver em fúria, a fera dentro de você pode amaldiçoar seu alvo com fúria raivosa. O alvo deve ser bem-sucedido em um teste de resistência de Sabedoria (CD igual a 8 + seu modificador de Constituição + seu bônus de proficiência) ou sofrer um dos seguintes efeitos (à sua escolha):</p>
+ 
+            <li>O alvo deve usar sua reação para fazer um ataque corpo a corpo contra outra criatura de sua escolha que você possa ver.</li>
+            <li>O alvo sofre 2d12 de dano psíquico.</li> <br>
+                    <p>Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p>
+    </div>
+
+                <button class="toggle-btn">Berserker</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Presença Intimidadora</h4>
+                    <p>A partir do 10º nível, você pode usar sua ação para assustar alguém com sua presença ameaçadora. Ao fazer isso, escolha uma criatura que você possa ver a até 30fts de você. Se a criatura puder ver ou ouvir você, ela deve ser bem-sucedida em um teste de resistência de Sabedoria (CD igual a 8 + seu bônus de proficiência + seu modificador de Carisma) ou ficará amedrontada até o final do seu próximo turno. Nos turnos subsequentes, você pode usar sua ação para estender a duração deste efeito na criatura amedrontada até o final do seu próximo turno. Este efeito termina se a criatura terminar seu turno fora da linha de visão ou a mais de 60fts de você.</p>
+                    <p>Se a criatura for bem-sucedida no teste de resistência, você não poderá usar esse recurso nela novamente por 24 horas.</p>
+            </div>
+
+                <button class="toggle-btn">Gigante</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+
+                    <h4>Nível 10: Impel Poderoso</h4>
+                    <p>Sua conexão com a força dos gigantes permite que você arremesse aliados e inimigos para o campo de batalha. Como uma ação bônus enquanto estiver em fúria, você pode escolher uma criatura média ou menor ao seu alcance e movê-la para um espaço desocupado que você possa ver a até 30fts de você. Uma criatura relutante deve ser bem-sucedida em um teste de resistência de Força (CD igual a 8 + seu bônus de proficiência + seu modificador de Força) para evitar o efeito.</p>
+                    <p>Se, ao final desse movimento, a criatura arremessada não estiver em uma superfície ou líquido que possa sustentá-la, a criatura cai, sofrendo dano normalmente e aterrissando de bruços.</p>
+
         </div>
 
-        <h2 id="AdeptoItem">Nível 10: Adepto de Itens Mágicos</h2>
-        <hr>
-        <div class="caracteristica">
-            <p><i>Característica de artífice de 10º nível</i></p>
-            <p>
-                Você alcançou um profundo entendimento de como usar e fazer itens mágicos:
-            </p>
-                <li>Você pode sintonizar até quatro itens mágicos ao mesmo tempo.</li>
-                <li>Se você criar um item mágico com raridade comum ou incomum, levará um quarto do tempo normal e custará metade do ouro usual.</li>
+                <button class="toggle-btn">Hercúleo</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Fúria Hercúlea</h4>
+                    <p>A partir do 10º nível, suas fúrias adquirem qualidades lendárias e se tornam mais poderosas quanto mais tempo duram. No início de cada um dos seus turnos, se você já estiver em fúria, seu bônus de dano de fúria aumenta em +1, até um máximo igual ao seu modificador de Força. Além disso, enquanto estiver em fúria, você fica imune a dano de veneno e não pode ser amedrontado.</p>
+
+            </div>
+
+                <button class="toggle-btn">Juggernaut</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                   
+                    <h4>Nível 10: Golpes Trovejantes </h4>
+                    <p>A partir do 10º nível, você pode empurrar uma criatura até 10fts quando atingi-la com um ataque corpo a corpo enquanto estiver em fúria.</p>
+                  
+                    <h4>Nível 10: Ataque do Furacão</h4>
+                    <p>A partir do 10º nível, seus golpes podem arremessar inimigos pelo ar e em direção aos ataques de seus aliados. Como reação, ao empurrar uma criatura por pelo menos 5fts, você pode saltar para um espaço desocupado próximo a ela. Se fizer isso, a criatura deve ser bem-sucedida em um teste de resistência de Força com CD igual a 8 + seu bônus de proficiência + seu modificador de Força ou será derrubada. Este salto não custa movimento e não provoca ataques de oportunidade.</p>
+                    <p>Além disso, sempre que você empurra uma criatura para um espaço a até 5fts de um de seus aliados, o aliado pode usar sua reação para fazer um ataque com arma corpo a corpo contra aquela criatura.</p>
+
+            </div>
+
+                    <button class="toggle-btn">Fumaça Sombria</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Consumir Escuridão</h4>
+                    <p>No 10º nível, enquanto estiver em fúria, você pode se alimentar das sombras ao seu redor para restaurar sua vitalidade. Em condições de penumbra ou escuridão, você pode usar uma ação bônus para recuperar pontos de vida equivalentes a 1d12 + seu modificador de Constituição. Enquanto durar sua fúria (até 1 minuto), você recupera 1 ponto de vida no início de cada um dos seus turnos.</p>
+                    <p>Após usar esse recurso, você deve terminar um descanso curto ou longo antes de poder usá-lo novamente.</p>
+                </div>
+
+                    <button class="toggle-btn">Fanático</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    <h4>Nível 10: Presença Zelosa</h4>
+                    <p>No 10º nível, você aprende a canalizar poder divino para inspirar fanatismo nos outros. Com uma ação bônus, você libera um grito de guerra imbuído de energia divina. Até dez outras criaturas à sua escolha a até 60fts de você que possam ouvi-lo ganham vantagem em jogadas de ataque e testes de resistência até o início do seu próximo turno. Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso longo.</p>
+
+            </div>
+
+                    <button class="toggle-btn">Arauto da Tempestade</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                   
+                    <h4>Nível 10: Escudo da Tempestade</h4>
+                    <p>No 10º nível, você aprende a usar sua maestria da tempestade para proteger os outros. Cada criatura à sua escolha tem a resistência a dano que você ganhou com a habilidade Alma da Tempestade enquanto a criatura estiver na sua Aura da Tempestade.</p>
+         
+            </div>
+
+                    <button class="toggle-btn">Magia Selvagem</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Reação Instável</h4>
+                    <p>Quando você estiver em perigo durante sua fúria, a magia dentro de você pode atacar. Imediatamente após sofrer dano ou falhar em um teste de resistência enquanto estiver em fúria, você pode usar sua reação para rolar na tabela de Magia Selvagem e produzir imediatamente o efeito rolado. Este efeito substitui seu efeito de Magia Selvagem atual.</p>
+                    
+            </div>
+
+                    <button class="toggle-btn">Guerreiro Totêmico</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 10: Andarilho Espiritual</h4>
+                    <p>No 10º nível, você pode conjurar a magia <a href="#">Comunhão com a Natureza</a>, mas apenas como um ritual. Ao fazê-lo, uma versão espiritual de um dos animais que você escolheu para Espírito Totêmico ou Aspecto da Besta aparece para transmitir a informação que você busca.</p>
+
+                </div>
+
         </div>
         <br>
 
-        <h2 id="ItemArmazena">Nível 11: Item Armazenador de Magias</h2>
+        </div>
+
+        <h2 id="Fúriaimplacavel">Nível 11: Fúria Implacável</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 11º nível</i></p>
-            <p>
-                Agora você pode armazenar uma magia em um objeto. Sempre que terminar um descanso longo, você pode tocar em uma arma simples ou marcial ou em um item que possa usar como foco de conjuração e armazenar uma magia nele, escolhendo uma magia de 1º ou 2º nível da <a href="#">lista de magias de Artíficer</a> que exija 1 ação para ser conjurada (você não precisa tê-la preparada).
-            </p>
-            <p>
-                Enquanto segura o objeto, uma criatura pode realizar uma ação para produzir o efeito da magia a partir dele, usando seu modificador de habilidade de conjuração. Se a magia exigir <a href="#">concentração</a>, a criatura deve se concentrar. A magia permanece no objeto até ser usada um número de vezes igual ao dobro do seu modificador de Inteligência (mínimo de duas vezes) ou até que você use esta habilidade novamente para armazenar uma magia em um objeto.
-            </p>
+            <p><i>Característica de Bárbaro de 11º nível</i></p>
+            <p> A partir do 11º nível, sua fúria pode mantê-lo lutando, apesar de ferimentos graves. Se você cair para 0 pontos de vida enquanto estiver em fúria e não morrer imediatamente, poderá realizar um teste de resistência de Constituição CD 10. Se for bem-sucedido, você cai para 1 ponto de vida.</p>
+            <p> Cada vez que você usa esse recurso após o primeiro, a CD aumenta em 5. Quando você termina um descanso curto ou longo, a CD volta para 10.            </p>
         </div>
 
         <h2 id="MelhoriaPontuacao2">Nível 12: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 12º nível</i></p>
+            <p><i>Característica de Bárbaro de 12º nível</i></p>
             <p>
                 Ao atingir o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
+            <p>Alternativamente, você poderá escolher um <a href="https://5e.tools/feats.html">talento</a>.</p>
             </p>
         </div>
 
-        <h2 id="Savant">Nível 14: Sábio de Itens Mágicos</h2>
+        <h2 id="Críticobrutal1">Nível 13: Crítico Brutal (2 dados)</h2>
+        <hr>
+            <p><i>Característica de Bárbaro de 13º nível</i></p>
+              
+            <p>No 13º nível, você pode rolar dois dados adicionais de dano de arma para determinar o dano extra de um acerto crítico com um ataque corpo a corpo. Isso aumenta para três dados adicionais no 17º nível.</p>
+        
+
+        <h2 id="Característicadocaminho2">Nível 14: Característica do Caminho</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 14º nível</i></p>
+            <p><i>Característica de Bárbaro de 14º nível</i></p>
             <p>
-                Sua habilidade com itens mágicos se aprofunda:
+                No 14º nível, você ganha uma característica do seu Caminho Primordial.
             </p>
-                <li>Você pode sintonizar até cinco itens mágicos de uma vez.</li>
-                <li>Você ignora todos os requisitos de classe, raça, magia e nível para sintonizar ou usar um item mágico.</li>
+                
+        <div class="caixas">
+                <button class="toggle-btn">Guardião Ancestral</button>
+                <div class="spoiler-content" style="display: none;">
+                    <hr style="color: #FFE38C;">
+    
+                    <h4>Nível 14: Ancestrais Vingativos</h4>
+                    <p>No 14º nível, seus espíritos ancestrais se tornam poderosos o suficiente para retaliar. Quando você usa seu Escudo Espiritual para reduzir o dano de um ataque, o atacante sofre uma quantidade de dano de força igual ao dano que seu Escudo Espiritual previne.</p>
+                   
+                </div>
+               
+
+                <button class="toggle-btn">Battlerager</button>
+                <div class="spoiler-content" style="display: none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4> Nível 14: Retribuição Espinhosa</h4>
+                  
+                    <p>A partir do 14º nível, quando uma criatura a até 1,5 m de você lhe atinge com um ataque corpo a corpo, o atacante sofre 3 de dano perfurante se você estiver em fúria, não estiver incapacitado e estiver usando uma armadura com espinhos.</p>
+
+                    </div>
+
+                <button class="toggle-btn">Besta</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 14: Chamado da Caçada</h4>
+                    <p>A fera dentro de você se torna tão poderosa que você pode espalhar sua ferocidade para outros e ganhar resiliência com a participação deles na sua caçada. Ao entrar em fúria, você pode escolher um número de outras criaturas dispostas que você possa ver a até 30fts de você, igual ao seu modificador de Constituição (mínimo de uma criatura).</p>
+                    <p>Você ganha 5 pontos de vida temporários para cada criatura que aceitar esta característica. Até que a fúria termine, as criaturas escolhidas podem usar o seguinte benefício uma vez em cada um dos seus turnos: quando a criatura atinge um alvo com uma jogada de ataque e causa dano a ele, a criatura pode rolar um d6 e ganhar um bônus no dano igual ao número rolado.</p>
+                    <p>Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.</p>
+
+                </div>
+
+                <button class="toggle-btn">Berserker</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 14: Retaliação</h4>
+                    <p>A partir do 14º nível, quando você sofre dano de uma criatura que está a até 5fts de você, você pode usar sua reação para fazer um ataque corpo a corpo contra aquela criatura.</p>
+            </div>
+
+                <button class="toggle-btn">Gigante</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+
+                    <h4>Nível 14: Colosso Demiúrgico</h4>
+                    <p>O poder primordial da sua fúria se intensifica. Quando você entra em fúria, seu alcance aumenta em 10fts, seu tamanho pode aumentar para Grande ou Enorme (à sua escolha) e você pode usar seu Impelimento Poderoso para mover criaturas Grandes ou menores.</p>
+                    <p>Além disso, o dano extra causado pela sua habilidade Cutelo Elemental aumenta para 2d6.</p>
+
         </div>
 
-        <h2 id="RecursoEspecialistaArtifice">Nível 15: Característica de Especialista em Artíficer</h2>
+                <button class="toggle-btn">Hercúleo</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 14: Earthshaker</h4>
+                    <p>A partir do 14º nível, sua força colossal faz o próprio solo tremer e tremer. No seu turno, você pode usar sua ação para atingir o solo e criar os efeitos de um terremoto com um raio de 40fts, centrado em sua localização. Esta área se torna um terreno difícil.</p>
+                    <p>Cada criatura no chão na área afetada que estiver se concentrando deve realizar um teste de resistência de Constituição com CD 8 + seu bônus de proficiência + seu modificador de Força. Em caso de falha, a concentração da criatura é quebrada. No final do seu turno, cada criatura no chão na área deve realizar um teste de resistência de Destreza com o mesmo CD da anterior. Em caso de falha, a criatura é derrubada. Você tem vantagem neste teste de resistência.</p>
+                    <p>No início de cada um dos seus turnos subsequentes, você pode usar sua ação bônus para pisar no chão e continuar os efeitos do terremoto até o início do seu próximo turno, por uma duração máxima de 1 minuto. Após usar esta habilidade, você não poderá usá-la novamente até completar um descanso longo.</p>
+
+            </div>
+
+                <button class="toggle-btn">Juggernaut</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                   
+                    <h4>Nível 14: Imparável</h4>
+                    
+                    <p>No 14º nível, sua fúria em batalha o torna imparável. Enquanto estiver em fúria, sua velocidade não pode ser reduzida e você é imune às condições de medo, paralisia, propensão e atordoamento.</p>
+                    <p>Se você estiver assustado, paralisado ou atordoado, ainda poderá usar uma ação bônus para entrar em fúria (mesmo que não possa realizar outras ações). Você não é afetado por nenhuma dessas condições enquanto estiver em fúria.</p>
+
+            </div>
+
+                    <button class="toggle-btn">Fumaça Sombria</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 14: Névoa Corrosiva</h4>
+                    <p>No 14º nível, sua Fumaça Sombria é mais potente. Qualquer criatura hostil que entre na fumaça ou comece seu turno nela deve ser bem-sucedida em um teste de resistência de Constituição ou ficará cega até o início do próximo turno. A CD é igual a 8 + seu bônus de proficiência + seu modificador de Constituição. Criaturas que não dependem da visão são imunes a este efeito.</p>
+
+                </div>
+
+                    <button class="toggle-btn">Fanático</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    <h4>Nível 14: Fúria além da Morte</h4>
+                    <p>A partir do 14º nível, o poder divino que alimenta sua fúria permite que você resista a golpes fatais. Enquanto estiver em fúria, ter 0 pontos de vida não o deixa inconsciente . Você ainda precisa realizar testes de resistência à morte e sofre os efeitos normais de sofrer dano enquanto estiver com 0 pontos de vida. No entanto, se você for morrer por falhar em testes de resistência à morte, você não morre até que sua fúria termine, e só morre se ainda tiver 0 pontos de vida.</p>
+
+            </div>
+
+                    <button class="toggle-btn">Arauto da Tempestade</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                   
+                    <h4>Nível 14: Tempestade Furiosa</h4>
+                    <p>No 14º nível, o poder da tempestade que você canaliza se torna mais poderoso, atingindo seus inimigos. O efeito é baseado no ambiente que você escolheu para sua Aura de Tempestade.</p>
+                    <li><strong>Deserto.</strong> Imediatamente após uma criatura em sua aura atingi-lo com um ataque, você pode usar sua reação para forçar essa criatura a realizar um teste de resistência de Destreza. Em caso de falha, a criatura sofre dano de fogo igual à metade do seu nível de bárbaro.</li>
+                    <li><strong>Mar.</strong> Ao atingir uma criatura em sua aura com um ataque, você pode usar sua reação para forçar essa criatura a realizar um teste de resistência de Força. Em caso de falha, a criatura é derrubada , como se tivesse sido atingida por uma onda</li>
+                    <li><strong>Tundra.</strong> Sempre que o efeito da sua Aura da Tempestade for ativado, você pode escolher uma criatura visível na aura. Essa criatura deve ser bem-sucedida em um teste de resistência de Força, ou sua velocidade será reduzida a 0 até o início do seu próximo turno, pois gelo mágico a cobre.</li>
+           <br>
+                </div>
+
+                    <button class="toggle-btn">Magia Selvagem</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 14: Onda Controlada</h4>
+                    <p>Sempre que rolar na tabela de Magia Selvagem, você pode rolar o dado duas vezes e escolher qual dos dois efeitos liberar. Se você tirar o mesmo número em ambos os dados, poderá ignorá-lo e escolher qualquer efeito da tabela.</p>
+                    
+            </div>
+
+                    <button class="toggle-btn">Guerreiro Totêmico</button>
+                <div class="spoiler-content" style="display:none;">
+                    <hr style="color: #FFE38C;">
+                    
+                    <h4>Nível 14: Sintonização Totêmica</h4>
+                    <p>No 14º nível, você ganha um benefício mágico baseado em um animal totêmico de sua escolha. Você pode escolher o mesmo animal selecionado anteriormente ou um diferente.</p>
+                    <li><strong>Urso.</strong> Enquanto você estiver em fúria, qualquer criatura hostil a até 5fts de você tem desvantagem em jogadas de ataque contra alvos que não sejam você ou outro personagem com esta característica. Um inimigo é imune a este efeito se não puder ver ou ouvir você, ou se não puder ser amedrontado .</li>
+                    <li><strong>Águia.</strong> Enquanto estiver em fúria, você tem uma velocidade de voo igual à sua velocidade de caminhada atual. Este benefício funciona apenas em rajadas curtas; você cai se terminar seu turno no ar e nada mais o estiver segurando no ar.</li>
+                    <li><strong>Alce.</strong> Enquanto estiver em fúria, você pode usar uma ação bônus durante seu movimento para atravessar o espaço de uma criatura Grande ou menor. Essa criatura deve ser bem-sucedida em um teste de resistência de Força (CD 8 + seu bônus de Força + seu bônus de proficiência) ou será derrubada e sofrerá dano contundente igual a 1d12 + seu modificador de Força.</li>
+                    <li><strong>Tigre.</strong> Enquanto estiver em fúria, se você se mover pelo menos 20fts em linha reta em direção a um alvo Grande ou menor logo antes de realizar um ataque corpo a corpo contra ele, você pode usar uma ação bônus para realizar um ataque corpo a corpo adicional contra ele.</li>
+                    <li><strong>Lobo.</strong> Enquanto estiver em fúria, você pode usar uma ação bônus no seu turno para derrubar uma criatura Grande ou menor ao atingi -la com um ataque de arma corpo a corpo.</li>
+                
+                </div>
+
+        </div>
+       <br>
+        </div>
+
+      
+
+        <h2 id="Fúriapersistente">Nível 15: Fúria Persistente</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 15º nível</i></p>
+            <p><i>Característica de Bárbaro de 15º nível</i></p>
             <p>
-                Você ganha uma habilidade concedida pela sua escolha de Especialista Artífice.
+                A partir do 15º nível, sua fúria é tão intensa que só termina mais cedo se você ficar inconsciente ou se decidir acabar com ela.
             </p>
-            <div class="caixas">
-                <button class="toggle-btn">Alquimista</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Nível 15: Maestria Química</h4>
-                    <p>No 15º nível, você foi exposto a tantos produtos químicos que eles representam pouco risco para você, e você pode usá-los para acabar rapidamente com certas doenças:</p>
-         
-                        <li>Você ganha resistência a dano de ácido e dano de veneno, e fica imune à condição de envenenamento.</li>
-                        <li>Você pode conjurar restauração e cura maiores sem gastar um espaço de magia, sem preparar a magia e sem componentes materiais, desde que use suprimentos de alquimista como foco de conjuração. Depois de conjurar qualquer uma das magias com esta característica, você não poderá conjurá-la novamente até terminar um descanso longo.</li>
-          <br>
-                </div>
+            
 
-                <button class="toggle-btn">Armeiro</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Level 15: Armadura Aperfeiçoada</h4>
-                    <p>No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:</p>
-     
-                        <li>O dano extra e a cura do seu Ataque Arcano aumentam para 4d6.</li>
-                        <li>Seu defensor de aço ganha um bônus de +2 na Classe de Armadura.</li>
-                        <li>Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a 1d4 + seu modificador de Inteligência.</li>
-            <br>
-                </div>
-
-                <button class="toggle-btn">Artilheiro</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Nível 15: Posição Fortificada</h4>
-                    <p>A partir do 15º nível, você se torna um mestre na formação de posições bem defendidas usando Canhão Eldritch:</p>
-         
-                        <li>Você e seus aliados têm meia cobertura enquanto estiverem a 3 metros de um canhão que você criar com o Canhão Sobrenatural, como resultado de um campo brilhante de proteção mágica que o canhão emite.</li>
-                        <li>Agora você pode ter dois canhões ao mesmo tempo. Você pode criar dois com a mesma ação (mas não com o mesmo espaço de magia) e pode ativar ambos com a mesma ação bônus. Você determina se os canhões são idênticos ou diferentes. Você não pode criar um terceiro canhão enquanto tiver dois.</li>
-            <br>
-                </div>
-
-                <button class="toggle-btn">Ferreiro de Batalha</button>
-                <div class="spoiler-content" style="display:none;">
-                    <hr style="color: #FFE38C;">
-                    <h4>Level 15: Defensor Aprimorado</h4>
-                    <p>No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:</p>
-             
-                        <li>O dano extra e a cura do seu Ataque Arcano aumentam para 4d6.</li>
-                        <li>Seu defensor de aço ganha um bônus de +2 na Classe de Armadura.</li>
-                        <li>Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a 1d4 + seu modificador de Inteligência.</li>
-          <br>
-                </div>
-        </div>
-</div>
         <h2 id="MelhoriaPontuacao3">Nível 16: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 16º nível</i></p>
+            <p><i>Característica de Bárbaro de 16º nível</i></p>
             <p>
                 Ao atingir o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
+            <p>Alternativamente, você poderá escolher um <a href="https://5e.tools/feats.html">talento</a>.</p>
             </p>
         </div>
 
-        <h2 id="MestreItens">Nível 18: Mestre de Itens Mágicos</h2>
+        <h2 id="Críticobrutal2">Nível 17: Crítico Brutal (3 dados)</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 18º nível</i></p>
+            <p><i>Característica de Bárbaro de 18º nível</i></p>
             <p>
-                Agora você pode sintonizar até seis itens mágicos ao mesmo tempo.
+                No 17º nível, você pode rolar três dados adicionais de dano de arma para determinar o dano extra de um acerto crítico com um ataque corpo a corpo.
+            </p>
+        </div>
+
+        <h2 id="Poderindomavel">Nível 18: Poder Indomável</h2>
+        <hr>
+        <div class="caracteristica">
+            <p><i>Característica de Bárbaro de 18º nível</i></p>
+            <p>
+                A partir do 18º nível, se o seu total em um teste de Força for menor que o seu valor de Força, você pode usar esse valor no lugar do total.
             </p>
         </div>
 
         <h2 id="MelhoriaPontuacao4">Nível 19: Melhoria na pontuação de habilidade (ASIs)</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 19º nível</i></p>
+            <p><i>Característica de Bárbaro de 19º nível</i></p>
             <p>
                 Ao atingir o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou pode aumentar dois valores de habilidade de sua escolha em 1. Como de costume, você não pode aumentar um valor de habilidade acima de 20 usando este recurso.
             </p>
-            <p>Alternativamente, você poderá escolher um <a href="#">talento</a>.</p>
+            <p>Alternativamente, você poderá escolher um <a href="https://5e.tools/feats.html">talento</a>.</p>
             </p>
             </p>
         </div>
 
-        <h2 id="AlmaArtificio">Nível 20: Alma do Artifício</h2>
+        <h2 id="Campeãoprimordial">Nível 20: Campeão Primordial</h2>
         <hr>
         <div class="caracteristica">
-            <p><i>Característica de artífice de 20º nível</i></p>
+            <p><i>Característica de Bárbaro de 20º nível</i></p>
             <p>
-                Você desenvolveu uma conexão mística com seus itens mágicos, dos quais você pode se valer para proteção:
+                No 20º nível, você personifica o poder da natureza. Seus valores de Força e Constituição aumentam em 4. Seu máximo para esses valores agora é 24.
             </p>
-                <li>Você ganha um bônus de +1 em todos os testes de resistência por item mágico ao qual você está sintonizado no momento.</li>
-                <li>Se você for reduzido a 0 pontos de vida, mas não for morto imediatamente, você pode usar sua reação para encerrar uma de suas infusões de artífice, fazendo com que você caia para 1 ponto de vida em vez de 0.</li>
-   
         </div>
     </div>
         <br>
