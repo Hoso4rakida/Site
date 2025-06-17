@@ -1,16 +1,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>História - Novastris</title>
+    <title>Sistema - Novastris</title>
     <link href="../css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-</head>  
+    <style>
+        .regras-container{
+            text-align: center;
+        }
+        
+        a{
+            color: #8B9EFF;
+        }
 
-<!DOCTYPE html>
+        .accordion {
+        cursor: pointer;
+        padding: 14px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 16px;
+        border: none;
+        background-color: #b0b9e6;
+        margin-bottom: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .accordion:hover {
+        background-color: #8B9EFF;
+      }
+      .panel {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #1E2125;
+        border-left: 2px solid #1E2125;
+      }
+
+      /* Botão flutuante */
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3A4162; /* Azul da sua imagem */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: background-color 0.3s;
+    }
+
+    .scroll-button:hover {
+      background-color: #3A4162; /* Azul mais claro no hover */
+    }
+
+    body {
+      height: 200px; /* Só para exemplo com rolagem */
+      margin: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    </style>
+    </head>
+
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -57,8 +119,7 @@
       align-items: center;
       padding: 12px 20px;
       text-decoration: none;
-      color: #A0A9D4
-;
+      color: #A0A9D4;
       font-weight: bold;
       font-size: 16px;
     }
@@ -103,10 +164,8 @@
 
   <!-- Menu lateral -->
   <div class="side-menu" id="sideMenu">
-    <a href="regras.html"><i class="fas fa-feather"></i> Regras</a>
     <a href="personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
     <a href="para mestre.html"><i class="fas fa-feather"></i> Para Mestres</a>
-    <a href="sistema.html"><i class="fas fa-feather"></i> Sistema</a>
     <a href="mercado.html"><i class="fas fa-feather"></i> Mercado</a>
     <a href="eventos.html"><i class="fas fa-feather"></i> Eventos</a>
     <a href="colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
@@ -122,7 +181,7 @@
 </body>
 </html>
 
-<body>
+  <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
@@ -131,7 +190,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active"><i class="fas fa-book-open"></i> História </a></li>
+                    <li class="nav-item"><a class="nav-link active"><i class="fas fa-book"></i> História </a></li>
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="../mapa.html"><i class="fas fa-map"></i> Mapa do Mundo </a></li>
                     <li class="nav-item"><a class="nav-link" href="../social.html"><i class="fas fa-earth-americas"></i> Redes Sociais </a></li>
                 </ul>
@@ -139,85 +198,342 @@
     </div>
   </nav>
   </div>
-    <section class="bg-dark custom-margin p-3" style= "text-align: justify;">  
+    <section class="bg-dark custom-margin p-3" style= "text-align: justify;">
+      <div class="back-button">
+        <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
+    </div> 
+    </button>
+    
+        <div class="regras-container">
+            <h1 id="regras">História</h1>
+            <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
+            <p style="color: #9b9898;">Toda a História de Cosmoria desde a criação da Guilda de Novastris, até os dias atuais.</p>
+            <hr>
 
-        <div class="back-button">
-            <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
-        </div> 
+          </div>
+     
+          <button class="scroll-button" onclick="scrollToBottom()">
+    ⬇
+  </button>
 
-        <h1 style="text-align: center;">História</h1>
-        <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
-        <hr>
-        <p>Há muito tempo no mundo de Cosmoria, existiam três Arquimagos extremamente poderosos, mas pouco conhecidos. Eles se chamavam <strong>Magnus Dazana, O Tempo Vivo</strong> (um mago cronomante com poderes temporais além da compreensão humana), <strong>Orrian London, O Escavador de Segredos</strong> (um mago escriba com informações que fariam reis brigarem por suas posses) e a líder deles <strong>Maghda Miralen, A Despertadora da Chama</strong> (a maga mais poderosa viva, com poderes capazes de dizimar exércitos com apenas um movimento de sua mão). Juntos, eles se nomearam a <strong>Ordem Estelar</strong>.</p>
-        
-        <p>Um certo dia, eles sentiram uma perturbação no tecido do cosmo. Um poder inimaginável estava se acumulando, prestes a desencadear uma supernova devastadora, destruindo tudo que estivesse à sua volta.</p>
-        
-        <p>Determinados a impedir essa catástrofe iminente, os magos se uniram em um conselho de emergência. Eles trouxeram suas habilidades e sabedoria para desvendar o segredo por trás dessa energia cósmica descontrolada. Após extensas pesquisas, descobriram que um antigo artefato, conhecido como <strong>Coração Estelar</strong>, poderia conter esse poder.</p>
-        
-        <p>O <strong>Coração Estelar</strong> era uma fonte de energia ancestral e poderosa, responsável por sustentar o equilíbrio cósmico de Cosmoria e de todo seu universo. Sua instabilidade poderia desencadear uma supernova devastadora como a que deviam impedir, destruindo tudo em seu caminho, ou poderia suprimi-la temporariamente. Compreendendo a gravidade da situação, os magos decidiram agir rapidamente.</p>
-        
-        <p>Utilizando seus conhecimentos e habilidades mágicas combinadas, os magos criaram um ritual complexo. Eles canalizaram suas próprias energias mágicas e se conectaram com o Coração Estelar, buscando transferir a supernova para dentro do artefato.</p>
-        <hr>
-        <h2 class="text-center mb-4">O Ritual da Ordem Estelar</h2>
-        <hr>
-        <p>
-            Durante o ritual, os magos enfrentaram um desafio monumental. O poder cósmico era imprevisível e tentava resistir a seus esforços como se aquilo fosse vivo. No entanto, eles permaneceram unidos e focados em sua missão.
-        </p>
-        <p>
-            Com grande esforço e sacrifício, os magos conseguiram estabilizar o <strong>Coração Estelar</strong>. O poder cósmico ameaçador foi contido e a supernova foi impedida temporariamente. Após vários estudos, Magnus fez com que o artefato ficasse preso no tempo, podendo ser liberado apenas por forças maiores com um imenso poder, fazendo assim com que Cosmoria fosse salva da destruição iminente.
-        </p>
-        <p>
-            A notícia da bravura e habilidade dos magos se espalhou rapidamente por todo o planeta. Eles foram aclamados como heróis, recebendo gratidão e admiração de todos que se beneficiaram de sua coragem. Em reconhecimento a sua grande conquista, os magos fundaram uma guilda dedicada à proteção do mundo e à busca por conhecimento chamada <strong>Novastris</strong>. Porém, após essa fundação, eles desapareceram sem deixar nenhum tipo de vestígio junto do Coração Estelar.
-        </p>
-        <p>
-            Agora, a <strong>Guilda Novastris</strong> se tornou um farol de esperança, sabedoria e prosperidade, a cada dia, com cada vez mais aventureiros determinados a impedir que o mal vença.
-        </p>
-        <hr>
-        <p class="text-center">
-            <em>
-                Para iniciarmos sua estadia como um desses aventureiros, leia a página
-                <a href="./regras.html" style="color: #8B9EFF; text-decoration: none;">Regras</a> para entender como tudo funciona por aqui. Temos itens, magias, classes, subclasses e talentos banidos e alterados. 
-                Verifique a página <a href="./personagens.html" style="color: #8B9EFF; text-decoration: none;">Criação de Personagem</a> para evitar problemas posteriores.
-                Após isso, siga o passo a passo no canal do nosso Discord e solicite sua ficha no canal apropriado. 
-                Após aprovação por um Gestor de Fichas e a criação da sua ficha no Excel e no Roll20, você estará apto para jogar conosco.
-            </em>
-        </p>
-        <p class="text-center mt-4">
-            <strong>Esperamos vê-lo em breve...</strong>
-        </p>
-        <p class="text-center">
-            <strong>Atenciosamente,<br>Administração Novastris</strong>
-        </p>        
-    </section>
+      <button class="accordion">😴 Ano 1122 – O Retorno das Sombras Antigas</button>
+      <div class="panel">
+        <br>
+        <p>O ano de 1122 ficou marcado por um colapso estranho na ordem natural do mundo. Em toda Cosmoria, pessoas começaram a sofrer de distúrbios incompreensíveis: algumas não conseguiam mais dormir, enquanto outras mergulhavam em sonos profundos dos quais não despertavam.</p>
+        <p>As ruas foram tomadas por <strong>criaturas oníricas</strong> — entidades formadas do próprio tecido dos sonhos e pesadelos. Algumas dançavam ao luar em silêncio hipnótico, outras arrastavam suas vítimas para reinos além da vigília. As cidades clamaram por socorro, e a <strong>Guilda Novastris</strong>, com sede fortalecida pela Tríade, enviou seus melhores aventureiros para restaurar a sanidade do mundo.</p>
+        <p>Em meio à crise, uma <strong>videira colossal</strong> rompeu os céus — um <strong>pé de feijão</strong> de proporções míticas cresceu até desaparecer nas nuvens. Dela, <strong>gigantes de um reino celeste desconhecido</strong> desceram com força brutal, causando destruição. Mais uma vez, heróis da Guilda e guardas de Novastris impediram sua marcha. Os colossos recuaram, mas o mistério sobre o reino acima das nuvens permaneceu sem resposta.</p>
+        <p>Ao mesmo tempo, <strong>livros e cantigas antigas</strong> começaram a se materializar — histórias que antes pertenciam ao folclore agora caminhavam entre os vivos. Seres das lendas surgiam em forma corpórea, atacando vilarejos e entoando <strong>rituais obscuros</strong> em nome de uma <strong>bruxa esquecida</strong>, cujo nome ninguém ousava pronunciar.</p>
+        <p><strong>Portais profanos</strong> foram abertos, e deles emergiram <strong>criaturas demoníacas</strong> de crueldade refinada. As forças de defesa mal podiam responder a tantos eventos simultâneos, e mesmo os mais experientes magos e clérigos sentiram suas magias falharem diante de tais manifestações.</p>
+        <p>Diz-se que <strong>algo adormecido no tempo foi despertado</strong>. Problemas que deveriam ter sido enterrados para sempre estavam agora emergindo com força renovada, como se as próprias lendas buscassem vingança pelo esquecimento. E talvez possam conseguir.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1122.png" style="text-align: center;" width="600px">
+      </div> 
 
-    <!--roda pé-->
+        <br>
+      </div>
+
+      <button class="accordion">🌟 Ano 1121 – O Legado de Leoric: A Aurora de Dois Reinos</button>
+      <div class="panel">
+        <br>
+        <p>Quando a misteriosa enfermidade começou a consumir o corpo do Rei Leoric, nem mesmo os mais sábios curandeiros de Celestia ou os magos de Solaria conseguiram identificar a origem do mal. Era como se o próprio tempo estivesse corroendo sua alma — lentamente, mas com uma inevitabilidade sombria. Mesmo assim, Leoric permaneceu firme em sua responsabilidade, governando com sabedoria até seus últimos dias.</p>
+        <p>Antecipando o inevitável, Leoric tomou uma decisão que alteraria o curso da história de Celestia. Ele separou a região sul do reino, uma terra fértil, de ventos suaves e auroras constantes, e a nomeou de <strong>Ostia</strong>, em homenagem à sua filha, a jovem princesa <strong>Laurie</strong>. Embora ainda adolescente, Laurie já demonstrava uma aura inata de liderança, com um coração nobre e mente curiosa. Leoric desejava garantir que sua filha herdasse um trono preparado para a paz, longe dos conflitos do passado.</p>
+        <p>Até que ela estivesse pronta, ambos os reinos — Celestia e Ostia — seriam regidos por sua filha, a <strong>Rainha Medea</strong>, uma mulher conhecida por sua diplomacia, coragem e eloquente domínio político. </p>
+        <p>A morte de Leoric foi marcada por uma cerimônia grandiosa. Enviados de Mortumbra, emissários de Satsuki, representantes de Solaria e até mesmo guerreiros de Bamaku vieram prestar homenagens. Pela primeira vez em décadas, torres sinfônicas de toda Cosmoria tocaram em uníssono — não por guerra, mas por luto.</p>
+        <p>O legado de Leoric não foi apenas de território, mas de esperança. Ostia passou a ser conhecida como o <strong>Reino da Aurora</strong>, um símbolo de novo começo, enquanto Celestia, sob a regência de Medea, manteve-se como o coração espiritual de Cosmoria.</p>
+        <p>Nos céus das duas capitais, durante a noite do funeral, uma estrela cadente dividiu-se em duas trilhas brilhantes — um sinal, segundo os videntes celestinos, de que pai e filha estavam agora unidos pelos laços do destino. O povo acreditava: o espírito de Leoric protegeria ambos os reinos até que a nova rainha despertasse.</p>
+
+        <div style="text-align: center;">
+      <img src="../img/ano1121.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🌋 Ano 1098 – O Levante de Selentia e o Bastião de Barundin</button>
+      <div class="panel">
+        <br>
+        <p>Um <strong>terremoto global</strong> sacudiu os alicerces de todos os continentes, mas suas ondas foram sentidas com força destruidora em <strong>Kel’dor, Solaria e Celestia.</strong></p>
+        <p>Das águas revoltas entre essas três nações, surgiu <strong>Selentia</strong> — uma ilha até então inexistente nas rotas náuticas ou mapas arcanos. Não havia ruínas ancestrais, nem marcas de civilização anterior. Apenas uma terra envolta por uma aura pulsante de <strong>energia mística e espiritual</strong>, como se o próprio plano etéreo houvesse rasgado sua pele para fazer surgir um fragmento perdido do divino.</p>
+        <p>Estudiosos, magos, xamãs e tecnomantes das maiores academias tentaram entender sua origem — mas até hoje <strong>Selentia permanece um mistério absoluto</strong>. Ela resiste a tentativas de escavação profunda, altera a percepção do tempo dentro de suas fronteiras e influencia os sonhos dos que dormem em suas margens.</p>
+        <p>Foi em <strong>Selentia</strong> que acordos de cessar-fogo foram selados, tratados comerciais nasceram, e as sementes da esperança se plantaram durante as eras de instabilidade. Sua neutralidade inabalável a transformou na <strong>Câmara Espiritual de Cosmoria</strong>, onde os líderes se encontravam em busca de soluções, longe das sombras de seus próprios tronos.</p>
+
+        <p>Nas sombras da ascensão de Selentia, uma <strong>segunda ilha</strong> próxima às costas gélidas de Solaria e Khazad foi nomeada de <strong>Barundin</strong>. Onde Selentia irradiava serenidade, Barundin emanava rigor e temor. Em resposta à crescente instabilidade provocada por artefatos proibidos, crimes dimensionais e magia incontrolável, o Conselho Solar decidiu criar uma prisão definitiva.</p>
+        <p>Ali, os criminosos mais poderosos e perigosos do universo conhecido — necromantes renegados, warforgeds corrompidos, devoradores de planos e traidores de guerra — foram confinados. A prisão foi construída com técnicas de tecnomancia de última geração, combinando runas de selamento, campos antimagia e sentinelas arcanomecânicas que nunca dormem.</p>
+        <p>Os que entram, não saem.</p>
+        <p>Os que são levados, desaparecem da história.</p>
+
+        <div style="text-align: center;">
+      <img src="../img/ano1098selbarun.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🌿 Ano 1092 – A Fundação da Tríade de Cosmoria: O Pacto da Folha</button>
+      <div class="panel">
+        <br>
+        <p>Dez anos após o renascimento tecnológico de Solaria, e com os ventos mágicos mais estáveis vindos de Mortumbra, o continente de Cosmoria começou a experimentar uma inesperada era de equilíbrio político — uma calmaria rara em meio aos ecos ainda ressonantes da Primeira Noite.</p>
+        <p>Foi nesse cenário que surgiu a <strong>Tríade de Cosmoria</strong>: uma aliança incomum entre três potências distintas — <strong>Celestia</strong>, <strong>Solaria</strong> e a enigmática <strong>Kel’dor</strong>.</p>
+        <p>Unidos, os três reinos assinaram um tratado chamado <strong>Pacto da Folha</strong>, um acordo sagrado inspirado nos princípios da preservação, da sabedoria e da força cooperativa. A "folha", símbolo vivo de harmonia entre natureza, mente e máquina, passou a representar essa união.</p>
+        <p>A <strong>Guilda de Novastris</strong>, percebendo a estabilidade crescente e o potencial mágico e político da nova aliança, decidiu expandir suas operações para <strong>Solaria</strong> e <strong>Celestia</strong>. Com isso, os arquimagos, batedores e escribas da Guilda passaram a compartilhar seus serviços, seus recursos e sua vasta rede de informação com a Rainha de Celestia e o Rei de Solaria.</p>
+        <p>Postos da Guilda começaram a ser construídos sobre trilhos energéticos solares em Solaria, e também entre os jardins suspensos e templos translúcidos de Celestia. A Guilda agora operava oficialmente nos três pontos-chave, oferecendo arbitragem mágica, contratos de defesa, e manutenção do equilíbrio arcano.</p>
+        <p>Esse equilíbrio, contudo, seria constantemente testado. Muitos viam a Tríade com esperança — outros, com temor.</p>
+     
+        <div style="text-align: center;">
+      <img src="../img/ano1092triade.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🌹 Ano 1088 – Satsuki: O Reino do Espírito e da Lâmina</button>
+      <div class="panel">
+        <br>
+        <p>Enquanto o mundo se agitava com os ecos da Primeira Noite, revoluções tecnológicas e reinos erguidos do desespero, ao extremo oriente de Cosmoria, um novo poder surgia de forma silenciosa, disciplinada e profundamente enraizada na tradição: <strong>Satsuki</strong>.</p>
+        <p>Formado nas montanhas enevoadas e vales de flor de cerejeira, o território de Satsuki era composto por vilarejos antigos, templos seculares e escolas marciais que treinavam gerações inteiras desde tempos imemoriais. Ao longo dos séculos, seus mestres — conhecidos como <strong>Senseis Eternos</strong> — preservaram conhecimentos de combate, meditação, alquimia corporal e filosofia.</p>
+        <p>Após o colapso de seu antigo império regional durante a Primeira Noite, Satsuki renasceu como uma nação regida pela <strong>Assembleia de Mestres</strong> — um conselho composto pelos líderes das principais escolas de combate, como:</p>
+        <li><strong>A Lança do Céu Esquecido,</strong> especialistas em combate aéreo e evasivo;</li>
+        <li><strong>O Punho do Espírito Interno,</strong> mestres da manipulação de ki e energia vital;</li>
+        <li><strong>A Espada dos Mil Silêncios,</strong> assassinos honrados que caminham entre sombras e disciplina;</li>
+        <li><strong>O Caminho do Tigre Ascendente,</strong> escola que funde combate brutal com espiritualidade protetora.</li>
+<br>
+
+        <p>Cada mestre não apenas representa sua escola, mas também compartilha responsabilidades no equilíbrio do país — política, justiça, defesa, agricultura e até artes — numa harmonia rara em qualquer outro lugar do mundo.</p>
+        <p>Satsuki prospera em paz e disciplina, suas cidades silenciosas, seus templos floridos, suas montanhas sagradas intocadas pela corrupção da magia negra ou da ganância dos reinos vizinhos. O povo vive sob uma rígida ética de honra e equilíbrio interior.</p>
+        <p>Contudo, a tranquilidade esconde um preparo constante: todos os cidadãos são ensinados desde cedo a arte da defesa, da sabedoria e da força contida. Nenhuma outra nação ousa invadir Satsuki. Não por medo de seu exército... mas por respeito à sua reputação: <strong>cada cidadão é um guerreiro. Cada guerreiro, um mestre em potencial.</strong></p>
+        <div style="text-align: center;">
+      <img src="../img/ano1088satsuki.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🪓 Ano 1084 – A Cisão de Laminia: O Juramento dos Irmãos de Pedra</button>
+      <div class="panel">
+        <br>
+        <p>Com o rugido dos martelos e o eco dos cânticos antigos, Laminia, a lendária fortaleza-mundo dos anões, conheceu uma nova era — marcada não por guerra, mas por divergência de visões.</p>
+        <p>Os irmãos gêmeos Khazadin e Bombur Tal’dorin, herdeiros diretos do Trono de Rocha Eterna, alcançaram juntos a maioridade anã. Cada um deles era símbolo de uma força distinta da alma anã: Khazadin, audacioso e ambicioso, via no mundo acima das montanhas uma oportunidade de expansão e comércio; Bombur, reservado e devoto às tradições dos antepassados, acreditava que a verdadeira força anã estava em suas raízes, sob a pedra, no sagrado silêncio das forjas antigas.</p>
+        <p>Por escolha mútua — e por amor fraternal inquebrantável — os dois decidiram dividir Laminia, não por sangue, mas por honra. E assim nasceram os dois reinos irmãos:</p>
+       
+        <p>💎 Khazad – O Reino do Brilho Eterno<p>
+        <p>Sob a liderança de Khazadin, Khazad tornou-se o centro do comércio subterrâneo de toda Cosmoria. Suas minas — como veias pulsando com ouro, platina, rubis, adamantina e mizzium— sustentavam cidades brilhantes, com palácios cravejados de gemas e cúpulas de prata pura.</p>
+        <p>Khazadin incentivou a criação de rotas comerciais com Solaria, fornecendo metais raros em troca de tecnologias inovadoras. Seus salões tornaram-se cosmopolitas, recebendo visitantes de todas as raças e reinos — algo que os anões mais ortodoxos viam com crescente desconfiança.</p>
+
+        <p>🗻 Tal’dorin – O Reino do Martelo Antigo</p>
+        <p>Bombur, por sua vez, fundou Tal’dorin nas profundezas do norte, onde as montanhas sussurram lendas e os ventos carregam as preces aos ancestrais. Lá, os anões ainda moldavam armaduras como seus antepassados faziam há milênios. Seus salões eram esculpidos à mão, suas runas entoadas em cada forja.</p>
+        <p>Tal’dorin proibiu a presença de forasteiros nas câmaras internas e recusou aliança com qualquer nação que não respeitasse os ritos anciões. Tornou-se um bastião impenetrável de cultura, honra e orgulho anão.</p>
+   
+        <div style="text-align: center;">
+      <img src="../img/ano1084laminia.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">💡 Ano 1082 – O Despertar de Solaria: A Era da Faísca e do Aço</button>
+      <div class="panel">
+        <br>
+        <p>Enquanto Mortumbra dominava a arte arcana e Bamaku mergulhava na selvageria, o mundo observava com surpresa o renascimento fulgurante de uma nação ao nordeste: <strong>Solaria.</strong></p>
+        <p>Antigamente um reino agrário modesto, abençoado por dias longos e céus sempre dourados, Solaria fora relativamente poupada pelos efeitos diretos da <strong>Primeira Noite</strong>. No entanto, seus estudiosos — temendo que outra escuridão pudesse vir — voltaram sua atenção para um novo tipo de poder: a <strong>tecnologia</strong>.</p>
+        <p>Durante escavações em antigas ruínas, foi descoberta uma fonte de energia pulsante enterrada sob a Montanha Dourada — uma relíquia conhecida apenas como o <strong>Núcleo de Ignis</strong>. Alimentada por raios e calor profundo, ela tornou-se o coração de uma revolução sem precedentes.</p>
+        <p>Torre por torre, distrito por distrito, a capital se transformou. Lâmpadas elétricas substituíram tochas, bondes magnéticos deslizaram pelas ruas, e os <strong>primeiros Warforgeds</strong> — autômatos com consciência rudimentar — começaram a surgir como soldados e operários. Logo, os <strong>Autognomes</strong> — criaturas mecânicas menores, dotadas de extrema inteligência — foram criados como assistentes de engenheiros e protetores das cidades.</p>
+        <p>O Conselho Solar, liderado pela visionária arquiteta e cientista <strong>Helira Vann</strong>, passou a investir em academias de inovação, fundindo magia e ciência em uma nova escola de conhecimento conhecida como <strong>Tecnomancia</strong>.</p>
+        <p>Solaria não apenas sobreviveu à Primeira Noite — ela floresceu, elevando-se a uma potência científica. Embora outros países vissem com receio a crescente dependência de seres artificiais, muitos também buscavam alianças, desejando compartilhar de sua tecnologia.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1082solaria.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🌵 Ano 1076 - A Queda e sobrevivência de Bamaku</button>
+      <div class="panel">
+        <br>
+        <p>Ao sudeste de Comoria, a outrora exuberante e pacífica região de <strong>Bamaku</strong> sofreu um destino diferente. Conhecida por seus vastos campos verdejantes, rios cristalinos e tribos em harmonia com a natureza, Bamaku não resistiu à onda destrutiva da Primeira Noite. Quando a escuridão se dissipou, nada mais era como antes.</p>
+        <p>A vegetação secou, o solo rachou, e as antigas tribos — desesperadas por recursos e proteção — se fragmentaram. Formaram-se clãs guerreiros brutais, guiados por xamãs enlouquecidos e líderes sedentos por poder. Os símbolos de paz deram lugar a pinturas de guerra. Os tambores cerimoniais passaram a marcar rituais de sangue.</p>
+        <p><strong>Bamaku</strong> tornou-se um deserto árido, repleto de ruínas saqueadas e fortalezas tribais erguidas com ossos e aço. Suas tribos agora guerreavam entre si por domínio, formando facções com nomes temidos: <strong>Os Garras de Ferro, Os Espíritos Ancestrais, As Sombras Sangrentas</strong>.</p>
+        <p>O que antes era um paraíso se tornara um dos lugares mais perigosos e imprevisíveis do mundo conhecido. E assim, enquanto <strong>Mortumbra se erguia das trevas como um império mágico, Bamaku mergulhava nelas, abraçando a selvageria.</strong></p>
+        <p>Duas terras marcadas pela mesma noite, mas moldadas por escolhas opostas — um lembrete eterno de que a <strong>Primeira Noite</strong> não foi um fim, mas o início de uma nova era em Cosmoria.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1076bamaku.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🜃 Ano 1076 – O Controle de Azrael Mortis</button>
+      <div class="panel">
+        <br>
+        <p>Nos anos que seguiram a <strong>Primeira Noite</strong>, o mundo ainda tateava na escuridão das consequências. E foi ao <strong>norte da Ilha das Brumas</strong>, onde a energia negativa mais pura se alastrava sem controle, que o solo começou a <strong>apodrecer</strong> — não apenas fisicamente, mas <strong>espiritualmente.</strong></p>
+        <p>Cidades inteiras foram devoradas por uma sombra viva que parecia drenar a essência vital de tudo o que tocava. Aldeias desfaleciam sem som, as florestas murchavam e até os rios secavam, corrompidos pela mácula. Diz-se que os mortos não podiam mais descansar — e os vivos enlouqueciam à simples visão do horizonte enevoado.</p>
+        <p>Foi nesse cenário de terror que surgiu um homem que mudaria para sempre o equilíbrio mágico de Cosmoria, <strong>Azrael Mortis</strong>, um necromante de linhagem obscura, guiado por um propósito desconhecido.</p>
+
+        <p>Ao lado de um círculo de magos renegados — dominadores de escolas como a Abjuração, Ilusão, Sangromancia e Cronomagia — Azrael estabeleceu um plano ousado: <strong>conter a praga energética e redirecioná-la.</strong> Em um ritual que durou sete luas sangrentas, os magos canalizaram a corrupção do norte para um único ponto de ancoragem: a fundação de uma nova nação, erguida sobre as ruínas do que antes era terra fértil.</p>
+        <p>Assim nasceu <strong>Mortumbra</strong>, um país de torres negras e portões arcanos, envolto por muralhas encantadas e tempestades etéreas. Uma <strong>fortaleza impenetrável</strong> onde a própria morte se tornara uma ciência — e onde a <strong>magia reinava absoluta.</strong></p>
+        <p>Enquanto muitos temiam Mortumbra, era inegável: Azrael havia salvado milhares ao conter o avanço da energia negativa. Por isso, entre os vivos e os mortos, seu nome ecoava como o de um <strong>herói sombrio</strong>.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1122.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">☠️ Ano 1074 – A Primeira Noite: A Ruína da Ilha das Bênçãos</button>
+      <div class="panel">
+        <br>
+        <p>A escuridão que caiu sobre o mundo durante a <strong>Primeira Noite</strong> não foi apenas um presságio — foi o prenúncio de um terror nunca antes visto em Cosmoria.</p>
+        
+        <p>No ano seguinte ao surgimento da <strong>Ilha Ladrilho</strong>, mortos-vivos começaram a emergir em diferentes pontos do continente. Vilas inteiras acordaram cercadas por cadáveres reanimados; ossos e sombras rastejavam entre as florestas, desertos e cidades costeiras. Esses ataques não pareciam coordenados, mas eram simultâneos — como se algo, em algum lugar, tivesse desencadeado um chamado que ecoou para além do véu da morte.</p>
+        
+        <p>O <strong>epicentro</strong> da calamidade foi rapidamente identificado: a outrora serena e sagrada <strong>Ilha das Bênçãos</strong>.</p>
+        
+        <p>Localizada ao noroeste, a ilha era antigamente lar de uma ordem druídica ancestral, dedicada à preservação da vida, à harmonia elemental e à cura das feridas do mundo. Suas florestas eram vivas com magia natural e eram santuários para estudiosos e curandeiros.</p>
+        
+        <p>Mas naquela noite, os portais druídicos silenciaram. As comunicações cessaram. Uma neblina espessa cobriu a ilha, e dela nada mais saiu — exceto <strong>morte</strong>.</p>
+        
+        <p>Testemunhas afirmam que a terra tremeu. Espíritos da floresta gritaram. Barcos de patrulha que tentaram se aproximar retornaram vazios... ou não retornaram.</p>
+
+        <p>A Guilda de Novastris, em conjunto com representantes de Nistara, Darkon e até mesmo Kel’dor, enviaram um grupo de aventureiros do mais alto escalão: magos, guerreiros, inquisidores e caçadores de maldições. Eles desceram em silêncio sobre a ilha, determinados a conter o avanço da morte e selar a origem do mal.</p>
+        <p><strong>Nenhum deles voltou.</strong></p>
+        <p>Desde então, a ilha passou a ser chamada de <strong>Ilha das Brumas</strong>. Sua neblina não se dissipa, seus bosques apodreceram, e as energias da morte ecoam em cada rocha e árvore que ali existia. A origem do ataque permanece um mistério.</p>
+        <p>Mas rumores persistem: algo foi <strong>libertado</strong> — algo que estava selado há eras. A <strong>Primeira Noite</strong> marcou o fim da inocência do novo mundo pós-supernova.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1074noite.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">📜 Ano 1074 – A Ascensão da Ilha Ladrilho</button>
+      <div class="panel">
+        <br>
+        <p>Dois anos após a fundação de Darkon, quando o mundo ainda cicatrizava das feridas da Guerra dos Quatro Tronos, uma nova força emergia das sombras.</p>
+        <p>Nas rotas marítimas do leste, surgiu a <strong>Ilha Ladrilho</strong>, um arquipélago obscuro formado por antigos criminosos, desertores e renegados das grandes nações. Sem leis formais ou códigos morais, a ilha se tornou um refúgio para ladrões, assassinos, piratas e mercenários. Liderados por um conselho oculto conhecido apenas como A <strong>Mão de Sangue</strong>, os habitantes de Ladrilho rapidamente estabeleceram redes clandestinas de tráfico, espionagem e sabotagem, influenciando os eventos do continente sem jamais revelarem seus rostos.</p>
+        <p>Foi nesse mesmo período que os primeiros registros da chamada <strong>"Primeira Noite"</strong> surgiram nos anais da Guilda de Novastris. Uma noite em que o céu escureceria completamente, sem lua, estrelas ou magia visível. Embora a causa desse fenômeno nunca tenha sido oficialmente descoberta, há relatos de que uma poderosa relíquia foi roubada de um antigo santuário nos mares do sul — uma relíquia que estaria ligada ao equilíbrio celeste.</p>
+        <p>Dizem que foi um grupo de mercenários da Ilha Ladrilho quem realizou o roubo… sem saber da verdadeira natureza do artefato que carregavam.</p>
+        <p>Com isso, surgiram boatos de que a ilha teria atraído a atenção de entidades muito além da compreensão mortal. Contudo, nenhum ataque divino ou vingança celestial caiu sobre Ladrilho. Pelo contrário — seus portos continuaram a prosperar, suas redes a se expandir, e sua influência a crescer... silenciosa e mortal.</p>
+        <p>A Ilha Ladrilho se tornava não apenas um berço de criminosos, mas um novo jogador no tabuleiro político e mágico de Cosmoria. E seu envolvimento com a noite mais sombria da história do mundo jamais seria esquecido.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1074ilhalad.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🏠 Ano 1072 – O Refúgio de Novastris e o Nascimento de Darkon</button>
+      <div class="panel">
+        <br>
+       <p>A Guerra do Sul deixou cicatrizes profundas em Cosmoria. Com a morte de Thrain Ta’ldorin e a expansão militar de Kel’dor e Nistara, milhares de civis — anões, elfos dissidentes, e humanos de regiões devastadas — buscaram abrigo longe dos campos de batalha. A estabilidade mágica e política oferecida pela <strong>Guilda de Novastris</strong> tornou-se um farol para os que desejavam reconstruir suas vidas.</p>
+        <p>A Guilda, embora não interferisse diretamente nos conflitos entre reinos, abriu suas portas para os desabrigados, estabelecendo o chamado <strong>Refúgio de Novastris:</strong> uma vasta zona neutra protegida por barreiras arcanas, onde o sangue da guerra era proibido e o conhecimento, o diálogo e a reconstrução prevaleciam. Ali, diferentes povos coexistiam, unidos não por alianças políticas, mas pelo desejo de paz.</p>
+        <p>Contudo, nem todos encontraram seu lugar ali. Um grupo de exilados, sobreviventes amargos da destruição de vilas, traídos por seus próprios reis ou abandonados por seus aliados, decidiu fundar um novo lar longe de todos os tronos — uma cidade independente, onde ninguém seria esquecido ou descartado. Assim nasceu <strong>Darkon</strong>, erguida nos vales sombrios ao sul de Kel´dor, construída sobre ruínas antigas e energias obscuras dos desertos.</p>
+        <p>Darkon foi fundada por mãos calejadas e corações feridos. Seus fundadores eram guerreiros, magos renegados e líderes populares. Lá, a força e a liberdade pessoal eram reverenciadas acima de linhagens ou títulos. Seu lema era simples: <strong>“Aqui, ninguém manda em nós"</strong>.</p>
+        <p>Enquanto Novastris se tornava um símbolo de esperança, <strong>Darkon crescia como uma cidade-estado resiliente</strong>, moldada pelo ressentimento, mas também por um ideal de sobrevivência e independência mais tarde acabaria se tornando um país sobrevivendo a cada possível desastre mundial.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1072babi.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🩸 Ano 1071 - A Guerra do Vale de Krummgar</button>
+      <div class="panel">
+        <br>
+        <p>Com o desaparecimento dos arquimagos e do Coração Estelar, as nações de Cosmoria entraram em um período de instabilidade. A Guilda Novastris se manteve como guardiã do conhecimento, mas seu alcance era limitado frente às ambições territoriais dos reinos emergentes.</p>
+        <p>No ano 1071, o Rei Thalorien de <strong>Kel’dor</strong>, um monarca élfico de espírito altivo e visão expansionista, iniciou uma campanha militar rumo ao sul de <strong></strong>Laminia</strong> — região agora conhecida como Tal’dorin, lar ancestral dos anões e berço das antigas minas de jóias preciosas e minérios. Ele alegava que os recursos do subsolo de Laminia estavam sendo mal utilizados e que a presença élfica restauraria o equilíbrio e a ordem naquela terra.</p>
+        <p>O Rei <strong>Thrain Ta’dlorin</strong>, líder dos anões e herdeiro direto da linhagem de Damir Tal’dorin, se opôs veementemente. Ele reuniu seu povo e suas forças em defesa das montanhas sagradas de Laminia. Mas o conflito logo deixou de ser apenas entre anões e elfos: <strong>o Reino de Nistara</strong>, liderado pelo carismático <strong>Rei Edward Lumina</strong>, apoiou abertamente os elfos, enviando tropas e recursos à campanha de Thalorien, alegando que a ameaça anã à estabilidade regional exigia uma resposta coordenada.</p>
+        <p>A guerra eclodiu com fúria no <strong>Vale de Krummgar</strong>, onde exércitos anões resistiram bravamente por sete dias. No oitavo dia, Thalorien liderou uma ofensiva decisiva com apoio de generais nistarianos. Thrain Ta’dlorin foi morto em combate direto, tombando sob os estandartes de sua linhagem.</p>
+        <p>A vitória dos elfos e de Nistara consolidou o domínio de <strong>Kel’dor</strong> sobre os recursos, mas o preço foi alto. A morte do rei anão marcou o início de séculos de ódio entre anões, elfos e os homens de Nistara, plantando as sementes de futuros conflitos e alianças quebradas.</p>
+        <p>A Guerra do Sul não foi apenas um choque por territórios e minérios — foi o início do <strong>crepúsculo das velhas alianças</strong> e possível e lenta derrocada da antiga ordem deixada pelos Três Arquimagos.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1071elforei.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      <button class="accordion">🏛️ Ano 1023 - A Fundação de Novastris: O Legado dos Três</button>
+      <div class="panel">
+        <br>
+        <p>Após selar o Coração Estelar, os três arquimagos — <strong>Magnus Dazana, Orrian London e Maghda Miralen</strong> — fundam a Guilda Novastris, um bastião de conhecimento, magia e preservação do equilíbrio cósmico. Seu objetivo: proteger <strong>Cosmoria</strong> de ameaças existenciais e estudar os segredos do universo.</p>
+        <p>Porém, apenas <strong>3 semanas</strong> após a fundação, eles desaparecem sem deixar rastros, junto do próprio Coração Estelar. Seus discípulos mais próximos assumem a liderança, jurando manter vivo o legado da Ordem Estelar.</p>
+        
+        <div style="text-align: center;">
+      <img src="../img/ano1023magos.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+
+      
+
+      <button class="accordion">🏛️ Ano 1023 - O Coração e a Ordem Estelar</button>
+      <div class="panel">
+        <br>
+        <p>Há muito tempo em um mundo antigo, existiam 3 Arquimagos extremamente poderosos. Eles se chamavam <strong>Magnus Dazana</strong> (O Tempo Vivo), <strong>Orrian London</strong> (O Escavador de Segredos) e a líder deles <strong>Maghda Miralen</strong> (A Despertadora da Chama). Juntos, eles se nomearam de a <strong>Ordem Estelar</strong>. Um certo dia, eles sentiram uma perturbação no tecido do cosmo. Um poder inimaginável estava se acumulando, prestes a desencadear uma supernova devastadora, destruindo tudo que estivesse a sua volta.</p>
+        <p>Determinados a impedir essa catástrofe iminente, os magos se uniram em um conselho de emergência. Após extensas pesquisas, eles descobriram que um antigo artefato, conhecido como Coração Estelar, poderia conter esse poder.</p>
+        <p>O <strong>Coração Estelar</strong> era uma fonte de energia ancestral e poderosa, responsável por sustentar o equilíbrio cósmico de Cosmoria. Sua instabilidade poderia desencadear uma supernova devastadora, destruindo tudo em seu caminho ou poderia suprimir uma temporariamente. Compreendendo a gravidade da situação, os magos decidiram agir rapidamente.</p>
+        <p>Utilizando seus conhecimentos e habilidades mágicas combinadas, os magos criaram um ritual complexo. Eles canalizaram sua própria energia mágica e se conectaram com o Coração Estelar, buscando transferir a supernova para dentro do artefato.</p>
+        <p>Durante o ritual, os magos enfrentaram um desafio monumental. O poder cósmico era imprevisível e tentava resistir a seus esforços como se aquilo fosse vivo. No entanto, eles permaneceram unidos e focados em sua missão. </p>
+        <p>Com grande esforço e sacrifício, os magos conseguiram estabilizar o Coração Estelar. O poder cósmico ameaçador foi contido e a supernova foi impedida temporariamente. Após vários estudos Magnus fez com que o artefato ficasse preso no tempo, podendo ser liberado apenas por 3 forças maiores com um imenso poder, fazendo assim com que Cosmoria fosse salva da destruição iminente.</p>
+        <div style="text-align: center;">
+      <img src="../img/ano1023heart.png" style="text-align: center;" width="600px">
+      </div> 
+
+        <br>
+      </div>
+        
+
+       
+   
+      
+<script>
+          const acc = document.querySelectorAll(".accordion");
+          acc.forEach(btn => {
+            btn.addEventListener("click", function () {
+              this.classList.toggle("active");
+              let panel = this.nextElementSibling;
+              panel.style.display = (panel.style.display === "block") ? "none" : "block";
+            });
+          });
+
+          function scrollToBottom() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+        </script>
+
+
+ </section>
+    <!--Roda pé-->
     <div class="branco rodape">
-        <div>
-            <div class="icon">
-                <a style="text-decoration: none; color: white;">
-                    <img src="../img/Historia.webp" alt="História">
-                    <h2>História</h2>
-                </a>
-                <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
-            </div>
-            
-            <div class="icon">
-                <a href="../mapa.html" style="text-decoration: none; color: white;">
-                    <img src="../img/Geografia.webp" alt="Geografia">
-                    <h2>Mapa do Mundo</h2>
-                </a>
-                <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
-            </div>
-            
-            <div class="icon">
-                <a href="../social.html" style="text-decoration: none; color: white;">
-                    <img src="../img/Redes_Sociais.webp" alt="Redes Sociais">
-                    <h2>Redes Sociais</h2>
-                </a>
-                <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!</p>
-            </div>
-        </div>
-    </div>
+      <div>
+          <div class="icon">
+              <a style="text-decoration: none; color: white;">
+                  <img src="../img/Historia.webp" alt="História">
+                  <h2>História</h2>
+              </a>
+              <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
+          </div>
+          
+          <div class="icon">
+              <a href="../mapa.html" style="text-decoration: none; color: white;">
+                  <img src="../img/Geografia.webp" alt="Geografia">
+                  <h2>Mapa do Mundo</h2>
+              </a>
+              <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
+          </div>
+          
+          <div class="icon">
+              <a href="../social.html" style="text-decoration: none; color: white;">
+                  <img src="../img/Redes_Sociais.webp" alt="Redes Sociais">
+                  <h2>Redes Sociais</h2>
+              </a>
+              <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!</p>
+          </div>
+      </div>
+  </div>
 <br>
 </div> 
   <footer class="bg-dark text-center py-3 branco">

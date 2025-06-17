@@ -50,6 +50,36 @@
         body , ul{
             text-align: justify;
         }
+
+        body {
+      height: 2000px; /* Só para exemplo com rolagem */
+      margin: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botão flutuante */
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3A4162; /* Azul da sua imagem */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: background-color 0.3s;
+    }
+
+    .scroll-button:hover {
+      background-color: #525a83; /* Azul mais claro no hover */
+    }
+
     </style>
 </head>
 
@@ -189,7 +219,11 @@
         <h1 style="text-align: center;">Para Mestres</h1>
         <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
 
-        <p>Nessa página falaremos sobre algumas regras para vocês mestres, funcionamento de algumas coisas no servidor e outras coisas que podem sanar suas dúvidas. Pedimos que tenham conhecimento de como é o cenário do mundo, as principais cidades, os reinos, os deuses no geral, NPCs importantes e etc.</p>
+        <button class="scroll-button" onclick="scrollToBottom()">
+    ⬇
+  </button>
+
+        <p style="color: #9b9898; text-align: center;">Nessa página falaremos sobre algumas regras para vocês mestres, funcionamento de algumas coisas no servidor e outras coisas que podem sanar suas dúvidas. Pedimos que tenham conhecimento de como é o cenário do mundo, as principais cidades, os reinos, os deuses no geral, NPCs importantes e etc.</p>
         <hr>
         <h1 style="color: #8B9EFF;">Regras do Servidor</h1>
         <button id="botao5" class="toggle-button" data-target="caixaTexto5">Regras do Servidor</button>
@@ -330,8 +364,8 @@
                 </a>
             </p>
         </div>
-        <button id="botao16" class="toggle-button" data-target="caixaTexto16">Mini-campanhas</button>
-        <div id="caixaTexto16" class="texto-oculto">
+        <button id="botao17" class="toggle-button" data-target="caixaTexto17">Mini-campanhas</button>
+        <div id="caixaTexto17" class="texto-oculto">
             
             <p>No servidor Novastris é possível realizar missões com múltiplas sessões, conhecidas como Mini-campanhas. Quando a missão for postada nos canais de missões no Discord, basta indicar no nome da missão ou nas observações, que se trata de uma Mini-campanha.</p>
 
@@ -364,11 +398,35 @@
                 <li> 2100po + 3 recompensas referentes ao Rank atual do seu PJ (450po) = 2550po </li>
 
         </div>
+
+        <button id="botao16" class="toggle-button" data-target="caixaTexto16">Missões de Stream</button>
+        <div id="caixaTexto16" class="texto-oculto">
+            
+            <p>As <strong>Missões de Stream</strong> são aventuras narradas ao vivo para a comunidade, onde jogadores podem participar de histórias dinâmicas e envolventes enquanto o público interage simultaneamente. Essas sessões são criadas para proporcionar experiências intensas e inesquecíveis, com desafios únicos, roleplay aprofundado e momentos épicos.</p>
+
+            <p><strong>🔹 Como funcionam?</strong></p>
+            
+
+            <li> As missões serão narradas ao vivo no Discord e, em alguns casos, transmitidas para quem quiser acompanhar em Apps como: <strong>Youtube, Twitch e até trechos da mesa no TikTok e Instagram.</strong></li>
+            <li> Os jogadores terão um papel ativo na história, tomando decisões e enfrentando desafios preparados pelo narrador.</li>
+            <li> Algumas mecânicas especiais podem ser aplicadas para tornar cada sessão ainda mais emocionante.</li>
+<br>
+            <p><strong>⚠️ Regras e Diretrizes</strong></p>
+            
+                <li>Apenas para maiores de <strong>18 anos.</strong></li>
+                <li>Respeito e bom senso são fundamentais para garantir uma experiência divertida para todos.</li>
+                <li>Personagens e temas podem ser mais maduros, então esteja ciente antes de participar.</li>
+            <br>
+            <p><strong>🔥 Quer participar?</strong></p>
+            <p>Fique atento aos anúncios no servidor! Sempre que uma nova missão for aberta, as inscrições serão divulgadas, e os aventureiros poderão se alistar para mais uma jornada épica!</p>
+
+
+        </div>
         <hr>
         <h1 style="color: #8B9EFF;">Criando e Finalizando uma Missão</h1>
         <hr style="color: #8B9EFF;">
-        <button id="botao17" class="toggle-button" data-target="caixaTexto17">Criando e Finalizando uma Missão</button>
-        <div id="caixaTexto17" class="texto-oculto">
+        <button id="botao18" class="toggle-button" data-target="caixaTexto18">Criando e Finalizando uma Missão</button>
+        <div id="caixaTexto18" class="texto-oculto">
             <p>Primeiramente, antes de criar e postar uma missão, é necessário verificar se há uma quantidade de jogadores disponíveis para o Rank que deseja narrar. Você poderá fazer isso marcando eles em seu canal de mestre quando o receber. É necessário ter ao menos 3 jogadores em uma missão. Após a postagem e a inscrição dos jogadores, você seguirá a <strong>Regra de Prioridade de Vagas</strong> para convocá-los e em seguida começara a mesa.</p>
             <p>Quando ela finalizar, você realizará a Recompensa da Missão de acordo com as horas e o Rank narrados e escolherá um de seus personagens para ganhar recompensas também (A recompensa é para o nível atual do seu personagem, não para o da missão narrada). Caso o mestre não escolha um personagem, ele poderá ganhar recompensas de qualquer personagem que tenha participado da mesa.</p>
         </div>
@@ -429,6 +487,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function scrollToBottom() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+
 </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

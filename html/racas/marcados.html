@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novastris - RPG</title>
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <style>
+        section {
+            padding: 1em !important;
+            border-radius: 10px;
+        }
+        .background-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #232f3c;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #fff; /* Corrige texto apagado */
+        }
+        .background-item:hover {
+            background-color: #121517;
+            transform: translateY(-2px);
+        }
+        a {
+            color: #8B9EFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .escondido {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        .background-item:hover .escondido {
+            max-height: 200px;
+            opacity: 1;
+            padding-top: 8px;
+        }
+        .races-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .races-column {
+            width: 48%;
+        }
+        @media (max-width: 768px) {
+            .races-column {
+                width: 100%;
+            }
+        }
+        /* Correções para elementos desativados */
+        .race-option {
+            background-color: #232f3c;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #fff;
+        }
+        .race-option:hover {
+            background-color: #121517;
+        }
+        .race-option.disabled {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="back-button">
+        <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
+    </div> 
+
+    <section class="bg-dark custom-margin" style="text-align: justify;">
+        <h1 style="text-align: center;"><strong>Marcados</strong></h1>
+
+        <h1><strong>🧙‍♂️ Canal de Raças Permitidas</strong></h1>
+
+        <p>Este é o <strong>Canal de Raças Permitidas</strong>, onde você encontrará informações sobre as raças disponíveis para criação de personagens em nosso servidor.</p>
+
+        <p>Muitas culturas e sociedades compõem o vasto mundo de nosso RPG; algumas são formadas por humanos, mas muitas outras são constituídas por raças fantásticas, como elfos, anões e draconatos. Os heróis e aventureiros emergem dessas diversas origens, trazendo consigo habilidades e características únicas. A raça escolhida pelo jogador não apenas determina um conjunto básico de vantagens e habilidades especiais, mas também ajuda a moldar a história e a identidade de seu personagem.</p>
+
+        <p>Por favor, certifique-se de revisar esta lista ao criar seu personagem para garantir que ele esteja em conformidade com as regras do servidor.</p>
+        
+        <img src="../../img/racaspermitidas.webp" alt="Raças">
+        <br>
+
+        <div class="races-container">
+            <div class="races-column">
+                <hr>
+                <div class="background-item">                            
+                    <a href="../racas/aarakocra.html">Aarakocra</a>
+                    <div class="escondido">Uma raça de humanoides com características de aves, conhecidos por sua habilidade de voo e conexão com o Plano Elemental do Ar.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#aasimar_mpmm">Aasimar</a>
+                    <div class="escondido">Humanos com ascendência celestial, abençoados com luz divina e poderes curativos.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#autognome_aag">Autognome</a>
+                    <div class="escondido">Criaturas mecânicas construídas para imitar gnomos, combinando engenhosidade com funcionalidade mágica.</div>
+                </div>
+                <div class="background-item">                            
+                    <a href="https://5e.tools/races.html#bugbear_mpmm">Bugbear</a>
+                    <div class="escondido">Criaturas peludas e fortes, conhecidas por sua furtividade surpreendente e alcance em combate.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#centaur_mpmm">Centaur</a>
+                    <div class="escondido">Metade humano, metade cavalo, os centauros são conhecidos por sua velocidade e conexão com a natureza.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#thylean%20centaur_ootdlpg">Centauro Thylean</a>
+                    <div class="escondido">Uma variante de centauros originários da região de Thylea, com tradições únicas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#cervan%20(grove)_hwcs">Cervan (Grove)</a>
+                    <div class="escondido">Humanoides com características de cervídeos das florestas densas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#cervan%20(pronghorn)_hwcs">Cervan (Pronghorn)</a>
+                    <div class="escondido">Humanoides com características de antílopes das planícies abertas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#corvum%20(dusk)_hwcs">Corvum (Dusk)</a>
+                    <div class="escondido">Humanoides com características de corvos, conhecidos por sua astúcia e visão noturna.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#corvum%20(kindled)_hwcs">Corvum (Kindled)</a>
+                    <div class="escondido">Uma variante de Corvum com afinidade para magia e luz.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#changeling_mpmm">Changeling</a>
+                    <div class="escondido">Metamorfos naturais que podem alterar sua aparência à vontade.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://discord.com/channels/1218373259985158194/1274447100129837138/1274447325204582500">Dhampir - Verificar Alteração Clicando nesse Link</a>
+                    <div class="escondido">Seres meio-vampiros com habilidades únicas relacionadas à vida e morte.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dragonborn_phb">Dragonborn (Base)</a>
+                    <div class="escondido">Humanoides dracônicos com habilidades de sopro e resistência.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dragonborn%20(chromatic)_ftd">Dragonborn (Chromatic)</a>
+                    <div class="escondido">Descendentes de dragões cromáticos com habilidades elementais destrutivas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dragonborn%20(gem)_ftd">Dragonborn (Gem)</a>
+                    <div class="escondido">Descendentes de dragões de gema com habilidades psíquicas e mentais.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dragonborn%20(metallic)_ftd">Dragonborn (Metallic)</a>
+                    <div class="escondido">Descendentes de dragões metálicos com habilidades defensivas e ofensivas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dragonborn%20(ravenite)_egw">Dragonborn (Ravenite)</a>
+                    <div class="escondido">Uma linhagem de draconatos conhecidos por sua resistência e determinação.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#duergar_mpmm">Dwarf (Duergar)</a>
+                    <div class="escondido">Anões das profundezas com habilidades psíquicas e de invisibilidade.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dwarf%20(hill)_phb">Dwarf (Hill)</a>
+                    <div class="escondido">Anões das colinas, conhecidos por sua sabedoria e resiliência.</div>
+                </div>
+            </div>
+            
+            <div class="races-column">
+                <hr>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#dwarf%20(mountain)_phb">Dwarf (Mountain)</a>
+                    <div class="escondido">Anões das montanhas, habilidosos em combate e artesanato.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#eladrin_mpmm">Eladrin</a>
+                    <div class="escondido">Elfos feéricos cuja aparência e habilidades mudam com as estações.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#astral%20elf_aag">Elf (Astral)</a>
+                    <div class="escondido">Elfos que habitam o Plano Astral, com conexões a memórias de vidas passadas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#elf%20(drow)_phb">Elf (Drow)</a>
+                    <div class="escondido">Elfos negros do Subterrâneo, com magia inata e visão no escuro superior.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#elf%20(high)_phb">Elf (High)</a>
+                    <div class="escondido">Elfos com grande afinidade para magia arcana e estudos.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#elf%20(pallid)_egw">Elf (Pallid)</a>
+                    <div class="escondido">Elfos pálidos abençoados pelo Luxon, com dons de clarividência.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#sea%20elf_mpmm">Elf (Sea)</a>
+                    <div class="escondido">Elfos adaptados à vida aquática, com respiração anfíbia.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#shadar-kai_mpmm">Elf (Shadar-kai)</a>
+                    <div class="escondido">Elfos sombrios do Plano das Sombras, servos da Rainha Corvo.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#elf%20(wood)_phb">Elf (Wood)</a>
+                    <div class="escondido">Elfos das florestas com agilidade superior e camuflagem natural.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#fairy_mpmm">Fairy</a>
+                    <div class="escondido">Criaturas mágicas com asas e conexão inata com o Feywild.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#firbolg_mpmm">Firbolg</a>
+                    <div class="escondido">Gigantes gentis com habilidades druídicas e conexão com a natureza.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#gallus%20(bright)_hwcs">Gallus (Bright)</a>
+                    <div class="escondido">Humanoides com características de aves solares.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#gallus%20(huden)_hwcs">Gallus (Huden)</a>
+                    <div class="escondido">Humanoides com características de aves do campo.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#genasi%20(air)_mpmm">Genasi (Air)</a>
+                    <div class="escondido">Descendentes de gênios do ar, com afinidade pelos céus.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#genasi%20(earth)_mpmm">Genasi (Earth)</a>
+                    <div class="escondido">Descendentes de gênios da terra, com força e resistência.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#genasi%20(fire)_mpmm">Genasi (Fire)</a>
+                    <div class="escondido">Descendentes de gênios do fogo, com resistência a chamas.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#genasi%20(water)_mpmm">Genasi (Water)</a>
+                    <div class="escondido">Descendentes de gênios da água, adaptados à vida aquática.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/races.html#giff_aag">Giff</a>
+                    <div class="escondido">Humanoides com cabeças de hipopótamo, conhecidos por seu amor por armas de pólvora.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#githyanki_mpmm">Githyanki</a>
+                    <div class="escondido">Guerreiros psíquicos que habitam o Plano Astral após escaparem da escravidão de Mind Flayers.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#githzerai_mpmm">Githzerai</a>
+                    <div class="escondido">Monges psíquicos que habitam Limbo, focados em disciplina mental e física.</div>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools//races.html#deep%20gnome_mpmm">Gnome (Deep)</a>
+                    <div class="escondido">Gnomos do Subterrâneo com camuflagem natural e resistência mágica.</div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <a href="../../index.html" class="btn btn-primary" style="background-color: #8B9EFF; display: block; width: 200px; margin: 0 auto; text-align: center; color: white; text-decoration: none;">
+            Voltar
+        </a>
+        
+    </section>
+
+    <div class="branco rodape">
+        <div>
+            <div class="icon">
+                <a href="#" style="text-decoration: none; color: white;">
+                <img src="../../img/Historia.webp" alt="Historia">
+                <h2>História</h2></a>
+                <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história! Descubra a rica história que moldou este mundo incrível.</p>
+            </div>
+            <div class="icon">
+                <img src="../../img/Geografia.webp" alt="Geografia">
+                <h2>Mapa do Mundo</h2>
+                <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você, visualizando nosso mapa do mundo e planejando sua próxima aventura... </p>
+            </div>
+            <div class="icon">
+                <img src="../../img/Redes_Sociais.webp" alt="Personagens">
+                <h2>Redes Sociais</h2>
+                <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center py-3 branco">
+        <p>&copy; 2025 Novastris. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

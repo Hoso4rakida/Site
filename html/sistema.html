@@ -40,6 +40,35 @@
         border-left: 2px solid #1E2125;
       }
 
+      body {
+      height: 2000px; /* Só para exemplo com rolagem */
+      margin: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botão flutuante */
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3A4162; /* Azul da sua imagem */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: background-color 0.3s;
+    }
+
+    .scroll-button:hover {
+      background-color: #525a83; /* Azul mais claro no hover */
+    }
+    
     </style>
     </head>
 
@@ -181,7 +210,12 @@
             <p style="color: #9b9898;">Algumas mecânicas foram adaptadas para melhor se encaixarem no estilo e na ambientação do mundo de Novastris. Além disso, elementos inéditos (como raças, habilidades, sistemas e recursos) foram incorporados para enriquecer a experiência dos jogadores.</p>
  <br>
           </div>
-      <h5><p style="color: #8B9EFF;" style="text-align: left;">Flanco</p></h5>   
+  
+  <button class="scroll-button" onclick="scrollToBottom()">
+    ⬇
+  </button>
+
+          <h5><p style="color: #8B9EFF;" style="text-align: left;">Flanco</p></h5>   
       <li>Em Novastris, utilizamos a regra opcional de flanqueamento descrita no Dungeon Master’s Guide, página 251. Quando dois aliados estão em lados opostos de um inimigo em combate corpo a corpo, ambos ganham vantagem em seus ataques corpo a corpo contra ele.</li>
       <br>
       <h5><p style="color: #8B9EFF;" style="text-align: left;">Divine Punch</p></h5>   
@@ -278,6 +312,18 @@
       <li><strong>Efeitos de Poções:</strong> Cada personagem pode estar sob o efeito de até <strong>3 Poções ou Comidas Mágicas</strong> simultaneamente. Portanto, escolha sabiamente!</li>
       <li><strong>Poções de Cura:</strong> Não há limite para o uso de Poções de Cura. Elas podem ser usadas à vontade para manter seu personagem saudável.</li>
       <li><strong>Outros Itens Consumíveis:</strong> Seguem uma regra especial. Não é permitido utilizar mais de um do mesmo tipo no mesmo dia. Use com cautela e estratégia!</li>
+<br>
+      <h5><p style="color: #8B9EFF;" style="text-align: left;"> 🎭 Surpresa – Antes e Depois da Regra</p></h5> 
+      <p>📖 Antes – Regra Oficial do Livro (PHB 5e - Pg. 191)</p>
+      <li>Quando o combate começa, o Mestre determina quem está surpreso. Se alguém tentar se esconder, o Mestre compara o <strong>teste de Furtividade</strong> com a <strong>Percepção Passiva</strong> dos oponentes.</li>
+      <li>Se qualquer inimigo perceber qualquer membro do grupo, ninguém do grupo surpreende o inimigo. Se nenhum inimigo perceber nenhum dos personagens então todos os inimigos estão surpresos.</li>
+      <li>Um personagem surpreso não pode se mover, agir ou reagir no primeiro turno do combate.</li><br>
+
+      <p>⚔ Depois – Regra Modificada: Surpresa Direcionada</p>
+      <li>Quando o combate começa, o Mestre determina quem está surpreso. Se alguém tentar se esconder, o Mestre compara o <strong>teste de Furtividade</strong> com a <strong>Percepção Passiva</strong> dos oponentes.</li>
+      <li>Se <strong>um personagem furtivo</strong> não for percebido por um inimigo, aquele inimigo está surpreso apenas contra ele, mesmo que tenha visto outros membros do grupo.</li>
+      <li>Um personagem surpreso não pode se mover, agir ou reagir no primeiro turno do combate.</li>
+
 <script>
           const acc = document.querySelectorAll(".accordion");
           acc.forEach(btn => {
@@ -287,6 +333,14 @@
               panel.style.display = (panel.style.display === "block") ? "none" : "block";
             });
           });
+
+          function scrollToBottom() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+
         </script>
 
 
