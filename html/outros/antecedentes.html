@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,27 +21,109 @@
             background-color: #232f3c;
             border-radius: 5px;
             transition: all 0.3s ease;
+            cursor: pointer;
+            color: #fff; /* Corrige texto apagado */
         }
         .background-item:hover {
             background-color: #121517;
-            transform: translateY(-2px);
+            transform: translateY(0px);
+        }
+        a {
+            color: #8B9EFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         h1 {
-            margin-bottom: 30px;
+            margin-bottom: 5px;
         }
         img {
-            /*alinha a imagem ao centro*/
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
         }
+        .escondido {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        .background-item:hover .escondido {
+            max-height: 200px;
+            opacity: 1;
+            padding-top: 8px;
+        }
+        .races-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .races-column {
+            width: 48%;
+        }
+        @media (max-width: 768px) {
+            .races-column {
+                width: 100%;
+            }
+        }
+        /* Correções para elementos desativados */
+        .race-option {
+            background-color: #232f3c;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #fff;
+        }
+        .race-option:hover {
+            background-color: #121517;
+        }
+        .race-option.disabled {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            color: #fff !important;
+        }
 
+        body {
+      height: 2000px; /* Só para exemplo com rolagem */
+      margin: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botão flutuante */
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3A4162; /* Azul da sua imagem */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: background-color 0.3s;
+    }
+
+    .scroll-button:hover {
+      background-color: #525a83; /* Azul mais claro no hover */
+    }
 
     </style>
 </head>
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -151,61 +235,284 @@
 </body>
 </html>
 
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="/html/historia.html"><i class="fas fa-book"></i> História </a></li>
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="/mapa.html"><i class="fas fa-map"></i> Mapa do Mundo </a></li>
                     <li class="nav-item"><a class="nav-link" href="/social.html"><i class="fas fa-earth-americas"></i> Redes Sociais </a></li>
                 </ul>
+            </div>
         </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="back-button">
-    <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
-</div> 
+    <div class="back-button">
+        <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
+    </div> 
 
-  </div>
-    <section class="bg-dark custom-margin" style= "text-align: justify;">
+    <section class="bg-dark custom-margin" style="text-align: justify;">
         <h1 style="text-align: center;"><strong>Antecedentes</strong></h1>
-        <h5><strong>🔍 O que são Itens Homebrews?</strong></h5>
-            <p>Itens homebrews são criações originais (fora das regras oficiais) adaptadas para enriquecer a narrativa, desafiar os personagens e surpreender os jogadores. Eles podem ser desde espadas lendárias com efeitos únicos até elixires instáveis, armaduras vivas ou relíquias antigas ligadas à história do mundo.</p>
-            <hr>
-            <h5><strong>📜 Contribua!</strong></h5>
-            <p>Tem uma ideia épica de item?
-            Envie sua criação para a nossa equipe! Os melhores podem entrar para o acervo oficial com os devidos créditos.</p>
-            <p><strong>OBS:</strong> Os itens podem não ser aprovados pela Administração.</p>
-            <hr>
-            <h5><strong>🧪 Exemplos de Itens Homebrews</strong></h5>
-            <p>Abaixo, você confere alguns dos itens homebrews disponíveis no nosso acervo. Eles foram criados para ilustrar o potencial criativo do nosso universo e servir como inspiração para jogadores e mestres.</p>
+        <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
+<hr>
+    <button class="scroll-button" onclick="scrollToBottom()">
+        ⬇
+    </button>
 
-            <h5 style="text-align: center;"><strong>🧾 Confira logo abaixo!</strong></h5>
-            <hr>
-            <p><strong>Ring of Dexterity - Raro Maior</strong></p>
+       <p style="color: #9b9898; text-align: center;">Os Antecedentes representam a vida que seu personagem tiveram antes de se tornar um aventureiro. Eles ajudam a contar a história do personagem, explicando sua ocupação, origens sociais, experiências e conexões no mundo.</p>
+       
+       <div class="races-container">
+            <div class="races-column">
+                <hr>
+                <div class="background-item">                            
+                    <a href="https://5e.tools/backgrounds.html#acolyte_phb">Acólito (Acolyte)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#anthropologist_toa">Antropólogo (Anthropologist)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#archaeologist_toa">Arqueólogo (Archaeologist)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#athlete_mot">Atleta (Athlete)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#augen%20trust%20(spy)_egw">Augen Trust (Espião) (Augen Trust (Spy))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#azorius%20functionary_ggr">Funcionário Azorius (Azorius Functionary)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#boros%20legionnaire_ggr">Legionário Boros (Boros Legionnaire)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#celebrity%20adventurer's%20scion_ai">Descendente do Aventureiro Celebridade (Celebrity Adventurer's Scion)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#charlatan_phb">Charlatão (Charlatan)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#city%20watch_scag">Vigilante da Cidade (City Watch)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20city%20watch%20(investigator)_scag">Variante Vigilante da Cidade (Variant City Watch (Investigator))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#clan%20crafter_scag">Artesão do Clã (Clan Crafter)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#cloistered%20scholar_scag">Estudioso Enclausurado (Cloistered Scholar)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#cobalt%20scholar%20(sage)_egw">Estudioso de Cobalto (Sábio) (Cobalt Scholar (Sage))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#courtier_scag">Cortesão (Courtier)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#criminal_phb">Criminoso (Criminal)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20criminal%20(spy)_phb">Criminoso Variante (Espião) (Variant Criminal (Spy))</a>
+                </div>
+
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#dimir%20operative_ggr">Agente Dimir (Dimir Operative)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#entertainer_phb">Artista (Entertainer)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20entertainer%20(gladiator)_phb">Variante Artista (Gladiador) (Variant Entertainer (Gladiator))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#faction%20agent_scag">Agente de Facção (Faction Agent)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#failed%20merchant_ai">Comerciante falido (Failed Merchant)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#far%20traveler_scag">Viajante Distante (Far Traveler)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#fisher_gos">Pescador (Fisher)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#folk%20hero_phb">Herói Popular (Folk Hero)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#gambler_ai">Jogador (Gambler)</a>
+                </div>
+
+
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#giant%20foundling_bgg">Enjeitado gigante (Giant Foundling)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#golgari%20agent_ggr">Agente Golgari (Golgari Agent)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#grinner_egw">Grinner (Grinner)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#gruul%20anarch_ggr">Gruul Anarquista (Gruul Anarch)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#guild%20artisan_phb">Artesão da Guilda (Guild Artisan)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20guild%20artisan%20(guild%20merchant)_phb">Artesão da Guilda Variante (Comerciante da Guilda) (Variant Guild Artisan (Guild Merchant))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#haunted%20one_vrgr">Assombrado (Haunted One)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#hermit_phb">Eremita (Hermit)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#house%20agent_erlw">Agente imobiliário (House Agent)</a>
+                </div>
+            </div>
+            
+            <div class="races-column">
+                <hr>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#inheritor_scag">Herdeiro (Inheritor)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#investigator_vrgr">Investigador (Investigator)</a>
+                </div>
+                 <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#izzet%20engineer_ggr">Engenheiro Izzet (Izzet Engineer)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#knight%20of%20the%20order_scag">Cavaleiro da Ordem (Knight of the Order)</a>
+              
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#lorehold%20student_scc">Estudante de Lorehold (Lorehold Student)</a>
+                   
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#luxonborn%20(acolyte)_egw">Luxonborn (Acólito) (Luxonborn (Acolyte))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#marine_gos">Marinho (Marine)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#mercenary%20veteran_scag">Veterano Mercenário (Mercenary Veteran)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#myriad%20operative%20(criminal)_egw">Agente Miríade (Criminoso) (Myriad Operative (Criminal))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#noble_phb">Nobre (Noble)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20noble%20(knight)_phb">Variante Nobre (Cavaleiro) (Variant Noble (Knight))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20noble%20(retainers)_phb">Variante Nobre (Retentores) (Variant Noble (Retainers))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#orzhov%20representative_ggr">Representante Orzhov (Orzhov Representative)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#outlander_phb">Outlander (Outlander)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#plaintiff_ai">Autor (Plaintiff)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#prismari%20student_scc">Estudante Prismari (Prismari Student)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#quandrix%20student_scc">Estudante Quandrix (Quandrix Student)</a>
+                </div>
+
+
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#rakdos%20cultist_ggr">Cultista Rakdos (Rakdos Cultist)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#revelry%20pirate%20(sailor)_egw">Pirata da Folia (Marinheiro) (Revelry Pirate (Sailor))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#rival%20intern_ai">Estagiário Rival (Rival Intern)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#rune%20carver_bgg">Escultor de Runas (Rune Carver)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#sage_phb">Sábio (Sage)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#sailor_phb">Marinheiro (Sailor)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#variant%20sailor%20(pirate)_phb">Marinheiro Variante (Pirata) (Variant Sailor (Pirate))</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#selesnya%20initiate_ggr">Iniciado Selesnya (Selesnya Initiate)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#shipwright_gos">Construtor Naval (Shipwright)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#silverquill%20student_scc">Estudante Silverquill (Silverquill Student)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#simic%20scientist_ggr">Cientista Simic (Simic Scientist)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#smuggler_gos">Contrabandista (Smuggler)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#soldier_phb">Soldado (Soldier)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#urban%20bounty%20hunter_scag">Caçador de Recompensas Urbano (Urban Bounty Hunter)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#urchin_phb">Ouriço (Urchin)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#uthgardt%20tribe%20member_scag">Membro da tribo Uthgardt (Uthgardt Tribe Member)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#volstrucker%20agent_egw">Agente Volstrucker (Volstrucker Agent)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#waterdhavian%20noble_scag">Nobre Waterdhavian (Waterdhavian Noble)</a>
+                </div>
+                <div class="background-item">
+                    <a href="https://5e.tools/backgrounds.html#witherbloom%20student_scc">Estudante de Witherbloom (Witherbloom Student)</a>
+                </div>
+            </div>
+        </div>
         
-                <li>Your Dexterity score is 19 while you wear these ring. They have no effect on you if your Dexterity is already 19 or higher without he.</li>
-        <br>
-            <p><strong>Periapt of Wisdom - Raro Maior</strong></p>
-           
-                <li>Your Wisdom score is 19 while you wear these periapt. They have no effect on you if your Wisdom is already 19 or higher without he.</li>
-           
-        <br>            
-            <p><strong>Necklace of Charisma - Raro Maior</strong></p>
+        <script>
           
-                <li>Your Charisma score is 19 while you wear these necklace. They have no effect on you if your Charisma is already 19 or higher without he.</li>            
-        <br>  
-        
+          function scrollToBottom() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+
+        </script>
+
     </section>
-  <div class="branco rodape">
-    <div>
-        <div class="icon">
+
+   <div class="branco rodape">
+       <div>
+            <div class="icon">
                 <a href="/html/historia.html" style="text-decoration: none; color: white;">
                 <img src="../../img/Historia.webp" alt="Historia">
                 <h2>História</h2></a>
@@ -225,11 +532,11 @@
             </div>
         </div>
     </div>
-<br>
-</div> 
-  <footer class="bg-dark text-center py-3 branco">
-    <p>&copy; 2025 Novastris. Todos os direitos reservados.</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+    <footer class="bg-dark text-center py-3 branco">
+        <p>&copy; 2025 Novastris. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
