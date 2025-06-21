@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Novastris - RPG</title>
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
     <style>
         section {
             padding: 1em !important;
@@ -90,6 +90,79 @@
             pointer-events: auto !important;
             color: #fff !important;
         }
+
+        table{
+            margin: auto;
+            margin-left: 40px;
+            margin-right: px;
+            color: white;
+        }
+        .tabela-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+}
+        td{
+            padding: 6px;
+        }
+        .trh{
+            background-color: #606480 !important;
+        }
+        tr{
+            background: #2c2e36;
+        }
+        tr:nth-child(2n+1) {
+            background: #171920;
+        }
+        .caixas{
+            border: 1px solid black;
+            padding: 1em;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.35);
+            margin-bottom: 1em;
+        }
+        a{
+            color: #8B9EFF;
+        }
+        .ar
+        {
+            color: #FFE38C;
+        }
+        .spoiler-content > h4{
+            color: #FFE38C
+        }
+        /* Estilo geral para o botão */
+        button {
+            background-color: #8B9EFF; /* Cor de fundo verde */
+            color: white;              /* Cor do texto branco */
+            padding: 7px 12px;        /* Espacamento interno */
+            font-size: 16px;           /* Tamanho da fonte */
+            border: none;              /* Remove a borda */
+            border-radius: 8px;        /* Bordas arredondadas */
+            cursor: pointer;          /* Indica que é clicável */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            margin: 3px;
+            line-height: 1.2;
+        }
+
+        /* Efeito de hover (passar o mouse sobre o botão) */
+        button:hover {
+            background-color: #606485; /* Cor de fundo um pouco mais escura */
+            transform: scale(1.05);     /* Aumenta ligeiramente o tamanho */
+        }
+
+        /* Efeito de foco (quando o botão é clicado ou selecionado) */
+        button:focus {
+            outline: none;             /* Remove o contorno padrão do foco */
+            box-shadow: 0 0 10px rgba(72, 159, 72, 0.8); /* Sombras suaves ao redor do botão */
+        }
+
+        /* Efeito de clique (pressionar o botão) */
+        button:active {
+            background-color: #606480; /* Cor de fundo ainda mais escura */
+            transform: scale(0.98);     /* Botão fica levemente menor ao ser pressionado */
+        }
     </style>
 </head>
 
@@ -140,8 +213,7 @@
       align-items: center;
       padding: 12px 20px;
       text-decoration: none;
-      color: #A0A9D4
-;
+      color: #A0A9D4;
       font-weight: bold;
       font-size: 16px;
     }
@@ -256,76 +328,35 @@
     </div> 
 
     <section class="bg-dark custom-margin" style="text-align: justify;">
-        <h1 style="text-align: center;"><strong>Marcados</strong></h1>
+        <h1 style="text-align: center;"><strong>Aasimar</strong></h1>
         <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
 
     <button class="scroll-button" onclick="scrollToBottom()">
             ⬇
     </button>
- <hr>
-            <p>Os Marcados são uma categoria especial de seres que carregam em seu corpo, mente ou alma uma marca sobrenatural (um símbolo, maldição, benção, pacto ou energia herdada de algo maior e inexplicável).</p>
-            <p>Eles não nascem “comuns”. Algo os tocou ou os escolheu. A marca que carregam pode ter lhes dado poder, conhecimento, propósito (ou um fardo). Ser Marcado é estar em descompasso com o mundo comum, sempre à beira do sagrado, do amaldiçoado ou do extraordinário.</p>
+<br>
+            <p><strong>Sejam descendentes de um ser celestial ou imbuídos de poder celestial, os aasimar são mortais que carregam uma centelha dos Planos Superiores em suas almas. Eles podem atiçar essa centelha para trazer luz, aliviar feridas e liberar a fúria dos céus.</strong></p>
+            <p><strong>Aasimar podem surgir entre qualquer população de mortais. Eles se assemelham aos seus pais, mas vivem até 160 anos e frequentemente apresentam características que sugerem sua herança celestial. Essas características geralmente começam sutis e se tornam mais evidentes quando o aasimar ganha a habilidade de revelar sua natureza celestial completa. A tabela de Características Celestiais de Aasimar contém exemplos que você pode escolher ou usar como inspiração para criar a sua própria.</strong></p>
 
-         <div class="races-container">
-            <div class="races-column">
-                <hr>
-                
-                <div class="background-item">
-                    <a href="../racas/marcados/aasimar.html">Aasimar</a>
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/changeling.html">Changeling</a>
-                 
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/dhampir.html">Dhampir</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/draconato.html">Draconato</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/fada.html">Fada</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/firbolg.html">Firbolg</a>
-                  
-                </div>
-            </div>
-            
-            <div class="races-column">
-                <hr>
-                                <div class="background-item">
-                    <a href="../racas/marcados/genasi.html">Genasi</a>
-                 
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/hexblood.html">Hexblood</a>
-                    
-                </div>                
-                <div class="background-item">
-                    <a href="../racas/marcados/kobold.html">Kobold</a>
-                 
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/satiro.html">Sátiro</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/tiefling.html">Tiefling</a>
-                    
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/tritão.html">Tritão</a>
-                  
-                </div>
-            </div>
-        </div>
+            <p><i>Fonte: Mordenkainen Apresenta: Monstros do Multiverso (MPMM)</i></p>
 
+            <div class="caixas">
+            <li><strong>Pontuações de Habilidade:</strong> Escolha uma das seguintes opções: (a) Escolha qualquer +2; escolha qualquer outro +1; (b) Escolha três +1 diferentes;</li>
+            <li><strong>Tipo de Criatura:</strong> Humanóide</li>
+            <li><strong>Tamanho:</strong> Você é Médio ou Pequeno. Você escolhe o tamanho ao selecionar esta raça.</li>
+            <li><strong>Velocidade:</strong> 30 pés</li><br><br>
 
-        <script>
+            <li><strong>Visão no escuro.</strong> Você consegue enxergar na penumbra a até 60fts de distância como se fosse luz forte, e na escuridão como se fosse luz fraca. Você distingue cores nessa escuridão apenas como tons de cinza.</li><br>
+            <li><strong>Mãos Curativas.</strong> Com uma ação, você pode tocar uma criatura e rolar um número de d4s igual ao seu bônus de proficiência. A criatura recupera um número de pontos de vida igual ao total rolado. Depois de usar esta característica, você não pode usá-la novamente até terminar um descanso longo.</p>
+            <li><strong>Resistência Celestial.</strong> Você tem resistência a dano necrótico e dano radiante.</li><br>
+            <li><strong>Portador da Luz.</strong> Você conhece o truque luz. Carisma é a sua habilidade de conjuração para ele.</li><br>
+            <li><strong>Revelação Celestial.</strong> Ao atingir o 3º nível, escolha uma das opções de revelação abaixo. Depois disso, você pode usar uma ação bônus para liberar a energia celestial dentro de si, obtendo os benefícios dessa revelação. Sua transformação dura 1 minuto ou até você finalizá-la com uma ação bônus. Depois de se transformar usando sua revelação abaixo, você não poderá usá-la novamente até terminar um descanso longo.</li><br>
+                    <p style="text-indent: 3em;"><strong>Mortalha Necrótica.</strong> Seus olhos se transformam brevemente em poças de escuridão, e asas fantasmagóricas e incapazes de voar brotam temporariamente de suas costas. Criaturas que não sejam seus aliados a até 10fts de você e que possam vê-lo devem ser bem-sucedidas em um teste de resistência de Carisma (CD 8 + seu bônus de proficiência + seu modificador de Carisma) ou ficarão amedrontadas até o final do seu próximo turno. Até que a transformação termine, uma vez em cada um dos seus turnos, você pode causar dano necrótico extra a um alvo ao causar dano a ele com um ataque ou magia. O dano extra é igual ao seu bônus de proficiência.</p>
+                    <p style="text-indent: 3em;"><strong>Consumo Radiante.</strong> Uma luz abrasadora irradia temporariamente dos seus olhos e boca. Durante a transformação, você emite luz brilhante em um raio de 10fts e luz fraca por mais 10fts. Ao final de cada um dos seus turnos, cada criatura a até 10fts de você sofre dano radiante igual ao seu bônus de proficiência. Até o fim da transformação, uma vez em cada um dos seus turnos, você pode causar dano radiante extra a um alvo ao causar dano a ele com um ataque ou magia. O dano extra é igual ao seu bônus de proficiência.</p>
+                    <p style="text-indent: 3em;"><strong>Alma Radiante.</strong> Duas asas luminosas e espectrais brotam temporariamente de suas costas. Até o fim da transformação, você tem uma velocidade de voo igual à sua velocidade de caminhada e, uma vez em cada um dos seus turnos, você pode causar dano radiante extra a um alvo ao causar dano a ele com um ataque ou magia. O dano extra é igual ao seu bônus de proficiência.</p>
+            <li><strong>Idiomas.</strong> Você pode falar, ler e escrever em Comum e em um outro idioma que você e seu Mestre concordem ser apropriado para o seu personagem.</li><br>
+         </div>
+         <script>
           
           function scrollToBottom() {
       window.scrollTo({
@@ -341,7 +372,7 @@
         <div>
             <div class="icon">
                 <a href="/html/historia.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Historia.webp" alt="História">
+                    <img src="../../../img/Historia.webp" alt="História">
                     <h2>História</h2>
                 </a>
                 <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
@@ -349,7 +380,7 @@
             
             <div class="icon">
                 <a href="/mapa.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Geografia.webp" alt="Geografia">
+                    <img src="../../../img/Geografia.webp" alt="Geografia">
                     <h2>Mapa do Mundo</h2>
                 </a>
                 <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
@@ -357,7 +388,7 @@
             
             <div class="icon">
                 <a href="/social.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Redes_Sociais.webp" alt="Redes Sociais">
+                    <img src="../../../img/Redes_Sociais.webp" alt="Redes Sociais">
                     <h2>Redes Sociais</h2>
                 </a>
                 <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!</p>

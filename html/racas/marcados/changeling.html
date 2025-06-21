@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Novastris - RPG</title>
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
     <style>
         section {
             padding: 1em !important;
@@ -90,6 +90,79 @@
             pointer-events: auto !important;
             color: #fff !important;
         }
+
+        table{
+            margin: auto;
+            margin-left: 40px;
+            margin-right: px;
+            color: white;
+        }
+        .tabela-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+}
+        td{
+            padding: 6px;
+        }
+        .trh{
+            background-color: #606480 !important;
+        }
+        tr{
+            background: #2c2e36;
+        }
+        tr:nth-child(2n+1) {
+            background: #171920;
+        }
+        .caixas{
+            border: 1px solid black;
+            padding: 1em;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.35);
+            margin-bottom: 1em;
+        }
+        a{
+            color: #8B9EFF;
+        }
+        .ar
+        {
+            color: #FFE38C;
+        }
+        .spoiler-content > h4{
+            color: #FFE38C
+        }
+        /* Estilo geral para o botão */
+        button {
+            background-color: #8B9EFF; /* Cor de fundo verde */
+            color: white;              /* Cor do texto branco */
+            padding: 7px 12px;        /* Espacamento interno */
+            font-size: 16px;           /* Tamanho da fonte */
+            border: none;              /* Remove a borda */
+            border-radius: 8px;        /* Bordas arredondadas */
+            cursor: pointer;          /* Indica que é clicável */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            margin: 3px;
+            line-height: 1.2;
+        }
+
+        /* Efeito de hover (passar o mouse sobre o botão) */
+        button:hover {
+            background-color: #606485; /* Cor de fundo um pouco mais escura */
+            transform: scale(1.05);     /* Aumenta ligeiramente o tamanho */
+        }
+
+        /* Efeito de foco (quando o botão é clicado ou selecionado) */
+        button:focus {
+            outline: none;             /* Remove o contorno padrão do foco */
+            box-shadow: 0 0 10px rgba(72, 159, 72, 0.8); /* Sombras suaves ao redor do botão */
+        }
+
+        /* Efeito de clique (pressionar o botão) */
+        button:active {
+            background-color: #606480; /* Cor de fundo ainda mais escura */
+            transform: scale(0.98);     /* Botão fica levemente menor ao ser pressionado */
+        }
     </style>
 </head>
 
@@ -140,8 +213,7 @@
       align-items: center;
       padding: 12px 20px;
       text-decoration: none;
-      color: #A0A9D4
-;
+      color: #A0A9D4;
       font-weight: bold;
       font-size: 16px;
     }
@@ -237,7 +309,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
+            <a class="navbar-brand" href="../../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -256,76 +328,31 @@
     </div> 
 
     <section class="bg-dark custom-margin" style="text-align: justify;">
-        <h1 style="text-align: center;"><strong>Marcados</strong></h1>
+        <h1 style="text-align: center;"><strong>Changeling</strong></h1>
         <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
 
     <button class="scroll-button" onclick="scrollToBottom()">
             ⬇
     </button>
- <hr>
-            <p>Os Marcados são uma categoria especial de seres que carregam em seu corpo, mente ou alma uma marca sobrenatural (um símbolo, maldição, benção, pacto ou energia herdada de algo maior e inexplicável).</p>
-            <p>Eles não nascem “comuns”. Algo os tocou ou os escolheu. A marca que carregam pode ter lhes dado poder, conhecimento, propósito (ou um fardo). Ser Marcado é estar em descompasso com o mundo comum, sempre à beira do sagrado, do amaldiçoado ou do extraordinário.</p>
+<br>
+            <p><strong>Com aparências em constante mudança, os changelings residem em muitas sociedades sem serem detectados. Cada changeling pode adotar sobrenaturalmente qualquer rosto que desejar. Para alguns changelings, um novo rosto é apenas um disfarce. Para outros, um novo rosto pode revelar um aspecto de sua alma.</strong></p>
+            <p><strong>Os primeiros changelings do multiverso surgiram na Agrestia das Fadas, e a essência maravilhosa e mutável daquele plano perdura nos changelings de hoje — mesmo naqueles que nunca pisaram no reino das fadas. Cada changeling decide como usar sua habilidade de metamorfose, canalizando o perigo ou a alegria da Agrestia das Fadas. Às vezes, eles adotam novas formas por maldade ou travessura, e outras vezes assumem uma nova identidade para corrigir erros ou deleitar os oprimidos.</strong></p>
+            <p><strong>Em sua forma verdadeira, os changelings parecem desbotados, com suas feições quase desprovidas de detalhes. É raro ver um changeling nessa forma, pois um changeling típico muda de forma da mesma forma que outros trocam de roupa. Uma forma casual — criada no calor do momento, sem profundidade ou história — é chamada de máscara. Uma máscara pode ser usada para expressar um estado de espírito ou para servir a um propósito específico e, então, pode nunca mais ser usada. No entanto, muitos changelings desenvolvem identidades mais profundas, criando personas completas, com histórias e crenças. Um aventureiro changeling pode ter personas para muitas situações, incluindo negociação, investigação e combate.</strong></p>
+            <p><strong>Personas podem ser compartilhadas por vários changelings; uma comunidade pode abrigar três changelings curandeiros, com quem estiver de plantão adotando a persona de Andrea, a médica gentil. Personas podem até ser passadas de geração para geração, permitindo que um changeling mais jovem tire proveito dos contatos estabelecidos pelos usuários anteriores da persona.</strong></p>
 
-         <div class="races-container">
-            <div class="races-column">
-                <hr>
-                
-                <div class="background-item">
-                    <a href="../racas/marcados/aasimar.html">Aasimar</a>
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/changeling.html">Changeling</a>
-                 
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/dhampir.html">Dhampir</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/draconato.html">Draconato</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/fada.html">Fada</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/firbolg.html">Firbolg</a>
-                  
-                </div>
-            </div>
-            
-            <div class="races-column">
-                <hr>
-                                <div class="background-item">
-                    <a href="../racas/marcados/genasi.html">Genasi</a>
-                 
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/hexblood.html">Hexblood</a>
-                    
-                </div>                
-                <div class="background-item">
-                    <a href="../racas/marcados/kobold.html">Kobold</a>
-                 
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/satiro.html">Sátiro</a>
-                  
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/tiefling.html">Tiefling</a>
-                    
-                </div>
-                <div class="background-item">
-                    <a href="../racas/marcados/tritão.html">Tritão</a>
-                  
-                </div>
-            </div>
-        </div>
+            <p><i>Fonte: Novastris: Player´s Homebrew (NPH)</i></p>
 
+            <div class="caixas">
+            <li><strong>Pontuações de Habilidade:</strong> Escolha uma das seguintes opções: (a) Escolha qualquer +2; escolha qualquer outro +1; (b) Escolha três +1 diferentes;</li>
+            <li><strong>Tipo de Criatura:</strong> Fey</li>
+            <li><strong>Tamanho:</strong> Pequeno ou Médio</li>
+            <li><strong>Velocidade:</strong> 30 pés</li><br><br>
 
-        <script>
+            <li><strong>Instintos de Changeling.</strong> Graças à sua conexão com o reino feérico, você ganha proficiência com duas das seguintes perícias de sua escolha: Enganação, Intuição, Intimidação, Performance ou Persuasão.</li><br>
+            <li><strong>Metamorfo.</strong> Como uma ação, você muda sua aparência e sua voz. Você determina as especificidades das mudanças, incluindo sua coloração, comprimento do cabelo e sexo. Você também pode ajustar sua altura entre Médio e Pequeno. Você pode se fazer parecer um membro de outra raça, embora nenhuma de suas estatísticas de jogo mude. Você não pode duplicar a aparência de um indivíduo que nunca viu, e deve adotar uma forma que tenha o mesmo arranjo básico de membros que você tem. Suas roupas e equipamentos não são alterados por esta característica. Você permanece na nova forma até usar uma ação para retornar à sua forma verdadeira ou até morrer.</p>
+            <li><strong>Idiomas.</strong> Você pode falar, ler e escrever Comum e outros dois idiomas que você e seu Mestre concordem ser apropriado para seu personagem.</li>
+         </div>
+         <script>
           
           function scrollToBottom() {
       window.scrollTo({
@@ -341,7 +368,7 @@
         <div>
             <div class="icon">
                 <a href="/html/historia.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Historia.webp" alt="História">
+                    <img src="../../../img/Historia.webp" alt="História">
                     <h2>História</h2>
                 </a>
                 <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
@@ -349,7 +376,7 @@
             
             <div class="icon">
                 <a href="/mapa.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Geografia.webp" alt="Geografia">
+                    <img src="../../../img/Geografia.webp" alt="Geografia">
                     <h2>Mapa do Mundo</h2>
                 </a>
                 <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
@@ -357,7 +384,7 @@
             
             <div class="icon">
                 <a href="/social.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Redes_Sociais.webp" alt="Redes Sociais">
+                    <img src="../../../img/Redes_Sociais.webp" alt="Redes Sociais">
                     <h2>Redes Sociais</h2>
                 </a>
                 <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!</p>

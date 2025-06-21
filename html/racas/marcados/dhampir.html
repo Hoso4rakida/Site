@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novastris - RPG</title>
+    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <style>
+        section {
+            padding: 1em !important;
+            border-radius: 10px;
+        }
+        .background-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #232f3c;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #fff; /* Corrige texto apagado */
+        }
+        .background-item:hover {
+            background-color: #121517;
+            transform: translateY(-2px);
+        }
+        a {
+            color: #8B9EFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .escondido {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        .background-item:hover .escondido {
+            max-height: 200px;
+            opacity: 1;
+            padding-top: 8px;
+        }
+        .races-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .races-column {
+            width: 48%;
+        }
+        @media (max-width: 768px) {
+            .races-column {
+                width: 100%;
+            }
+        }
+        /* Correções para elementos desativados */
+        .race-option {
+            background-color: #232f3c;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #fff;
+        }
+        .race-option:hover {
+            background-color: #121517;
+        }
+        .race-option.disabled {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            color: #fff !important;
+        }
+
+        table{
+            margin: auto;
+            margin-left: 40px;
+            margin-right: px;
+            color: white;
+        }
+        .tabela-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+}
+        td{
+            padding: 6px;
+        }
+        .trh{
+            background-color: #606480 !important;
+        }
+        tr{
+            background: #2c2e36;
+        }
+        tr:nth-child(2n+1) {
+            background: #171920;
+        }
+        .caixas{
+            border: 1px solid black;
+            padding: 1em;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.35);
+            margin-bottom: 1em;
+        }
+        a{
+            color: #8B9EFF;
+        }
+        .ar
+        {
+            color: #FFE38C;
+        }
+        .spoiler-content > h4{
+            color: #FFE38C
+        }
+        /* Estilo geral para o botão */
+        button {
+            background-color: #8B9EFF; /* Cor de fundo verde */
+            color: white;              /* Cor do texto branco */
+            padding: 7px 12px;        /* Espacamento interno */
+            font-size: 16px;           /* Tamanho da fonte */
+            border: none;              /* Remove a borda */
+            border-radius: 8px;        /* Bordas arredondadas */
+            cursor: pointer;          /* Indica que é clicável */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            margin: 3px;
+            line-height: 1.2;
+        }
+
+        /* Efeito de hover (passar o mouse sobre o botão) */
+        button:hover {
+            background-color: #606485; /* Cor de fundo um pouco mais escura */
+            transform: scale(1.05);     /* Aumenta ligeiramente o tamanho */
+        }
+
+        /* Efeito de foco (quando o botão é clicado ou selecionado) */
+        button:focus {
+            outline: none;             /* Remove o contorno padrão do foco */
+            box-shadow: 0 0 10px rgba(72, 159, 72, 0.8); /* Sombras suaves ao redor do botão */
+        }
+
+        /* Efeito de clique (pressionar o botão) */
+        button:active {
+            background-color: #606480; /* Cor de fundo ainda mais escura */
+            transform: scale(0.98);     /* Botão fica levemente menor ao ser pressionado */
+        }
+    </style>
+</head>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Flutuante com Seções</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Botão flutuante */
+    .floating-menu-button {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #616C9C; /* Azul escuro */
+      color: white;
+      padding: 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    /* Menu lateral posicionado ao lado do botão */
+    .side-menu {
+      position: fixed;
+      top: 10%;
+      left: 60px;
+      width: 250px;
+      max-height: 80%;
+      background-color: #2c2c2c;
+      padding-top: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .side-menu.open {
+      transform: scaleX(1);
+    }
+
+    .side-menu a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #A0A9D4;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .side-menu a:hover {
+      background-color: #3a3a3a;
+    }
+
+    .side-menu i {
+      margin-right: 10px;
+    }
+
+    /* Título da seção */
+    .section-title {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 20px 5px;
+      text-transform: uppercase;
+      font-family: 'Georgia', serif;
+      border-top: 2px solid #aaa;
+      margin-top: 10px;
+    }
+
+    /* Scroll customizado (opcional) */
+    .side-menu::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .side-menu::-webkit-scrollbar-thumb {
+      background-color: #616C9C;
+      border-radius: 3px;
+    }
+
+    body {
+      height: 200px; /* Só para exemplo com rolagem */
+      margin: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botão flutuante */
+    .scroll-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3A4162; /* Azul da sua imagem */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: background-color 0.3s;
+    }
+
+    .scroll-button:hover {
+      background-color: #525a83; /* Azul mais claro no hover */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Botão flutuante -->
+  <div class="floating-menu-button" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu lateral -->
+  <div class="side-menu" id="sideMenu">
+    <a href="/html/regras.html"><i class="fas fa-feather"></i> Regras</a>
+    <a href="/html/personagens.html"><i class="fas fa-feather"></i> Criação de Personagem</a>
+    <a href="/html/para mestre.html"><i class="fas fa-feather"></i> Para Mestres</a>
+    <a href="/html/sistema.html"><i class="fas fa-feather"></i> Sistema</a>
+    <a href="/html/eventos.html"><i class="fas fa-feather"></i> Eventos</a>
+    <a href="/html/colaboradores.html"><i class="fas fa-feather"></i>Colaboradores</a>
+    <a href="/html/ask.html"><i class="fas fa-feather"></i> Dúvidas e Respostas</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/html/historia.html"><i class="fas fa-book"></i> História </a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/mapa.html"><i class="fas fa-map"></i> Mapa do Mundo </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/social.html"><i class="fas fa-earth-americas"></i> Redes Sociais </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="back-button">
+        <button onclick="window.history.back()" class="btn btn-dark voltar">&lt;- Voltar</button>
+    </div> 
+
+    <section class="bg-dark custom-margin" style="text-align: justify;">
+        <h1 style="text-align: center;"><strong>Dhampir</strong></h1>
+        <h5 style="text-align: center;">in <a href="/index.html">Novastris</a></h5>
+
+    <button class="scroll-button" onclick="scrollToBottom()">
+            ⬇
+    </button>
+<br>
+            <p><strong>Situados entre os mundos dos vivos e dos mortos, os dhampirs mantêm o controle da vida, mas são testados incansavelmente por fomes cruéis. Seus laços com os mortos-vivos concedem aos dhampirs um gostinho da destreza imortal dos vampiros na forma de velocidade aumentada, visão no escuro e uma mordida que drena a vida.</strong></p>
+            <p><strong>Com insights únicos sobre a natureza dos mortos-vivos, muitos dhampirs se tornam aventureiros e caçadores de monstros. Seus motivos costumam ser profundamente pessoais. Alguns buscam o perigo, imaginando monstros como personificações de suas próprias fomes. Outros buscam vingança contra o que os transformou em dhampirs. E outros ainda abraçam a solidão da caça, esforçando-se para se distanciar daqueles que tentam saciar sua fome.</strong></p>
+
+            <p><i>Fonte: Novastris: Player´s Homebrew (NPH)</i></p>
+
+            <h4 style="color: #8B9EFF;">Fome de Dhampir</h4>
+
+            <p>Todo dhampir conhece uma sede saciada apenas pelos vivos. Aqueles que exageram na sede correm o risco de perder o controle e ver os outros como presas para sempre. Aqueles que resistem podem encontrar maneiras excepcionais de controlar seus impulsos ou suprimi-los por meio de uma contenção constante e exaustiva. De qualquer forma, a tentação assombra os dhampirs, e as circunstâncias conspiram para lhes dar infinitas razões para ceder.</p>
+            <p>Embora muitos dhampirs tenham sede de sangue, seu personagem pode se alimentar dos vivos. Role ou escolha uma opção na tabela Fome dos Dhampirs para determinar o que leva seu personagem a se alimentar.</p>
+            
+            <h5 style="text-align: center; color: #8B9EFF;">Fome de Dhampir</h5>
+        
+                        <table style="color: white;" class="tabela-container">
+                        <tbody>
+                            
+                            <td><strong>d6</strong></td>
+                            <td><strong>Fome</strong></td>
+                            
+                            <tr>
+                                <td>1</td>
+                                <td>Sangue</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Carne ou Carne Crua</td>
+                         
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Líquido cefalorraquidiano</td>
+                            
+                            </tr>
+                                <td>4</td>
+                                <td>Energia psíquica</td>
+                              
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Sonhos</td>
+                             
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Energia vital</td>
+                             
+                            </tr>
+                        </tbody>
+                    </table>
+
+            <h4 style="color: #8B9EFF;">Origens Dhampir</h4>
+
+            <p>Dhampirs frequentemente surgem de encontros com vampiros, mas todos os tipos de barganhas macabras, influências necromânticas e encontros com imortais misteriosos podem ter transformado seu personagem. A tabela Origens dos Dhampirs fornece sugestões de como seu personagem obteve sua linhagem.</p>
+            
+            <h5 style="text-align: center; color: #8B9EFF;">Origens Dhampir</h5>
+        
+                        <table style="color: white;" class="tabela-container">
+                        <tbody>
+                            
+                            <td><strong>d8</strong></td>
+                            <td><strong>Origem</strong></td>
+                            
+                            <tr>
+                                <td>1</td>
+                                <td>Você é a reencarnação de um ancestral que era um tirano vampírico.</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Seu pacto com uma divindade predadora, demônio, fada ou espírito faz com que você compartilhe a fome deles.</td>
+                         
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Você sobreviveu ao ataque de um vampiro, mas mudou para sempre.</td>
+                            
+                            </tr>
+                                <td>4</td>
+                                <td>Um parasita vive dentro de você. Você sacia a fome dele.</td>
+                              
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>A tragédia interrompeu sua transformação em imortal</td>
+                             
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Você é uma forma reduzida de um ser sobrenatural. Saciar sua fome acelera sua renovação.</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Um dos seus pais era um vampiro.</td>
+                             
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Um experimento radical mudou seu corpo, fazendo com que você dependesse de outras pessoas para obter fluidos vitais.</td>                             
+                            </tr>
+                        </tbody>
+                    </table>
+
+            <div class="caixas">
+            <li><strong>Pontuações de Habilidade:</strong> Escolha uma das seguintes opções: (a) Escolha qualquer +2; escolha qualquer outro +1; (b) Escolha três +1 diferentes;</li>
+            <li><strong>Tipo de Criatura:</strong> Humanóide</li>
+            <li><strong>Tamanho:</strong> Você é Médio ou Pequeno. Você escolhe o tamanho ao selecionar esta raça.</li>
+            <li><strong>Velocidade:</strong> 30 pés</li><br><br>
+
+            <li><strong>Visão no escuro.</strong> Você pode ver em luz fraca a 60 pés de você como se fosse luz brilhante e na escuridão como se fosse luz fraca. Você discerne cores nessa escuridão como tons de cinza.</li><br>
+            <li><strong>Legado Ancestral.</strong> Se você substituir uma raça por esta linhagem, poderá manter os seguintes elementos daquela raça: quaisquer proficiências de habilidade que você adquiriu dela e qualquer velocidade de escalada ou natação que você adquiriu dela. Se você não mantiver nenhum desses elementos ou escolher essa linhagem na criação do personagem, você ganha proficiência em duas habilidades de sua escolha.</p>
+            <li><strong>Natureza Imortal.</strong> Você não precisa comer, beber ou respirar.</li><br>
+            <li><strong>Resistência Necrótica.</strong> Você tem resistência a dano necrótico.</li><br>
+
+            <li><strong>Mordida Vampírica.</strong> Sua mordida com presas é uma arma natural, que conta como um ataque desarmado. Você adiciona seu modificador de Constituição, em vez de seu modificador de Força, às jogadas de ataque e dano quando ataca com esta mordida. Ela causa 1d6 de dano perfurante em um acerto (dano esse que não pode ser alterado por nenhuma habilidade). Enquanto estiver faltando metade ou mais de seus pontos de vida, você tem vantagem nas jogadas de ataque que fizer com esta mordida. Quando você ataca com esta mordida e atinge uma criatura que não é um Construto ou um Morto-vivo, você pode se fortalecer de uma das seguintes maneiras de sua escolha: <br><br>
+            <p style="text-indent: 3em;"> - Você recupera pontos de vida iguais ao dano perfurante causado pela mordida.</p>
+            <p style="text-indent: 3em;"> - Você ganha um bônus no próximo teste de habilidade ou jogada de ataque que fizer; o bônus é igual ao dano perfurante causado pela mordida.</p>
+            Você pode se fortalecer com essa mordida um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos quando termina um descanso longo.</li><br>
+
+            <li><strong>Idiomas.</strong>  Você pode falar, ler e escrever em Comum e em outro idioma que você e seu Mestre concordem ser apropriado para seu personagem.</li>
+         </div>
+         <script>
+          
+          function scrollToBottom() {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+
+        </script>
+    </section>
+
+    <div class="branco rodape">
+        <div>
+            <div class="icon">
+                <a href="/html/historia.html" style="text-decoration: none; color: white;">
+                    <img src="../../../img/Historia.webp" alt="História">
+                    <h2>História</h2>
+                </a>
+                <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
+            </div>
+            
+            <div class="icon">
+                <a href="/mapa.html" style="text-decoration: none; color: white;">
+                    <img src="../../../img/Geografia.webp" alt="Geografia">
+                    <h2>Mapa do Mundo</h2>
+                </a>
+                <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
+            </div>
+            
+            <div class="icon">
+                <a href="/social.html" style="text-decoration: none; color: white;">
+                    <img src="../../../img/Redes_Sociais.webp" alt="Redes Sociais">
+                    <h2>Redes Sociais</h2>
+                </a>
+                <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center py-3 branco">
+        <p>&copy; 2025 Novastris. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
