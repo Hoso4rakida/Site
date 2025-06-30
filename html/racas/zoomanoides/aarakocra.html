@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Novastris - RPG</title>
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
     <style>
         section {
             padding: 1em !important;
@@ -91,6 +91,29 @@
             color: #fff !important;
         }
 
+        table{
+            margin: auto;
+            margin-left: 40px;
+            margin-right: px;
+            color: white;
+        }
+        .tabela-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+}
+        td{
+            padding: 6px;
+        }
+        .trh{
+            background-color: #606480 !important;
+        }
+        tr{
+            background: #2c2e36;
+        }
+        tr:nth-child(2n+1) {
+            background: #171920;
+        }
         .caixas{
             border: 1px solid black;
             padding: 1em;
@@ -98,6 +121,47 @@
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.35);
             margin-bottom: 1em;
+        }
+        a{
+            color: #8B9EFF;
+        }
+        .ar
+        {
+            color: #FFE38C;
+        }
+        .spoiler-content > h4{
+            color: #FFE38C
+        }
+        /* Estilo geral para o botão */
+        button {
+            background-color: #8B9EFF; /* Cor de fundo verde */
+            color: white;              /* Cor do texto branco */
+            padding: 7px 12px;        /* Espacamento interno */
+            font-size: 16px;           /* Tamanho da fonte */
+            border: none;              /* Remove a borda */
+            border-radius: 8px;        /* Bordas arredondadas */
+            cursor: pointer;          /* Indica que é clicável */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            margin: 3px;
+            line-height: 1.2;
+        }
+
+        /* Efeito de hover (passar o mouse sobre o botão) */
+        button:hover {
+            background-color: #606485; /* Cor de fundo um pouco mais escura */
+            transform: scale(1.05);     /* Aumenta ligeiramente o tamanho */
+        }
+
+        /* Efeito de foco (quando o botão é clicado ou selecionado) */
+        button:focus {
+            outline: none;             /* Remove o contorno padrão do foco */
+            box-shadow: 0 0 10px rgba(72, 159, 72, 0.8); /* Sombras suaves ao redor do botão */
+        }
+
+        /* Efeito de clique (pressionar o botão) */
+        button:active {
+            background-color: #606480; /* Cor de fundo ainda mais escura */
+            transform: scale(0.98);     /* Botão fica levemente menor ao ser pressionado */
         }
     </style>
 </head>
@@ -245,7 +309,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
+            <a class="navbar-brand" href="../../../index.html" style="font-family: 'Times New Roman', Georgia, serif; margin-left: 1%;">Novastris</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -272,22 +336,21 @@
     </button>
 <br>
             <p><strong>Um povo alado originário do Plano Elemental do Ar, os aarakocra planam pelos céus por onde passam. Os primeiros aarakocra serviram aos Duques do Vento de Aaqa — poderosos seres do ar — e foram imbuídos de uma medida do poder de seus mestres sobre os ventos. Seus descendentes ainda carregam ecos desse poder.</strong></p>
-            <p><strong>Vistos de baixo, os aarakocras parecem pássaros grandes e, por isso, às vezes são chamados de povo-pássaro. Somente quando pousam em um galho ou caminham pelo chão é que sua natureza humanoide se torna evidente. Em pé, os aarakocras geralmente têm cerca de 5fts de altura e pernas longas e estreitas que se afinam em garras afiadas. Seus corpos são cobertos por penas — geralmente vermelhas, laranja, amarelas, marrons ou cinzas. Suas cabeças também são aviárias, muitas vezes lembrando as de papagaios ou águias.</strong></p>
+            <p><strong>Vistos de baixo, os aarakocras parecem pássaros grandes e, por isso, às vezes são chamados de povo-pássaro. Somente quando pousam em um galho ou caminham pelo chão é que sua natureza humanoide se torna evidente. Em pé, os aarakocras geralmente têm cerca de 1,5 metro de altura e pernas longas e estreitas que se afinam em garras afiadas. Seus corpos são cobertos por penas — geralmente vermelhas, laranja, amarelas, marrons ou cinzas. Suas cabeças também são aviárias, muitas vezes lembrando as de papagaios ou águias.</strong></p>
 
-         <p><i>Fonte: Mordenkainen Apresenta: Monstros do Multiverso (MPMM)</i></p>
-            
-         <div class="caixas">
+            <p><i>Fonte: Mordenkainen Apresenta: Monstros do Multiverso (MPMM)</i></p>
+
+           <div class="caixas">
             <li><strong>Pontuações de Habilidade:</strong> Escolha uma das seguintes opções: (a) Escolha qualquer +2; escolha qualquer outro +1; (b) Escolha três +1 diferentes;</li>
             <li><strong>Tipo de Criatura:</strong> Humanóide</li>
             <li><strong>Tamanho:</strong> Médio</li>
-            <li><strong>Velocidade:</strong> 30 pés, voo igual à sua velocidade de caminhada</li><br><br>
+            <li><strong>Velocidade:</strong> 30 pés</li><br><br>
 
             <li><strong>Voo.</strong> Graças às suas asas, você tem uma velocidade de voo igual à sua velocidade de caminhada. Você não pode usar essa velocidade de voo se estiver usando armadura média ou pesada.</li><br>
             <li><strong>Garras.</strong> Você tem garras que pode usar para desferir golpes desarmados. Ao atingi-las, o golpe causa 1d6 + seu modificador de Força de dano cortante, em vez do dano contundente normal de um golpe desarmado.</li><br>
-            <li><strong>Conjurador do Vento.</strong> A partir do 3º nível, você pode conjurar a magia rajada de vento com esta característica, sem precisar de um componente material. Depois de conjurar a magia com esta característica, você não poderá fazê-lo novamente até terminar um descanso longo. Você também pode conjurar a magia usando quaisquer espaços de magia que possua de 2º nível ou superior.Inteligência, Sabedoria ou Carisma é sua habilidade de conjuração para quando você conjura rajada de vento com esta característica (escolha ao selecionar esta raça).</p>
-            <li><strong>Idiomas.</strong> Você pode falar, ler e escrever em Comum e em um outro idioma que você e seu Mestre concordem ser apropriado para o seu personagem.</li>
+            <li><strong>Conjurador de Vento.</strong> A partir do 3º nível, você pode conjurar a magia <a href="https://5e.tools/spells.html#gust%20of%20wind_phb">Rajada de Vento</a> com esta característica, sem precisar de um componente material. Depois de conjurar a magia com esta característica, você não poderá fazê-lo novamente até terminar um descanso longo. Você também pode conjurar a magia usando qualquer espaço de magia que possua de 2º nível ou superior. Inteligência, Sabedoria ou Carisma é sua habilidade de conjuração quando você conjura Rajada de Vento com esta característica (escolha ao selecionar esta raça).</li><br>
+            <li><strong>Idiomas.</strong> Você pode falar, ler e escrever Comum e um outro idioma que você e seu Mestre concordem ser apropriado para seu personagem.</li>
          </div>
-
          <script>
           
           function scrollToBottom() {
@@ -304,7 +367,7 @@
         <div>
             <div class="icon">
                 <a href="/html/historia.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Historia.webp" alt="História">
+                    <img src="../../../img/Historia.webp" alt="História">
                     <h2>História</h2>
                 </a>
                 <p>Descubra a origem do mundo de Cosmoria e como a Guilda Novastris foi criada. Grandes eventos e personagens marcaram essa história!</p>
@@ -312,7 +375,7 @@
             
             <div class="icon">
                 <a href="/mapa.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Geografia.webp" alt="Geografia">
+                    <img src="../../../img/Geografia.webp" alt="Geografia">
                     <h2>Mapa do Mundo</h2>
                 </a>
                 <p>Explore o mundo de Cosmoria cheio de mistérios, reinos poderosos e terras inexploradas, esperando por aventureiros como você.</p>
@@ -320,7 +383,7 @@
             
             <div class="icon">
                 <a href="/social.html" style="text-decoration: none; color: white;">
-                    <img src="../../img/Redes_Sociais.webp" alt="Redes Sociais">
+                    <img src="../../../img/Redes_Sociais.webp" alt="Redes Sociais">
                     <h2>Redes Sociais</h2>
                 </a>
                 <p>Fique por dentro das novidades, eventos e interaja com a comunidade do servidor em todas as nossas redes sociais!!!</p>
