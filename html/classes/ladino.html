@@ -826,9 +826,10 @@
             <p><i>Característica de Ladino de 5º nível</i></p>
            
             <p>
-                A partir do 5º nível, quando um atacante que você pode ver lhe acerta com um ataque, você pode usar sua reação para reduzir pela metade o dano do ataque contra você.
+                Quando um atacante que você pode ver lhe atinge com uma jogada de ataque, você pode usar uma Reação para reduzir pela metade o dano do ataque contra você (arredondado para baixo).
             </p>
-        
+        </div>
+
         <h2 id="Especialização1">Nível 6: Especilização</h2>
         <hr>
         <div class="caracteristica">
@@ -845,7 +846,8 @@
  
             <p><i>Característica de Ladino de 7º nível</i></p>
  
-            <p>A partir do 7º nível, você pode se esquivar agilmente de certos efeitos de área, como o sopro flamejante de um dragão vermelho ou uma magia de tempestade de gelo. Quando você é submetido a um efeito que lhe permite fazer um teste de resistência de Destreza para receber apenas metade do dano, você não recebe dano se for bem-sucedido no teste de resistência e recebe apenas metade do dano se falhar.</p>
+            <p>Você pode se esquivar agilmente de certos perigos. Quando você é submetido a um efeito que lhe permite fazer um teste de resistência de Destreza para receber apenas metade do dano, você não recebe dano se for bem-sucedido no teste e apenas metade do dano se falhar. Você não pode usar esta habilidade se tiver a condição Incapacitado.</p>
+
         </div>
 
         <h2 id="MelhoriaPontuacao1">Nível 8: Melhoria na pontuação de habilidade (ASIs)</h2>
@@ -880,7 +882,10 @@
                     <hr style="color: #FFE38C;">
                     
                     <h4>Nível 9: Perícia em Infiltração</h4>                  
-                    <p>A partir do 9º nível, você pode criar identidades falsas para si mesmo, sem falhas. Você deve gastar sete dias e 25 PO para estabelecer o histórico, a profissão e as afiliações de uma identidade. Você não pode estabelecer uma identidade que pertença a outra pessoa. Por exemplo, você pode adquirir roupas apropriadas, cartas de apresentação e certificações com aparência oficial para se estabelecer como membro de uma casa comercial de uma cidade remota, para que possa se infiltrar na companhia de outros comerciantes ricos. Depois disso, se você adotar a nova identidade como disfarce, outras criaturas acreditarão que você é essa pessoa até que recebam uma razão óbvia para não acreditarem.</p>                    
+                    <p>Você é especialista nas seguintes técnicas que auxiliam em suas infiltrações.</p>
+
+                    <p><strong>Mimetismo Magistral.</strong> A partir do 9º nível, você pode criar identidades falsas para si mesmo, sem falhas. Você deve gastar sete dias e 25 PO para estabelecer o histórico, a profissão e as afiliações de uma identidade. Você não pode estabelecer uma identidade que pertença a outra pessoa. Por exemplo, você pode adquirir roupas apropriadas, cartas de apresentação e certificações com aparência oficial para se estabelecer como membro de uma casa comercial de uma cidade remota, para que possa se infiltrar na companhia de outros comerciantes ricos. Depois disso, se você adotar a nova identidade como disfarce, outras criaturas acreditarão que você é essa pessoa até que recebam uma razão óbvia para não acreditarem.</p>                    
+                    <p><strong>Mira Móvel.</strong> Sua Velocidade não é reduzida a 0 ao usar Mira Firme.</p>                    
 
                 </div>
 
@@ -938,7 +943,7 @@
                     <p>Suas Lâminas Psíquicas agora são uma expressão de sua alma imbuída de psi, dando a você estes poderes que usam seus dados de Energia Psiônica:</p>
 
                     <li><strong>Golpes Teleguiados.</strong> Se você fizer uma jogada de ataque com suas Lâminas Psíquicas e errar o alvo, você pode rolar um dado de Energia Psiônica e adicionar o número obtido à jogada de ataque. Se isso fizer com que o ataque acerte, você gasta o dado de Energia Psiônica.</li><br>
-                    <li><strong>Teletransporte Psíquico.</strong> Como uma ação bônus, você manifesta uma de suas Lâminas Psíquicas, gasta um dado de Energia Psiônica, rola-o e arremessa a lâmina em um espaço desocupado que você possa ver, a uma distância de até 33fts do número rolado. Você então se teletransporta para esse espaço, e a lâmina desaparece.</li>
+                    <li><strong>Teletransporte Psíquico.</strong> Como uma Ação Bônus , você manifesta uma Lâmina Psíquica , gasta um Dado de Energia Psiônica, rola-o e arremessa a lâmina em um espaço desocupado que você possa ver a até uma distância de metros igual a 10 vezes o número rolado. Você então se teletransporta para esse espaço, e a lâmina desaparece.</li>
 <br>
     </div>
 
@@ -1033,9 +1038,11 @@
                 <div class="spoiler-content" style="display: none;">
                     <hr style="color: #FFE38C;">
                     
-                    <h4>Nível 13: Impostor</h4>                  
-                    <p>No 13º nível, você adquire a habilidade de imitar com precisão a fala, a escrita e o comportamento de outra pessoa. Você deve passar pelo menos três horas estudando esses três componentes do comportamento da pessoa, ouvindo a fala, examinando a caligrafia e observando o maneirismo. Seu estratagema é imperceptível para um observador casual. Se uma criatura cautelosa suspeitar de algo errado, você tem vantagem em qualquer teste de Carisma (Enganação) que fizer para evitar ser detectado.</p>                    
-
+                    <h4>Nível 13: Armas Envenenadas</h4>                  
+                    <p>Você desenvolveu uma maneira astuta de usar seu Ataque Furtivo. Ao causar dano de Ataque Furtivo, você pode adicionar o efeito Armas Envenenadas. O efeito ocorre imediatamente após o dano do ataque ser causado.</p>                    
+                    <p><strong>Armas Envenenadas.</strong> Você adiciona uma toxina ao seu golpe, forçando o alvo a realizar um teste de resistência de Constituição (CD igual a 8 + seu modificador de Destreza + seu Bônus de Proficiência). Em caso de falha, o alvo permanece na condição Envenenado por 1 minuto e sofre 2d6 de dano de Veneno sempre que falhar no teste de resistência. </p>                    
+                    <p>Ao final de cada um de seus turnos, o alvo Envenenado repete o teste, encerrando o efeito sobre si mesmo em caso de sucesso. Este dano ignora a Resistência a dano de Veneno. Para usar esse efeito, você precisa ter um Kit de Envenenamento consigo.</p>                    
+                    
                 </div>
 
                 <button class="toggle-btn">Inquisitivo</button>
@@ -1106,7 +1113,12 @@
                     <hr style="color: #FFE38C;">
                     
                     <h4>Nível 13: Usar Dispositivo Mágico</h4>
-                    <p>No 13º nível, você já aprendeu o suficiente sobre o funcionamento da magia para improvisar o uso de itens, mesmo quando eles não são destinados a você. Você ignora todos os requisitos de classe, raça e nível para o uso de itens mágicos.</p>
+                    
+                    <p>Você aprendeu como maximizar o uso de itens mágicos, concedendo a você os seguintes benefícios.</p>                 
+
+                    <p><strong>Sintonização.</strong> Você pode sintonizar até quatro itens mágicos simultaneamente.</p>                    
+                    <p><strong>Cargas.</strong> Sempre que você usar uma propriedade de item mágico que gaste cargas, role 1d6. Com um resultado 6, você usa a propriedade sem gastar as cargas.</p>                    
+                    <p><strong>Pergaminhos.</strong> Você pode usar qualquer Pergaminho de Magia, usando Inteligência como sua habilidade de conjuração para a magia. Se a magia for um truque mágico ou uma magia de nível 1, você pode conjurá-la com segurança. Se o pergaminho contiver uma magia de nível superior, você deve primeiro ser bem-sucedido em um teste de Inteligência (Arcanismo) (CD 10 mais o nível da magia). Em um teste bem-sucedido, você conjura a magia do pergaminho. Em um teste falho, o pergaminho se desintegra.</p>                    
 
             </div>
 
